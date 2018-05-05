@@ -7,8 +7,10 @@ import { RouterModule } from '@angular/router';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { SharedModule } from '../shared/shared.module';
-import {routing} from './about.routing';
-import {AboutComponent} from './about.component';
+import {routing} from './contact.routing';
+import {ContactComponent} from './contact.component';
+import { ContactService, Contact } from './contact.service';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   imports: [
@@ -20,17 +22,21 @@ import {AboutComponent} from './about.component';
     SharedModule,
     ScrollToModule,
     NgbModule.forRoot(),
-   routing
+    routing,   
+    AgmCoreModule.forRoot({
+    apiKey: 'AIzaSyBgDkEqzA4rL-mb0Ha2GD2OJNmei-De2e0'
+  }),
   ],
   declarations: [
     
-    AboutComponent,
+    ContactComponent,
 ],
   providers: [
+    ContactService
   ],
   entryComponents: [
     ]
 
 })
-export class AboutModule {
+export class ContactModule {
 }

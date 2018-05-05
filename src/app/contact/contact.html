@@ -1,0 +1,82 @@
+<div class="container-fluid" style="background-color: #fff!important;">
+    <div class="section text-center">
+            <div class="col-md-11 mr-auto ml-auto">
+            <div class="card card-header"  style="background-color: rgb(255, 255, 255)!important;">
+        <h3 class="tittle">Contact Us</h3>
+    </div>
+</div>
+<div class="col-md-11 mr-auto ml-auto">
+    <div class="row">
+            <div class="col-md-4">
+                    <div class="card card-body">
+                    <h3 class="tittle1">Address:</h3>
+                    <br>
+                   <p class="p"> Csquare, Ground floor<br>
+                    Novel Business Center - BTM Layout Stage I<br>
+                    Outer Ring Rd, Bangalore - 560068</p>
+                    <h3 class="tittle1">Phone:</h3><br>
+                    <p class="p">Telephone: <i class="fa fa-phone" aria-hidden="true"></i>080-41627767<br>
+                    Mobile: <i class="fa fa-phone" aria-hidden="true"></i>7899342386 <i class="fa fa-phone" aria-hidden="true"></i>9036198865<br>
+                    Alternate: <i class="fa fa-phone" aria-hidden="true"></i>9886265509<br></p>
+                    <h3 class="tittle1">Email:</h3><br>
+                   <p class="p"> <i class="fa fa-envelope" aria-hidden="true"></i>csquarebangalore@gmail.com<br>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>info@csquareeducation.com<br>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>hr@csquareeducation.com<br></p>
+                </div>
+            </div>
+                <div class="col-md-8">
+                    <div class="card card-body">
+                        <div class="card card-header tittle" style="font-size:2em;font-weight:bold;text-align:center;">
+                         Send Your Message. We are here to help :)
+                        </div><br>
+                            <form [formGroup]="contactForm">
+                            <div class="row">
+                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!name.valid && name.touched)), 'has-success': (name.valid && name.touched)}">
+                                    <label for="name"> Name</label>
+                                    <input type="text" class="form-control" formControlName="name" id="name">
+                                    <small *ngIf="(!name.valid && name.touched)" class="text-danger">
+                                             Name is required.
+                                          </small>
+                                </div>
+                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!email.valid && email.touched)), 'has-success': (email.valid && email.touched)}">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" formControlName="email" id="email">
+                                    <small *ngIf="(!email.valid && email.touched)" class="text-danger">
+                                            Email is required.
+                                          </small>
+                                </div> 
+                                <div class="form-group col-md-12" [ngClass]="{'has-error': ((!phone.valid && phone.touched)), 'has-success': (phone.valid && phone.touched)}">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" class="form-control" formControlName="phone" id="phone">
+                                    <small *ngIf="(!phone.valid && phone.touched)" class="text-danger">
+                                        Phone is required.
+                                    </small>
+                                    </div>                   
+                                <div class="form-group col-sm-12">
+                                    <label for="message">Message</label>
+                                    <textarea type="text" class="form-control" rows="5" formControlName="message" id="message">
+                                        </textarea>
+                                </div>                                                
+                            </div>
+                            <div class="form-group row">
+                                    <div class="col-sm-12">
+                                      <button type="button" class="btn btn-round btn-primary" (click)="submit()">Submit</button>&nbsp;&nbsp;
+                                      <button type="reset" class="btn btn-round btn-danger" >Reset</button>
+                                    </div>
+                            </div>
+                            </form>
+                    </div>
+                </div>
+    </div>
+</div>
+        
+    <div class="col-md-11 mr-auto ml-auto">
+            <div class="card card-header">
+                    <h3 class="tittle">Reach Us through Google Maps:</h3>
+            </div>
+                <agm-map [latitude]="lat" [longitude]="lng" [zoom]="16">
+                        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                </agm-map>
+    </div>
+</div>
+</div>

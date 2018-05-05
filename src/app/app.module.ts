@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {TransferHttpCacheModule} from '@nguniversal/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { JWBootstrapSwitchModule } from 'jw-bootstrap-switch-ng2';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoadingModule } from 'ngx-loading';
@@ -30,7 +29,6 @@ import { FilterPipeModule } from './shared/pipes/filters/fliter.module';
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
     NgbModule.forRoot(),
-    JWBootstrapSwitchModule,
     ScrollToModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
@@ -42,7 +40,9 @@ import { FilterPipeModule } from './shared/pipes/filters/fliter.module';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full'},
       { path: 'home', component: HomeComponent },
-      { path: 'about', loadChildren: './about/about.module#AboutModule' }
+      { path: 'about', loadChildren: './about/about.module#AboutModule' },
+      { path: 'question',      loadChildren: './question/ques.module#QuesModule' },
+      { path: 'contact',      loadChildren: './contact/contact.module#ContactModule' },
     ]),
   ],
   providers: [],

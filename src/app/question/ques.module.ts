@@ -7,8 +7,8 @@ import { RouterModule } from '@angular/router';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { SharedModule } from '../shared/shared.module';
-import {routing} from './about.routing';
-import {AboutComponent} from './about.component';
+import {routing} from './question.routing';
+import {QuesComponent} from './ques.component';
 
 @NgModule({
   imports: [
@@ -24,7 +24,7 @@ import {AboutComponent} from './about.component';
   ],
   declarations: [
     
-    AboutComponent,
+    QuesComponent,
 ],
   providers: [
   ],
@@ -32,5 +32,5 @@ import {AboutComponent} from './about.component';
     ]
 
 })
-export class AboutModule {
+export class QuesModule {
 }

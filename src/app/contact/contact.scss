@@ -1,0 +1,40 @@
+.container-fluid{
+    margin-top: 2em;
+}
+.tittle {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color:#f8591f!important;
+}
+// .card{
+//     background-color: rgb(255, 255, 255);
+//     margin-left: 2em;
+//     margin-right: 1em;
+// }
+.card-header{
+    text-align: center;
+    font-size: 2em;
+    color:#f8591f!important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+.card-body{
+    color: rgb(8, 8, 8);
+    text-align: justify;
+    border: 1px solid #ccc;
+    font-family: 'Montserrat', sans-serif;
+}
+.p{
+    margin-left: 2em;
+}
+.tittle1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: 4em;
+}
+agm-map {
+    height: 400px;
+  }

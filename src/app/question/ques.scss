@@ -1,0 +1,68 @@
+.col-md-4{
+    border-right: 1px dotted #f8591f;
+}  
+.card-body{
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}  
+.dropdown{
+    padding-top: 1em;
+    color : #f8591f;
+}
+.btn{
+    width: 25em!important;
+    font-weight: bold;
+}
+.btn-primary{
+    background-color : #F38D68!important;
+    border: 1px solid #F38D68!important;
+}
+.temp{
+    padding-top: 1em;
+    margin-left: -4em;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+.tittle {
+    text-align: center;
+    font-weight: bold;
+    color:#f8591f!important;
+    font-family: 'Montserrat', sans-serif;
+}
+.dropdown-menu{
+    text-align: center;
+    border-bottom: 1px dotted #f8591f;    
+    background-color: #fff;
+}
+.dropdown-menu a{
+    color: #000;
+    font-weight: bold;
+    padding-top: 1em;
+}
+.divider{
+    border-bottom: 1px dotted rgb(2, 2, 2);
+}
+@media (max-width: 500px){
+    .card {
+        font-size:.8em!important;
+    }
+    .btn{
+        width: 20em!important;
+        font-weight: bold;
+        margin-left: -7em;
+    }
+    .dropdown-menu{
+        text-align: center;
+        border-bottom: 1px dotted #f8591f;    
+        background-color: #fff!important;
+        position: relative;
+    }
+    .dropdown-menu a{
+        color: #000;
+        font-weight: bold;
+        padding-top: 1em;
+    }
+}
