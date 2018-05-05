@@ -28,9 +28,6 @@
     "serve:prerender": "cd dist/browser && http-server",
     "serve:ssr": "node dist/server"
   },
-  "pre-commit": [
-    "lint"
-  ],
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
@@ -51,13 +48,17 @@
     "zone.js": "^0.8.14",
     "bootstrap": "^4.1.1",
     "popper.js": "^1.14.3",
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "@ng-bootstrap/ng-bootstrap": "^1.1.2",
+    "jw-bootstrap-switch-ng2": "^1.0.10"
   },
   "devDependencies": {
     "@angular/cli": "^1.5.0",
     "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
     "@types/node": "^8.0.30",
+    "@types/jasmine": "~2.8.3",
+    "@types/jasminewd2": "~2.0.2",
     "codelyzer": "^4.0.2",
     "cpy-cli": "^1.0.1",
     "express": "^4.15.2",

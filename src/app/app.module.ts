@@ -5,6 +5,8 @@ import {RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import {TransferHttpCacheModule} from '@nguniversal/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { JWBootstrapSwitchModule } from 'jw-bootstrap-switch-ng2';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
+    NgbModule.forRoot(),
+    JWBootstrapSwitchModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full'},
       { path: 'home', component: HomeComponent}
