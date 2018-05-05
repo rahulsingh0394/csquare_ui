@@ -1,0 +1,152 @@
+    <div class="wrapper">
+            <div class="page-header section-dark">
+                                        <!-- <video id="video" autoplay loop muted playsinline src="assets/img/banner.mp4"></video> -->
+                                    <img src="assets/img/banner.jpg">
+                                        <div class="overlay">
+                                            <div class="row" style="margin-top:-8em!important;">
+                                                <div class="col-md-2">
+                            
+                                                </div>
+                                                <div class="col-md-8 top">
+                                                <h1>CsquareEducation</h1>
+                                                </div>
+                                                <div class="col-md-2">
+                                            
+                                                </div> 
+                                                <div class="col-md-2">
+                            
+                                                </div>
+                                                <div class="col-md-8" style="margin-top: 4em;">
+                                                <h2>A Step Towards Learning.</h2>               
+                                                </div>
+                                                <div class="col-md-2">
+                                            
+                                                </div>
+                                                <div class="col-md-2">
+                            
+                                                </div>
+                                                <div class="col-md-8">
+                                                        <!-- <ngb-carousel >
+                                                                <ng-template ngbSlide>
+                                                                        <p>CsquareEducation is providing home tuition from various range. CsquareEducation provides flexible range to select home tutor or tuition teacher for their kids. </p> 
+                                                                           
+                                                                </ng-template>
+                                                                <ng-template ngbSlide>
+                                                                   
+                                                                        <p>CsquareEducation provides flexibility to replace your home tutor/private tutor at any time if you’re not satisfied with the way of teaching of current tutor.</p>
+                                                                        
+                                                                </ng-template>
+                                                                <ng-template ngbSlide>
+                                                                        <p>Many of us need female tutor/ teacher for our kid’s as they handle kid’s in better way and they understand them in better way.</p>
+                                                                       
+                                                                </ng-template>
+                                                                <ng-template ngbSlide>
+                                                                        <p>Csquareeducation do documents verification for all their home tutor or tuition teacher. Every aspects of recruitment process is well verified.</p>
+                                                                        
+                                                                </ng-template>
+                                                        </ngb-carousel> -->
+                                                <div class="row row">
+                                                        <div class="icon icon-danger icon-view-prev" *ngIf="count > 0">
+                                                            <a role="button" (click)="back(count)">
+                                                                    <i class="fa fa-chevron-left fa-2x"></i><br>Back
+                                                            </a>
+                                                                </div> 
+                                                        <div class="icon icon-danger icon-view-next" *ngIf="isNext == true">
+                                                                <a role="button" (click)="next(count)">
+                                                                        <i class="fa fa-chevron-right fa-2x"></i><br>Next
+                                                                </a>
+                                                                    </div>  
+                                                        </div>   
+                                                </div>
+                                                <div class="col-md-2">
+                                            
+                                                </div>
+                                                <div class="col-md-2">
+                            
+                                                </div>
+                                                <div class="col-md-8 search" *ngIf="count == 0">
+                                                        <!-- <h2>A Step Towards Learning.</h2> -->
+                                                        <!-- FormHere -->
+                                                        <button class="btn btn-warning" (click)="next(0)">Click Here To Get A Free Demo Class</button>
+                                                </div>
+                                                <div class="col-md-8 search" *ngIf="count == 1">
+                                                        <!-- <h2>A Step Towards Learning.</h2> -->
+                                                        <!-- FormHere -->
+                                                        <form [formGroup]="enquiryForm">
+                                                                <select class="form-control" formControlName="city" id="city">
+                                                                        <option value="" hidden>Select City Where You Need Home Tuition!</option>
+                                                                        <option *ngFor= "let list of cityList" [value]="list.pK">{{list.city_name}}</option>
+                                                                    </select>  
+                                                        </form>
+                                                </div>
+                                                <div class="col-md-8 search" *ngIf="count == 2">
+                                                        <!-- <h2>A Step Towards Learning.</h2> -->
+                                                        <!-- FormHere -->
+                                                        <form [formGroup]="enquiryForm">
+                                                                <input type="text" class="form-control" formControlName="firstName" id="firstName" placeholder="Please Enter Your Name">
+                                                        </form>
+                                                        <br>
+                                                        <button class="btn btn-success" *ngIf="isSubmit == true" (click)="next2()">{{btnName}}</button>
+                                                </div>
+                                                <div class="col-md-8 search" *ngIf="count == 3">
+                                                        <!-- <h2>A Step Towards Learning.</h2> -->
+                                                        <!-- FormHere -->
+                                                        <form [formGroup]="enquiryForm">
+                                                                <input type="text" class="form-control" formControlName="phone" id="phone" placeholder="Phone">         
+                                                            </form>
+                                                            <br>
+                                                            <button class="btn btn-success" *ngIf="isSubmit == true" (click)="next2()">{{btnName}}</button>
+                                                </div>
+                                                <div class="col-md-8 search" *ngIf="count == 4">
+                                                    <!-- <h2>A Step Towards Learning.</h2> -->
+                                                    <!-- FormHere -->
+                                                    <form [formGroup]="enquiryForm">
+                                                            <input type="text" class="form-control" formControlName="email" id="email" placeholder="Email">
+                            
+                                                        </form>
+                                                        <br>
+                                                        <button class="btn btn-success" *ngIf="isSubmit == true" (click)="next2()">{{btnName}}</button>                  
+                                                        </div> 
+                                                <div class="col-md-8 search" *ngIf="count == 5">
+                                                    <!-- <h2>A Step Towards Learning.</h2> -->
+                                                    <!-- FormHere -->
+                                                    <form [formGroup]="enquiryForm">
+                                                            <select class="form-control" formControlName="grade" id="grade" placeholder="Grade">
+                                                                    <option value="" hidden>Grade</option>
+                                                                    <option *ngFor="let list of gradeList" [value]="list.pk">{{list.grade}}</option>
+                                                                </select>
+                                                        </form>                  
+                                                        </div>  
+                                                <div class="col-md-8 search" *ngIf="count == 6 || count == 7">
+                                                        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>                    
+                                                        <!-- <h2>A Step Towards Learning.</h2> -->
+                                                        <!-- FormHere -->
+                                                        <form [formGroup]="enquiryForm"> 
+                                                                <select class="form-control" formControlName="lead" id="lead" placeholder="lead">
+                                                                        <option value="" hidden>Are You A Student Or A Tutor </option>
+                                                                        <option value="1">Student/Parent</option>
+                                                                        <option value="2">Tutor</option>
+                                                                    </select>
+                                                            </form>  
+                                                            <br>
+                                                            <button class="btn btn-success" *ngIf="isSubmit == true" (click)="next2()">{{btnName}}</button>              
+                                                            </div>                 
+                                                <div class="col-md-2">
+                                            
+                                                </div>
+                                                <div class="col-md-2"></div>
+                                                <div class="col-md-8">
+                                                        <div class="icon icon-danger">
+                                                                <i class="fa fa-chevron-down fa-3x iconDown" aria-hidden="true" (click)="scrollElement(container1,500)"></i>
+                                                                    </div>  
+                                                </div>
+                                                <div class="col-md-2"></div>
+                                                
+                                            </div>
+                            </div>
+            </div>
+    </div>
+    <div class="container1" #container1>
+    
+    </div>
+    
