@@ -5,7 +5,7 @@ import { FormGroup, AbstractControl, FormBuilder, Validators, MinLengthValidator
 import { Observable } from 'rxjs/Rx';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { HttpModule, Http, Response } from '@angular/http';
-//import { CommonModalComponent } from '../../shared/common-modal/common-modal.component';
+import { CommonModalComponent } from '../../shared/common-modal/common-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { HostListener, ElementRef } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
@@ -166,7 +166,7 @@ export class BannerComponent implements OnInit {
                 this.btnName = 'Next';
             }
         })
-        this.gender.valueChanges.subscribe(val =>{
+        this.grade.valueChanges.subscribe(val =>{
             if(val){
                 this.next2();
             }
@@ -189,10 +189,10 @@ export class BannerComponent implements OnInit {
                 console.log(this.count);
                 this.validationMessage();
                 if(this.message){
-                    // const activeModal = this.modalService.open(CommonModalComponent, { size: 'lg' });
-                    //     activeModal.componentInstance.showHide = true;
-                    //     activeModal.componentInstance.modalHeader = 'Alert';
-                    //     activeModal.componentInstance.modalContent = this.message;
+                    const activeModal = this.modalService.open(CommonModalComponent, { size: 'lg' });
+                        activeModal.componentInstance.showHide = true;
+                        activeModal.componentInstance.modalHeader = 'Alert';
+                        activeModal.componentInstance.modalContent = this.message;
                 } else {
                     const formValue: any = this.enquiryForm.value;  
                     console.log(formValue);
@@ -201,18 +201,18 @@ export class BannerComponent implements OnInit {
                     this.service.addLead(formValue).subscribe(enquiry => {
                         if(enquiry._body){
                             if(enquiry._body == "Email already exists"){
-                            //   const activeModal = this.modalService.open(CommonModalComponent, { size: 'lg' });
-                            //   activeModal.componentInstance.showHide = true;
-                            //   activeModal.componentInstance.modalHeader = 'Alert';
-                            //   activeModal.componentInstance.modalContent = 'Hello ' + this.firstName.value + '. This email already exists. Check your email to get credentials for login.';
-                            //   ////  this.spinnerService.hide();
-                            //   this.loading = false;
+                              const activeModal = this.modalService.open(CommonModalComponent, { size: 'lg' });
+                              activeModal.componentInstance.showHide = true;
+                              activeModal.componentInstance.modalHeader = 'Alert';
+                              activeModal.componentInstance.modalContent = 'Hello ' + this.firstName.value + '. This email already exists. Check your email to get credentials for login.';
+                              ////  this.spinnerService.hide();
+                              this.loading = false;
                           } else {
-                            // const activeModal2 = this.modalService.open(CommonModalComponent, { size: 'lg' });
-                            // activeModal2.componentInstance.showHide = true;
-                            // activeModal2.componentInstance.modalHeader = 'Success';
-                            // activeModal2.componentInstance.modalContent = 'Thank you ' + this.firstName.value + ' for contacting us we will reach you shortly!';
-                           // this.enquiryForm.reset();
+                            const activeModal2 = this.modalService.open(CommonModalComponent, { size: 'lg' });
+                            activeModal2.componentInstance.showHide = true;
+                            activeModal2.componentInstance.modalHeader = 'Success';
+                            activeModal2.componentInstance.modalContent = 'Thank you ' + this.firstName.value + ' for contacting us we will reach you shortly!';
+                           this.enquiryForm.reset();
                             this.count = 0;
                             this.isNext = false;
                             this.loading = false;

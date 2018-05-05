@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-// import { CommonModalComponent } from './common-modal/common-modal.component';
+import { CommonModalComponent } from './common-modal/common-modal.component';
 // import { LoggedInNavComponent } from './loggedInNav/loggedInNavbar.component';
 // import { LoggedInService, LoggedIn } from './loggedInNav/loggedInNavbar.service';
 // import { FilterPipeModule } from './pipes/filters/fliter.module';
@@ -25,14 +25,16 @@ import { LoadingModule } from 'ngx-loading';
         
     ],
     entryComponents: [
-        // CommonModalComponent,
+         CommonModalComponent,
         // LoggedInNavComponent
       ],
     declarations: [
-       // CommonModalComponent, LoggedInNavComponent
+        CommonModalComponent,
+        // LoggedInNavComponent
      ],
     exports:[  
-       // CommonModalComponent, LoggedInNavComponent
+        CommonModalComponent,
+       // LoggedInNavComponent
     ],
     providers: [ 
         //LoggedInService,
