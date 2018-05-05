@@ -13,7 +13,7 @@ import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
-//import { SortPipe } from '../pipes/filters/filter.pipe';
+import { SortPipe } from '../pipes/filters/filter.pipe';
 import { BannerService } from './banner.service';
 
 

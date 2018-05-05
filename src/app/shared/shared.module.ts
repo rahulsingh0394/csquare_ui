@@ -6,11 +6,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModalComponent } from './common-modal/common-modal.component';
-// import { LoggedInNavComponent } from './loggedInNav/loggedInNavbar.component';
-// import { LoggedInService, LoggedIn } from './loggedInNav/loggedInNavbar.service';
-// import { FilterPipeModule } from './pipes/filters/fliter.module';
+import { LoggedInNavComponent } from './loggedInNav/loggedInNavbar.component';
+import { LoggedInService, LoggedIn } from './loggedInNav/loggedInNavbar.service';
+import { FilterPipeModule } from './pipes/filters/fliter.module';
 import {Banner, BannerService} from './banner/banner.service';
 import { LoadingModule } from 'ngx-loading';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
     imports: [
@@ -21,23 +22,26 @@ import { LoadingModule } from 'ngx-loading';
         NgbModule,
         ReactiveFormsModule,
         LoadingModule,
-        //FilterPipeModule
+        FilterPipeModule
         
     ],
     entryComponents: [
          CommonModalComponent,
-        // LoggedInNavComponent
+         LoggedInNavComponent,
+         BannerComponent
       ],
     declarations: [
         CommonModalComponent,
-        // LoggedInNavComponent
+         LoggedInNavComponent,
+         BannerComponent
      ],
     exports:[  
         CommonModalComponent,
-       // LoggedInNavComponent
+        LoggedInNavComponent,
+        BannerComponent
     ],
     providers: [ 
-        //LoggedInService,
+        LoggedInService,
         BannerService 
     ]
 })

@@ -113,7 +113,7 @@
                                                     <form [formGroup]="enquiryForm">
                                                             <select class="form-control" formControlName="grade" id="grade" placeholder="Grade">
                                                                     <option value="" hidden>Grade</option>
-                                                                    <option *ngFor="let list of gradeList" [value]="list.pk">{{list.grade}}</option>
+                                                                    <option *ngFor="let list of gradeList | sortBy: 'sortorder'" [value]="list.pk">{{list.grade}}</option>
                                                                 </select>
                                                         </form>                  
                                                         </div>  
