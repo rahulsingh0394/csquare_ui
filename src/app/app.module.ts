@@ -42,7 +42,7 @@ import { FilterPipeModule } from './shared/pipes/filters/fliter.module';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full'},
       { path: 'home', component: HomeComponent },
-      //{ path: 'banner', component: BannerComponent }
+      { path: 'about', loadChildren: './about/about.module#AboutModule' }
     ]),
   ],
   providers: [],
