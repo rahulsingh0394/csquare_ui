@@ -57,6 +57,8 @@ import { TutorService } from './tutorForm/tutor.service';
       { path: 'signup', loadChildren: './signup/signup.module#SignupModule' },
       { path: 'studentForm', component: StudentComponent },
       { path: 'tutorForm', component: TutorComponent },
+      { path: 'terms', loadChildren: './terms/terms.module#TermsModule'},
+      { path: 'tutors-review', loadChildren: './tutors/tutors.module#TutorsModule' },
     ]),
   ],
   providers: [StudentService, TutorService],

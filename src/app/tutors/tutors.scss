@@ -1,0 +1,46 @@
+.card-body {
+    border: 1px solid #ccc;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-header {
+    border: 1px solid #ccc;
+    border-radius: 0px;
+}
+
+.title {
+    color: #f8591f !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.info-title {
+    color: #f8591f !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-category {
+    color: #f8591f !important;
+    font-family: 'Montserrat', sans-serif;
+}
+.rounded.mx-auto.d-block{
+    width: 80%;
+    height: 70%;
+}
+a {
+    color: #f8591f !important;
+    font-weight: bold;
+    font-size: 1em;
+}
+a:hover{
+    color: #06b7f1 !important;
+}
+.checked {
+    color: orange;
+}
+.fa {
+    font-size: 25px;
+}
