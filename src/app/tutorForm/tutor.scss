@@ -1,0 +1,68 @@
+.container {
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+}
+
+.card-header {
+    border: 1px solid #ccc;
+    border-radius: 0px;
+}
+
+.title {
+    color: #f8591f !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 1.5em;
+    text-align: center;
+    color: rgb(8, 5, 5);
+    margin-top: -.5em;
+    margin-bottom: 1em;
+}
+
+.card-register {
+    margin-top: 20em;
+    margin-bottom: 10em; // background-color: opacify($color: #494646, $amount: 1);
+    background-color: white !important;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .card {
+        margin-top: 0em;
+        margin-bottom: 0em;
+        padding: 0 1em .5em .5em !important;
+    }
+    .form-group {
+        width: 50%;
+    } //    .col-sm-12{
+    //     width: 100%!important;
+    //     height: 20%!important;
+    // }
+    .title {
+        margin-top: 5em;
+        font-size: 2em;
+        font-weight: bold;
+        color: rgb(10, 1, 1);
+    }
+    .tagline {
+        font-size: 1em;
+        display: inline-block;
+        color: rgb(8, 5, 5);
+    }
+    .social-line .text-center {
+        display: inline-block;
+        text-align: center !important;
+    }
+    .btn {
+        display: inline-block !important;
+        padding: 0 1em 0 1em !important;
+        margin: 0 1em 1em 0 !important;
+    }
+}

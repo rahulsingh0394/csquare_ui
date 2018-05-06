@@ -1,13 +1,13 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
-import {TransferHttpCacheModule} from '@nguniversal/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { TransferHttpCacheModule } from '@nguniversal/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoadingModule } from 'ngx-loading';
 import { HttpModule } from '@angular/http';
-
+import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 
 import { SharedModule } from './shared/shared.module';
 
@@ -17,17 +17,23 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FilterPipeModule } from './shared/pipes/filters/fliter.module';
+import { StudentComponent } from './studentForm/student.component';
+import { StudentService } from './studentForm/student.service';
+import { TutorComponent } from './tutorForm/tutor.component';
+import { TutorService } from './tutorForm/tutor.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-   // BannerComponent,
+    // BannerComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    StudentComponent,
+    TutorComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({appId: 'my-app'}),
+    BrowserModule.withServerTransition({ appId: 'my-app' }),
     NgbModule.forRoot(),
     ScrollToModule.forRoot(),
     FormsModule,
@@ -35,20 +41,25 @@ import { FilterPipeModule } from './shared/pipes/filters/fliter.module';
     LoadingModule,
     HttpModule,
     TransferHttpCacheModule,
+    AngularMultiSelectModule,
     SharedModule,
     FilterPipeModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full'},
+      { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'about', loadChildren: './about/about.module#AboutModule' },
-      { path: 'question',      loadChildren: './question/ques.module#QuesModule' },
-      { path: 'contact',      loadChildren: './contact/contact.module#ContactModule' },
-      { path: 'careers',      loadChildren: './careers/careers.module#CareersModule' },
-      { path: 'media',         loadChildren: './media/media.module#MediaModule' },
-      { path: 'parents-review',      loadChildren: './parents/parents.module#ParentsModule' },
+      { path: 'contact', loadChildren: './contact/contact.module#ContactModule' },
+      { path: 'careers', loadChildren: './careers/careers.module#CareersModule' },
+      { path: 'media', loadChildren: './media/media.module#MediaModule' },
+      { path: 'parents-review', loadChildren: './parents/parents.module#ParentsModule' },
+      { path: 'privacy', loadChildren: './privacy/privacy.module#PrivacyModule' },
+      { path: 'question', loadChildren: './question/ques.module#QuesModule' },
+      { path: 'signup', loadChildren: './signup/signup.module#SignupModule' },
+      { path: 'studentForm', component: StudentComponent },
+      { path: 'tutorForm', component: TutorComponent },
     ]),
   ],
-  providers: [],
+  providers: [StudentService, TutorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
