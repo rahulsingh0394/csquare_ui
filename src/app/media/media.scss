@@ -1,12 +1,8 @@
 .card-body {
     border: 1px solid #ccc;
-    text-align: center;
+    text-align: justify;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
-}
-
-.card-header {
-    border: 1px solid #ccc;
 }
 
 .title {
@@ -23,4 +19,22 @@
 .card-category {
     color: #f8591f !important;
     font-family: 'Montserrat', sans-serif;
+}
+
+.card-header {
+    border: 1px solid #ccc;
+}
+
+.rounded.mx-auto.d-block {
+    width: 60%;
+}
+
+a {
+    color: #f8591f !important;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+a:hover {
+    color: #06b7f1 !important;
 }

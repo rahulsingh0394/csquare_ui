@@ -1,7 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild, Input } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { NgbPopover } from '@ng-bootstrap/ng-bootstrap';
-import {NgbPopoverConfig} from '@ng-bootstrap/ng-bootstrap';
+import { NgbPopoverConfig } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModalComponent } from '../../shared/common-modal/common-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
     showLink: object;
 
     constructor(public location: Location,
-         private element : ElementRef,
+        private element: ElementRef,
         config: NgbPopoverConfig,
         private router: Router,
         private modalService: NgbModal) {
@@ -30,22 +30,22 @@ export class NavbarComponent implements OnInit {
     }
 
 
-  public changeGreeting(greeting: any): void {
-    
-    const isOpen = this.popover.isOpen();
-     ;
-    
-    if (isOpen == false) {
-      this.popover.close();
-      if (greeting !== this.greeting || !isOpen) {
-        this.greeting = greeting;
-        this.popover.open(greeting);
-      }
+    public changeGreeting(greeting: any): void {
+
+        const isOpen = this.popover.isOpen();
+        ;
+
+        if (isOpen == false) {
+            this.popover.close();
+            if (greeting !== this.greeting || !isOpen) {
+                this.greeting = greeting;
+                this.popover.open(greeting);
+            }
+        }
+        if (isOpen == true) {
+            this.popover.close();
+        }
     }
-    if (isOpen == true) {
-        this.popover.close();
-    }
-  }
 
     ngOnInit() {
         const navbar: HTMLElement = this.element.nativeElement;
@@ -55,7 +55,7 @@ export class NavbarComponent implements OnInit {
         const toggleButton = this.toggleButton;
         const html = document.getElementsByTagName('html')[0];
 
-        setTimeout(function(){
+        setTimeout(function () {
             toggleButton.classList.add('toggled');
         }, 500);
         html.classList.add('nav-open');
@@ -76,14 +76,14 @@ export class NavbarComponent implements OnInit {
         }
     };
 
-    refresh(){
-        if(this.showLink){
-           this.ngOnInit();
+    refresh() {
+        if (this.showLink) {
+            this.ngOnInit();
         }
     }
 
-    buttonClick(data: any){
+    buttonClick(data: any) {
         this.router.navigateByUrl(data);
     }
-    
+
 }

@@ -7,13 +7,13 @@
   </div>
   <div class="modal-body">
     {{modalContent}}
-   
+
   </div>
   <div class="modal-footer ">
     <div>
-    <button class="btn btn-primary confirm-btn" (click)="okModal()">Ok</button>
-     <!-- TODO: Need to handle two button -->
-    <button class="btn btn-danger confirm-btn" *ngIf="showHide" (click)="cancelModal()">Cancel</button>
+      <button class="btn btn-primary confirm-btn" (click)="okModal()">Ok</button>
+      <!-- TODO: Need to handle two button -->
+      <button class="btn btn-danger confirm-btn" *ngIf="showHide" (click)="cancelModal()">Cancel</button>
     </div>
   </div>
 </div>

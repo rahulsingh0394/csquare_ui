@@ -1,96 +1,108 @@
 <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="navbar-translate" routerLinkActive="active">              
-                        <img src="assets/img/cs-large.png" style="position: fixed!important; margin-top: -1.4em!important; height: 50px!important; width: 70px!important;" alt="home tuition bangalore, home tutor">                    
-            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
-                <span class="navbar-toggler-bar"></span>
-                <span class="navbar-toggler-bar"></span>
-                <span class="navbar-toggler-bar"></span>
-            </button>
-        </div>        
-        <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav ml-auto">
-                    <li class="nav-item" *ngIf=" home == true" routerLinkActive="active">                        
-                            <a [routerLink]="['/home']" class="nav-link">Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        </li> 
-                        <li class="nav-item" *ngIf=" studentForm == true" routerLinkActive="active">
-                            <a [routerLink]="['/studentForm']" class="nav-link">Get Tutor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                        <li class="nav-item" *ngIf=" tutorForm == true" routerLinkActive="active">
-                            <a [routerLink]="['/tutorForm']" class="nav-link">Be Tutor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                    <li class="nav-item" *ngIf=" about == true" routerLinkActive="active">
-                            <a [routerLink]="['/about']" class="nav-link">About Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        </li> 
-                    <li class="nav-item" *ngIf=" blog == true">
-                        <a target="_blank" href="https://csquareeducation.com/blog/" target="_blank" class="nav-link">Blog &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        </li> 
-                    <li class="nav-item" *ngIf=" question == true" routerLinkActive="active">
-                            <a [routerLink]="['/question']" class="nav-link">Question Paper &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        </li>                
-                <li class="nav-item" *ngIf=" payment == true">
-                    <a href="https://www.payumoney.com/paybypayumoney/#/293697" class="nav-link" target="_blank">
-                        <!-- <i class="fa fa-github"></i> -->
-                        Payment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <!-- <p class="d-lg-none">Payment</p> -->
-                    </a>
-                </li>
-                <li class="nav-item" *ngIf=" contact == true" routerLinkActive="active">
-                        <a [routerLink]="['/contact']" class="nav-link">Contact Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                    </li> 
-                <!-- <li class="nav-item" *ngIf="isHome()">
+    <div class="navbar-translate" routerLinkActive="active">
+        <img src="assets/img/cs-large.png" style="position: fixed!important; margin-top: -1.4em!important; height: 50px!important; width: 70px!important;"
+            alt="home tuition bangalore, home tutor">
+        <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02"
+            aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+            <span class="navbar-toggler-bar"></span>
+            <span class="navbar-toggler-bar"></span>
+            <span class="navbar-toggler-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" *ngIf=" home == true" routerLinkActive="active">
+                <a [routerLink]="['/home']" class="nav-link">Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item" *ngIf=" studentForm == true" routerLinkActive="active">
+                <a [routerLink]="['/studentForm']" class="nav-link">Get Tutor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item" *ngIf=" tutorForm == true" routerLinkActive="active">
+                <a [routerLink]="['/tutorForm']" class="nav-link">Be Tutor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item" *ngIf=" about == true" routerLinkActive="active">
+                <a [routerLink]="['/about']" class="nav-link">About Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item" *ngIf=" blog == true">
+                <a target="_blank" href="https://csquareeducation.com/blog/" target="_blank" class="nav-link">Blog &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item" *ngIf=" question == true" routerLinkActive="active">
+                <a [routerLink]="['/question']" class="nav-link">Question Paper &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item" *ngIf=" payment == true">
+                <a href="https://www.payumoney.com/paybypayumoney/#/293697" class="nav-link" target="_blank">
+                    <!-- <i class="fa fa-github"></i> -->
+                    Payment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <!-- <p class="d-lg-none">Payment</p> -->
+                </a>
+            </li>
+            <li class="nav-item" *ngIf=" contact == true" routerLinkActive="active">
+                <a [routerLink]="['/contact']" class="nav-link">Contact Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <!-- <li class="nav-item" *ngIf="isHome()">
                     <a href="https://www.creative-tim.com/product/paper-kit-2-pro?ref=pk2-free-local" target="_blank" class="btn btn-danger btn-round disabled">Upgrade to Pro</a>
                 </li> -->
-                <li class="nav-item" *ngIf=" signup == true" routerLinkActive="active">
-                    <a [routerLink]="['/signup']" class="nav-link">Sign In / Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </li>  
-                <!-- <li class="nav-item" routerLinkActive="active">
+            <li class="nav-item" *ngIf=" signup == true" routerLinkActive="active">
+                <a [routerLink]="['/signup']" class="nav-link">Sign In / Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li>
+            <!-- <li class="nav-item" routerLinkActive="active">
                     <a [routerLink]="['/signup']" class="nav-link">Sign In / Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </li>    -->
-                <!-- <li class="nav-item" routerLinkActive="active" style="margin-right:5em!important;">
+            <!-- <li class="nav-item" routerLinkActive="active" style="margin-right:5em!important;">
                     <a role="button" class="nav-link" placement="bottom" aria-expanded="true"
                     ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Popover on bottom">
                     <img src="assets/img/he.jpg" class="img-circle" style="position: fixed!important; height: 30px!important; width: 30px!important;" alt="User">                    
                 </a>
                  </li>          -->
-                 <li class="nav-item" *ngIf=" lead == true" routerLinkActive="active">                        
-                    <a role="button" class="nav-link" (click)="buttonClick('/lead')">Lead &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                </li> 
-                <li class="nav-item" *ngIf=" userManagement == true" routerLinkActive="active">
-                    <a role="button" class="nav-link" (click)="buttonClick('/userManagement')">User Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                </li>
-                <li class="nav-item" *ngIf=" studentManagement == true" routerLinkActive="active">
-                    <a role="button" class="nav-link" (click)="buttonClick('/studentManagement')">Student Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                </li>
+            <li class="nav-item" *ngIf=" lead == true" routerLinkActive="active">
+                <a role="button" class="nav-link" (click)="buttonClick('/lead')">Lead &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item" *ngIf=" userManagement == true" routerLinkActive="active">
+                <a role="button" class="nav-link" (click)="buttonClick('/userManagement')">User Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item" *ngIf=" studentManagement == true" routerLinkActive="active">
+                <a role="button" class="nav-link" (click)="buttonClick('/studentManagement')">Student Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
             <li class="nav-item" *ngIf=" tutorManagement == true" routerLinkActive="active">
-                    <a role="button" class="nav-link" (click)="buttonClick('/tutorManagement')">Tutor Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                </li> 
+                <a role="button" class="nav-link" (click)="buttonClick('/tutorManagement')">Tutor Management &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
             <li class="nav-item" *ngIf=" tutorSearch == true">
                 <a role="button" class="nav-link" (click)="buttonClick('/tutorSearch')">Tutor Search &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                </li> 
+            </li>
             <li class="nav-item" *ngIf=" tutorSearch == true">
                 <a role="button" class="nav-link" (click)="buttonClick('/userContact')">User Contact &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                </li> 
-                 <li class="nav-item" *ngIf=" profile == true" routerLinkActive="active">
-                    <a role="button" style="border:none!important; margin-top:.1em!important;margin-right: 2em!important;" class="btn btn-outline-secondary" (click)="changeGreeting({ greeting: 'Bonjour' })">
-                        <img src="{{userPic}}" class="img-circle" style="position: fixed!important; height: 40px!important; width: 40px!important;" alt="User">                    
-                    </a><br>
-                   <p> <strong [ngbPopover]="popContent" container="body" popoverTitle="Welcome" placement="bottom" #p="ngbPopover" triggers="manual"  style="position:fixed!important;margin:-5em!important; margin-top:1em!important;"></strong></p>
-                 </li>
-                <ng-template #popContent let-greeting="greeting">
-                    <div class="info">
-                        <div class="row" style="border-top: 1px solid rgb(187, 187, 187);border-bottom: 1px solid rgb(187, 187, 187); margin-bottom: 1em!important;">
-                            <div class="col-md-4" style="margin-top:1em!important;">
-                                    <img src="{{userPic}}" style="border-radius:50%!important; height: 80px!important; width: 80px!important;margin-bottom: 1em!important;" alt="User">                    
-                            </div>
-                            <div class="col-md-8" style="text-align:left;">
-                                <h4 style="font-size:.9em!important; font-weight:bold!important;margin-top:1em!important;">{{userName}}</h4><br>
-                                <p style="font-size:.9em!important;">{{userEmail}}</p><br>
-                            </div>
+            </li>
+            <li class="nav-item" *ngIf=" profile == true" routerLinkActive="active">
+                <a role="button" style="border:none!important; margin-top:.1em!important;margin-right: 2em!important;" class="btn btn-outline-secondary"
+                    (click)="changeGreeting({ greeting: 'Bonjour' })">
+                    <img src="{{userPic}}" class="img-circle" style="position: fixed!important; height: 40px!important; width: 40px!important;"
+                        alt="User">
+                </a>
+                <br>
+                <p>
+                    <strong [ngbPopover]="popContent" container="body" popoverTitle="Welcome" placement="bottom" #p="ngbPopover"
+                        triggers="manual" style="position:fixed!important;margin:-5em!important; margin-top:1em!important;"></strong>
+                </p>
+            </li>
+            <ng-template #popContent let-greeting="greeting">
+                <div class="info">
+                    <div class="row" style="border-top: 1px solid rgb(187, 187, 187);border-bottom: 1px solid rgb(187, 187, 187); margin-bottom: 1em!important;">
+                        <div class="col-md-4" style="margin-top:1em!important;">
+                            <img src="{{userPic}}" style="border-radius:50%!important; height: 80px!important; width: 80px!important;margin-bottom: 1em!important;"
+                                alt="User">
                         </div>
-                        <button class="btn btn-primary" style="background-color:rgb(85, 160, 247); border:none!important; color:black;" (click)="buttonClick('/studentManagement')">My Account</button>
-                        <button class="btn btn-primary" style="background-color:rgb(85, 160, 247); border:none!important; color:black;" (click)="logout()">Sign Out</button>
-                    </div></ng-template>
-            </ul>
-        </div>
-    
+                        <div class="col-md-8" style="text-align:left;">
+                            <h4 style="font-size:.9em!important; font-weight:bold!important;margin-top:1em!important;">{{userName}}</h4>
+                            <br>
+                            <p style="font-size:.9em!important;">{{userEmail}}</p>
+                            <br>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="background-color:rgb(85, 160, 247); border:none!important; color:black;" (click)="buttonClick('/studentManagement')">My Account</button>
+                    <button class="btn btn-primary" style="background-color:rgb(85, 160, 247); border:none!important; color:black;" (click)="logout()">Sign Out</button>
+                </div>
+            </ng-template>
+        </ul>
+    </div>
+
 </nav>
