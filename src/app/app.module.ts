@@ -59,6 +59,7 @@ import { TutorService } from './tutorForm/tutor.service';
       { path: 'tutorForm', component: TutorComponent },
       { path: 'terms', loadChildren: './terms/terms.module#TermsModule'},
       { path: 'tutors-review', loadChildren: './tutors/tutors.module#TutorsModule' },
+      { path: 'admin-app',      loadChildren: './admin-app/admin-app.module#AdminAppModule' },
     ]),
   ],
   providers: [StudentService, TutorService],

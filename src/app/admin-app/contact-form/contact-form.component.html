@@ -1,0 +1,20 @@
+<!-- <div class="page-header" style="background-image:linear-gradient(
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+     ), url('assets/img/1.gif')">
+            <div class="container"> -->
+<app-loggedInNavbar [sessionId]="sessionId"></app-loggedInNavbar>
+<div class="section text-center" style="background-color: rgb(255, 255, 255)!important;">
+    <div class="col-md-11 mr-auto ml-auto">
+        <div class="card card-header title">
+            User Contact Through Website
+        </div>
+        <div class="card-body bg-transparent">
+            <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+            <ng2-smart-table [settings]="settings" [source]="source" *ngIf="source" (delete)="onDeleteConfirm($event)"></ng2-smart-table>
+        </div>
+    </div>
+</div>
+
+<!-- </div>
+              </div> -->

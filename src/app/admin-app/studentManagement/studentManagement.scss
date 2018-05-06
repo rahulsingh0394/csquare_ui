@@ -1,0 +1,42 @@
+.row {
+    margin-top: 5em;
+    padding: 0 2em 0 2em;
+}
+
+.card-body {
+    border: 1px solid #ccc;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-header {
+    border: 1px solid #ccc;
+    font-size: 2em;
+    color: #f8591f;
+    text-align: center;
+}
+
+.title {
+    color: #f8591f !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+:host /deep/ ng2-smart-table thead,
+:host /deep/ ng2-smart-table tbody,
+:host /deep/ ng2-smart-table tr,
+:host /deep/ ng2-smart-table td,
+:host /deep/ ng2-smart-table th {
+    border-collapse: collapse !important;
+    border: 1px solid #5da6fa !important;
+}
+
+:host /deep/ ng2-smart-table tr.ng2-smart-titles {
+    background-color: rgb(235, 235, 235) !important;
+}
+
+:host /deep/ ng2-smart-table a.ng2-smart-sort-link.sort {
+    font-weight: bold !important;
+    color: #070000 !important;
+}

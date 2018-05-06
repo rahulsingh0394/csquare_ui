@@ -1,0 +1,22 @@
+<!-- <div class="page-header" style="background-image:linear-gradient(
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+     ), url('assets/img/1.gif')">
+            <div class="container"> -->
+<app-loggedInNavbar [sessionId]="sessionId"></app-loggedInNavbar>
+<div class="section text-center" style="background-color: rgb(255, 255, 255)!important;">
+        <div class="col-md-11 mr-auto ml-auto">
+                <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+                <div class="card-body" style="text-align:left!important;">
+
+                        <div class="card card-header title">
+                                All Students's
+                        </div>
+                </div>
+                <div class="card-body bg-transparent">
+                        <ng2-smart-table [settings]="settings" [source]="source" (create)="handleCreate()" (edit)="handleEdit($event)" (delete)="onDeleteConfirm($event)"></ng2-smart-table>
+                </div>
+        </div>
+</div>
+<!-- </div>
+                        </div> -->

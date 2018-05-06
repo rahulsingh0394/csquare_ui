@@ -1,0 +1,359 @@
+<!-- <div class="page-header" style="background-image:linear-gradient(
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+     ), url('assets/img/1.gif')">
+            <div class="container"> -->
+<app-loggedInNavbar [sessionId]="sessionId"></app-loggedInNavbar>
+<div class="section text-center" style="background-color: rgb(255, 255, 255)!important;">
+        <div class="col-md-11 mr-auto ml-auto">
+                <div class="card card-header title">
+                        Edit Student for futher process
+                </div>
+                <div class="card-body bg-transparent">
+                        <button type="button" style="float:right;" class="btn btn-primary btn-round" (click)="back('/studentManagement')">Back</button><br>
+                                <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+                                <form [formGroup]="studentManagementForm">
+                                        <div class="row">
+                                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!firstName.valid && firstName.touched)), 'has-success': (firstName.valid && firstName.touched)}">
+                                                        <label for="firstName">First Name</label>
+                                                        <input type="text" class="form-control" formControlName="firstName" id="firstName">
+
+                                                        <small *ngIf="(!firstName.valid && firstName.touched)" class="text-danger">
+                                                                First Name is required.
+                                                        </small>
+                                                </div>
+                                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!lastName.valid && lastName.touched)), 'has-success': (lastName.valid && lastName.touched)}">
+                                                        <label for="lastName">Last Name</label>
+                                                        <input type="text" class="form-control" formControlName="lastName" id="lastName">
+                                                        <small *ngIf="(!lastName.valid && lastName.touched)" class="text-danger">
+                                                                Last Name is required.
+                                                        </small>
+                                                </div>
+                                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!phone.valid && phone.touched)), 'has-success': (phone.valid && phone.touched)}">
+                                                        <label for="phone">Phone</label>
+                                                        <input type="text" class="form-control" formControlName="phone" id="phone">
+                                                        <div *ngIf="(!phone.valid && phone.touched)" class="text-danger">
+                                                                <small *ngIf="phone.errors.required">
+                                                                        Phone is required.
+                                                                </small>
+                                                                <small *ngIf="phone.errors.pattern">
+                                                                        Phone must be a number.
+                                                                </small>
+                                                                <small *ngIf="phone.errors.minlength">
+                                                                        Phone must be at least 10.
+                                                                </small>
+                                                                <small *ngIf="phone.errors.maxlength">
+                                                                        Phone must not be greater than 10.
+                                                                </small>
+                                                        </div>
+                                                </div>
+                                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!gender.valid && gender.touched)), 'has-success': (gender.valid && gender.touched)}">
+                                                        <label for="gender">Gender</label>
+                                                        <select type="text" class="form-control" formControlName="gender" id="gender">
+                                                                <option value="" hidden>Gender</option>
+                                                                <option value="Male">Male</option>
+                                                                <option vlaue="Female">Female</option>
+                                                        </select>
+                                                        <small *ngIf="(!gender.valid && gender.touched)" class="text-danger">
+                                                                Gender is required.
+                                                        </small>
+                                                </div>
+                                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!email.valid && email.touched)), 'has-success': (email.valid && email.touched)}">
+                                                        <label for="email">Email</label>
+                                                        <input type="text" class="form-control" formControlName="email" id="email">
+                                                        <small *ngIf="(!email.valid && email.touched)" class="text-danger">
+                                                                Email is required.
+                                                        </small>
+                                                </div>
+                                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!city.valid && city.touched)), 'has-success': (city.valid && city.touched)}">
+                                                        <label for="city">City</label>
+                                                        <select type="text" class="form-control" formControlName="city" id="city">
+                                                                <option value="" hidden>City</option>
+                                                                <option *ngFor="let list of cityList" [value]="list.pK">{{list.city_name}}</option>
+                                                        </select>
+                                                        <small *ngIf="(!city.valid && city.touched)" class="text-danger">
+                                                                City is required.
+                                                        </small>
+                                                </div>
+                                                <div class="form-group col-sm-4">
+                                                        <label for="locationName">Location</label>
+                                                        <input id="test" type="text" class="form-control" [formControl]="locationName" id="locationName" [ngbTypeahead]="search"
+                                                                placeholder="Location" />
+                                                        <small *ngIf="(!locationName.valid && locationName.touched)" class="text-danger">
+                                                                Location is required
+                                                        </small>
+                                                </div>
+                                                <input type="hidden" formControlName="location" class="form-control" id="location">
+                                        </div>
+                                        <ngb-tabset type="pills">
+                                                <ngb-tab>
+                                                        <ng-template ngbTabTitle>
+                                                                <b>General Information</b>
+                                                        </ng-template>
+                                                        <ng-template ngbTabContent>
+                                                                <div class="row" style="margin:1em!important;padding:1em!important; border: 1px dotted black;">
+                                                                        <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!parentName.valid && parentName.touched)), 'has-success': (parentName.valid && parentName.touched)}">
+                                                                                <label for="parentName">Parent Name</label>
+                                                                                <input type="text" class="form-control" formControlName="parentName" id="parentName">
+
+                                                                                <small *ngIf="(!parentName.valid && parentName.touched)" class="text-danger">
+                                                                                        Parent Name is required.
+                                                                                </small>
+                                                                        </div>
+
+                                                                        <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!studentRecordOwner.valid && studentRecordOwner.touched)), 'has-success': (studentRecordOwner.valid && studentRecordOwner.touched)}">
+                                                                                <label for="studentRecordOwner">Student Record Owner</label>
+                                                                                <input type="text" class="form-control" formControlName="studentRecordOwner" id="studentRecordOwner">
+
+                                                                                <small *ngIf="(!studentRecordOwner.valid && studentRecordOwner.touched)" class="text-danger">
+                                                                                        Student Record Owner is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!sourceOfLead.valid && sourceOfLead.touched)), 'has-success': (sourceOfLead.valid && sourceOfLead.touched)}">
+                                                                                <label for="sourceOfLead">Source Of Lead</label>
+                                                                                <select class="form-control" formControlName="sourceOfLead" id="sourceOfLead">
+                                                                                        <option value="" hidden>Source Of Lead</option>
+                                                                                        <option value="WebSite ">WebSite </option>
+                                                                                        <option value="Phone ">Phone </option>
+                                                                                        <option value="Google ">Google </option>
+                                                                                        <option value="Ad-World ">Ad-World </option>
+                                                                                        <option value="Urban Clap ">Urban Clap </option>
+                                                                                        <option value="Urban Pro ">Urban Pro </option>
+                                                                                        <option value="Just Dial ">Just Dial </option>
+                                                                                        <option value="Direct ">Direct </option>
+                                                                                        <option value="Reference ">Reference </option>
+                                                                                        <option value="Other ">Other </option>
+                                                                                </select>
+
+                                                                                <small *ngIf="(!sourceOfLead.valid && sourceOfLead.touched)" class="text-danger">
+                                                                                        Source Of Lead is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!syllabus.valid && syllabus.touched)), 'has-success': (syllabus.valid && syllabus .touched)}">
+                                                                                <label for="syllabus">Syllabus Preffered</label>
+                                                                                <select class="form-control" formControlName="syllabus" id="syllabus">
+                                                                                        <option value="" hidden>Syllabus</option>
+                                                                                        <option *ngFor="let item of syllabusList" [value]="item.pk">{{item.syllabus_name}}</option>
+                                                                                </select>
+                                                                                <small *ngIf="(!syllabus.valid && syllabus.touched)" class="text-danger">
+                                                                                        Syllabus is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!grade.valid && grade.touched)), 'has-success': (grade.valid && grade.touched)}">
+                                                                                <label for="grade">Grade</label>
+                                                                                <select class="form-control" formControlName="grade" id="grade">
+                                                                                        <option value="" hidden>Grade</option>
+                                                                                        <option *ngFor="let item of gradeList | sortBy : 'sortorder'" [value]="item.pk">{{item.grade}}</option>
+                                                                                </select>
+                                                                                <small *ngIf="(!grade.valid && grade.touched)" class="text-danger">
+                                                                                        Grade is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!subjects.valid && subjects.touched)), 'has-success': (subjects.valid && subjects.touched)}">
+                                                                                <label for="subjects">Preffered Subjects</label>
+                                                                                <angular2-multiselect [data]="subjectDis" class="form-control" formControlName="subjects" id="subjects" [(ngModel)]="selectedItems"
+                                                                                        [settings]="settings" (onSelect)="onItemSelect($event)"
+                                                                                        (onDeSelect)="OnItemDeSelect($event)">
+                                                                                </angular2-multiselect>
+                                                                                <small *ngIf="(!subjects.valid && subjects.touched)" class="text-danger">
+                                                                                        Subjects are required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!address.valid && address.touched)), 'has-success': (address.valid && address.touched)}">
+                                                                                <label for="address">Address</label>
+                                                                                <textarea type="text" class="form-control" formControlName="address" id="address" rows="2">
+                                                                                </textarea>
+                                                                                <small *ngIf="(!address.valid && address.touched)" class="text-danger">
+                                                                                        Address is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-6">
+                                                                                <label for="comment">Comment</label>
+                                                                                <textarea type="text" class="form-control" rows="2" formControlName="comment" id="comment">
+                                                                                </textarea>
+                                                                        </div>
+                                                                </div>
+                                                        </ng-template>
+                                                </ngb-tab>
+                                                <ngb-tab>
+                                                        <ng-template ngbTabTitle>
+                                                                <b>Course Information</b>
+                                                        </ng-template>
+                                                        <ng-template ngbTabContent>
+                                                                <div class="row" style="margin:1em!important;padding:1em!important; border: 1px dotted black;">
+                                                                        <div class="col-md-3">
+                                                                                <label class="checkbox-inline" for="existingClient">
+                                                                                        <input type="checkbox" [formControl]="existingClient" id="existingClient">&nbsp;&nbsp;Existing Client
+                                                                                </label>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                                <label class="checkbox-inline" for="isHold">
+                                                                                        <input type="checkbox" [formControl]="isHold" id="isHold">&nbsp;&nbsp;Is Hold?
+                                                                                </label>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                                <label class="checkbox-inline" for="interested">
+                                                                                        <input type="checkbox" [formControl]="interested" id="interested">&nbsp;&nbsp;Interested
+                                                                                </label>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                                <label class="checkbox-inline" for="notInterested">
+                                                                                        <input type="checkbox" [formControl]="notInterested" id="notInterested">&nbsp;&nbsp;Not Interested
+                                                                                </label>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                                <label class="checkbox-inline" for="demoRequired">
+                                                                                        <input type="checkbox" [formControl]="demoRequired" id="demoRequired">&nbsp;&nbsp;Demo Required?
+                                                                                </label>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                                <label class="checkbox-inline" for="converted">
+                                                                                        <input type="checkbox" [formControl]="converted" id="converted">&nbsp;&nbsp;Converted
+                                                                                </label>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                                <label class="checkbox-inline" for="requiredFollowUp">
+                                                                                        <input type="checkbox" [formControl]="requiredFollowUp" id="requiredFollowUp">&nbsp;&nbsp;Required Follow Up?
+                                                                                </label>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                                <label class="checkbox-inline" for="isStopped">
+                                                                                        <input type="checkbox" [formControl]="isStopped" id="isStopped">&nbsp;&nbsp;Is Home Tuition Stopped?
+                                                                                </label>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-3" [ngClass]="{'has-error': ((!demoDate.valid && demoDate.touched)), 'has-success': (demoDate.valid && demoDate.touched)}">
+                                                                                <label for="demoDate">Demo Date</label>
+                                                                                <input type="date" class="form-control" formControlName="demoDate" id="demoDate">
+                                                                                <small *ngIf="(!demoDate.valid && demoDate.touched)" class="text-danger">
+                                                                                        Demo Date is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-3" [ngClass]="{'has-error': ((!enrollmentDate.valid && enrollmentDate.touched)), 'has-success': (enrollmentDate.valid && enrollmentDate.touched)}">
+                                                                                <label for="enrollmentDate">Enrollment Date</label>
+                                                                                <input type="date" class="form-control" formControlName="enrollmentDate" id="enrollmentDate">
+                                                                                <small *ngIf="(!enrollmentDate.valid && enrollmentDate.touched)" class="text-danger">
+                                                                                        Enrollment Date is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-3" [ngClass]="{'has-error': ((!followUpDate.valid && followUpDate.touched)), 'has-success': (followUpDate.valid && followUpDate.touched)}">
+                                                                                <label for="followUpDate">Follow Up Date</label>
+                                                                                <input type="date" class="form-control" formControlName="followUpDate" id="followUpDate">
+                                                                                <small *ngIf="(!followUpDate.valid && followUpDate.touched)" class="text-danger">
+                                                                                        Follow Up Date is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-3" [ngClass]="{'has-error': ((!stoppedDate.valid && stoppedDate.touched)), 'has-success': (stoppedDate.valid && stoppedDate.touched)}">
+                                                                                <label for="stoppedDate">Home Tuition Stopped Date</label>
+                                                                                <input type="date" class="form-control" formControlName="stoppedDate" id="stoppedDate">
+                                                                                <small *ngIf="(!stoppedDate.valid && stoppedDate.touched)" class="text-danger">
+                                                                                        Stopped Date is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-3" [ngClass]="{'has-error': ((!callPreferredTime.valid && callPreferredTime.touched)), 'has-success': (callPreferredTime.valid && callPreferredTime.touched)}">
+                                                                                <label for="callPreferredTime">Call Preferred Time</label>
+                                                                                <input type="text" class="form-control" formControlName="callPreferredTime" id="callPreferredTime">
+                                                                                <small *ngIf="(!callPreferredTime.valid && callPreferredTime.touched)" class="text-danger">
+                                                                                        Call Preferred Time is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <label class="checkbox-inline" style="margin-right: 2em!important;" for="pendingForConversion">
+                                                                                <input type="checkbox" [formControl]="pendingForConversion" id="pendingForConversion">&nbsp;&nbsp;Pending For Conversion
+                                                                        </label>
+                                                                        <label class="checkbox-inline" style="margin-right: 2em!important;" for="parentAgreementStatus">
+                                                                                <input type="checkbox" [formControl]="parentAgreementStatus" id="parentAgreementStatus">&nbsp;&nbsp;Parent Agreement Status
+                                                                        </label>
+                                                                        <label class="checkbox-inline" style="margin-right: 2em!important;" for="tutorAgreementStatus">
+                                                                                <input type="checkbox" [formControl]="tutorAgreementStatus" id="tutorAgreementStatus">&nbsp;&nbsp;Tutor Agreement Status
+                                                                        </label>
+                                                                        <label class="checkbox-inline" style="margin-right: 2em!important;" for="parentsDocStatus">
+                                                                                <input type="checkbox" [formControl]="parentsDocStatus" id="parentsDocStatus">&nbsp;&nbsp;Parent Document Submitted?
+                                                                        </label>
+                                                                </div>
+                                                        </ng-template>
+                                                </ngb-tab>
+                                                <ngb-tab>
+                                                        <ng-template ngbTabTitle>
+                                                                <b>Price Information</b>
+                                                        </ng-template>
+                                                        <ng-template ngbTabContent>
+                                                                <div class="row" style="margin:1em!important;padding:1em!important; border: 1px dotted black;">
+                                                                        <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!packageInHrs.valid && packageInHrs.touched)), 'has-success': (packageInHrs.valid && packageInHrs.touched)}">
+                                                                                <label for="packageInHrs">Package In Hrs</label>
+                                                                                <input type="text" class="form-control" formControlName="packageInHrs" id="packageInHrs">
+                                                                                <small *ngIf="(!packageInHrs.valid && packageInHrs.touched)" class="text-danger">
+                                                                                        Package In Hrs is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!hourlyRate.valid && hourlyRate.touched)), 'has-success': (hourlyRate.valid && hourlyRate.touched)}">
+                                                                                <label for="hourlyRate">Hourly Rate</label>
+                                                                                <input type="text" class="form-control" formControlName="hourlyRate" id="hourlyRate">
+                                                                                <small *ngIf="(!hourlyRate.valid && hourlyRate.touched)" class="text-danger">
+                                                                                        Hourly Rate is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!registrationFee.valid && registrationFee.touched)), 'has-success': (registrationFee.valid && registrationFee.touched)}">
+                                                                                <label for="registrationFee">Registration Fee</label>
+                                                                                <input type="text" class="form-control" formControlName="registrationFee" id="registrationFee">
+                                                                                <small *ngIf="(!registrationFee.valid && registrationFee.touched)" class="text-danger">
+                                                                                        Registration Fee is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!studentTotalFee.valid && studentTotalFee.touched)), 'has-success': (studentTotalFee.valid && studentTotalFee.touched)}">
+                                                                                <label for="studentTotalFee">Student Total Fee</label>
+                                                                                <input type="text" class="form-control" formControlName="studentTotalFee" id="studentTotalFee">
+                                                                                <small *ngIf="(!studentTotalFee.valid && studentTotalFee.touched)" class="text-danger">
+                                                                                        Student Total Fee is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!tutionRequiredForMonths.valid && tutionRequiredForMonths.touched)), 'has-success': (tutionRequiredForMonths.valid && tutionRequiredForMonths.touched)}">
+                                                                                <label for="tutionRequiredForMonths">Tution Required For Months</label>
+                                                                                <input type="text" class="form-control" formControlName="tutionRequiredForMonths" id="tutionRequiredForMonths">
+                                                                                <small *ngIf="(!tutionRequiredForMonths.valid && tutionRequiredForMonths.touched)" class="text-danger">
+                                                                                        Tution Required For Months is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!csquareIncome.valid && csquareIncome.touched)), 'has-success': (csquareIncome.valid && csquareIncome.touched)}">
+                                                                                <label for="csquareIncome">Csquare Income In %</label>
+                                                                                <input type="text" class="form-control" formControlName="csquareIncome" id="csquareIncome">
+                                                                                <small *ngIf="(!csquareIncome.valid && csquareIncome.touched)" class="text-danger">
+                                                                                        Csquare Income For Months is required.
+                                                                                </small>
+                                                                        </div>
+                                                                        <label class="checkbox-inline" style="margin-right: 2em!important;" for="isRegistrationPaid">
+                                                                                <input type="checkbox" [formControl]="isRegistrationPaid" id="isRegistrationPaid">&nbsp;&nbsp;Is Registration Amount Paid?
+                                                                        </label>
+                                                                </div>
+                                                        </ng-template>
+                                                </ngb-tab>
+                                                <ngb-tab>
+                                                        <ng-template ngbTabTitle>
+                                                                <b>Assign Tutor To Student</b>
+                                                        </ng-template>
+                                                        <ng-template ngbTabContent>
+                                                                <br>
+                                                                <br>
+                                                                <br>
+                                                                <button class="btn btn-success btn-round" (click)="routeToTutorSearch('/studentTutorAssign')">Tutor Search</button>
+                                                                <br>
+                                                                <br>
+                                                                <br>
+                                                                <ng2-smart-table [settings]="settings" [source]="source" (create)="handleCreate($event)" (edit)="handleEdit($event)" (delete)="onDeleteConfirm($event)"></ng2-smart-table>
+                                                                <br>
+                                                                <br>
+                                                                <br>
+                                                        </ng-template>
+                                                </ngb-tab>
+                                        </ngb-tabset>
+                                        <div class="row">
+                                                <div class="col-md-6" routerLinkActive="active">
+                                                        <button class="btn btn-success btn-round" (click)="submit()">Submit</button>
+                                                        <!-- <button class="btn btn-primary btn-round" (click)="cancel()">Reset</button>                                               -->
+                                                        <button class="btn btn-danger btn-round" (click)="back('/studentManagement')">Cancel</button>
+                                                </div>
+                                        </div>
+                                </form>
+                </div>
+        </div>
+</div>
+<!-- </div>
+</div> -->
