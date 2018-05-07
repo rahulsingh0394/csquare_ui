@@ -48,6 +48,7 @@ import { TutorService } from './tutorForm/tutor.service';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'about', loadChildren: './about/about.module#AboutModule' },
+      { path: 'bangalore', loadChildren: './bangalore/bangalore.module#BangaloreModule' },
       { path: 'contact', loadChildren: './contact/contact.module#ContactModule' },
       { path: 'careers', loadChildren: './careers/careers.module#CareersModule' },
       { path: 'media', loadChildren: './media/media.module#MediaModule' },
