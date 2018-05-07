@@ -1,0 +1,35 @@
+.btn {
+  margin-right: 20px;
+  padding: 0 5em 0 1em;
+  text-align: left;
+}
+
+//Add a comment to this line
+.modal-content {
+  color: black;
+  background-color: rgb(248, 248, 248);
+  text-align: center;
+  width: 100%;
+}
+
+.modal-footer {
+  padding: 1em 0 1em 2em;
+}
+
+:host /deep/ ng2-smart-table thead,
+:host /deep/ ng2-smart-table tbody,
+:host /deep/ ng2-smart-table tr,
+:host /deep/ ng2-smart-table td,
+:host /deep/ ng2-smart-table th {
+  border-collapse: collapse !important;
+  border: 1px solid #5da6fa !important;
+}
+
+:host /deep/ ng2-smart-table tr.ng2-smart-titles {
+  background-color: rgb(235, 235, 235) !important;
+}
+
+:host /deep/ ng2-smart-table a.ng2-smart-sort-link.sort {
+  font-weight: bold !important;
+  color: #070000 !important;
+}

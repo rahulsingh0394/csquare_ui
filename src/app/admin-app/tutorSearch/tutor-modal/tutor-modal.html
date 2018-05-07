@@ -1,0 +1,19 @@
+<div class="modal-content" style="height: 500px!important;width: 1000px!important;margin:-2em -2em -2em -2em!important;">
+  <div class="modal-header">
+    <h4 class="modal-title">{{modalHeader}}: {{name}}</h4>
+    <button class="close" aria-label="Close" (click)="cancelModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <ng2-smart-table [settings]="settings" [source]="source" (delete)="onDeleteConfirm($event)"></ng2-smart-table>
+
+  </div>
+  <div class="modal-footer ">
+    <div>
+      <button class="btn btn-primary confirm-btn" (click)="okModal()">Ok</button>
+      <!-- TODO: Need to handle two button -->
+      <button class="btn btn-danger confirm-btn" (click)="cancelModal()">Cancel</button>
+    </div>
+  </div>
+</div>

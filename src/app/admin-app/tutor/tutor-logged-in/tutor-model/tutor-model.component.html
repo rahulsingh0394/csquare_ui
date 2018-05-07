@@ -1,0 +1,83 @@
+<div class="modal-content" style="height: 500px!important;width: 1000px!important;margin:-2em -2em -2em -2em!important;" *ngIf="attendenceTabClicked == false">
+  <div class="modal-header">
+    <h4 class="modal-title">Selected Student Details!</h4>
+    <button class="close" aria-label="Close" (click)="cancelModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="studentManagementForm">
+      <div class="row">
+              <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!firstName.valid && firstName.touched)), 'has-success': (firstName.valid && firstName.touched)}">
+                  <label for="firstName">First Name</label>
+                  <input type="text" class="form-control" formControlName="firstName" id="firstName">
+              </div>
+              <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!lastName.valid && lastName.touched)), 'has-success': (lastName.valid && lastName.touched)}">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" class="form-control" formControlName="lastName" id="lastName">
+              </div>
+              <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!phone.valid && phone.touched)), 'has-success': (phone.valid && phone.touched)}">
+                      <label for="phone">Phone</label>
+                      <input type="text" class="form-control" formControlName="phone" id="phone">
+                      </div>
+              <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!gender.valid && gender.touched)), 'has-success': (gender.valid && gender.touched)}">
+                      <label for="gender">Gender</label>
+                      <select type="text" class="form-control" formControlName="gender" id="gender">
+                          <option value="" hidden>Gender</option>
+                          <option value="Male">Male</option>
+                          <option vlaue="Female">Female</option>
+                      </select>
+                  </div>
+                  <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!email.valid && email.touched)), 'has-success': (email.valid && email.touched)}">
+                          <label for="email">Email</label>
+                          <input type="text" class="form-control" formControlName="email" id="email">
+                        
+                      </div>                                                 
+                  <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!city.valid && city.touched)), 'has-success': (city.valid && city.touched)}">
+                          <label for="city">City</label>
+                          <select type="text" class="form-control" formControlName="city" id="city">
+                              <option value="" hidden>City</option>
+                              <option *ngFor="let list of cityList" [value]="list.pK">{{list.city_name}}</option>
+                          </select>
+                       </div> 
+                       <div class="form-group col-sm-4">
+                          <label for="locationName">Location</label>
+                          <select type="text" class="form-control" formControlName="location" id="location">
+                            <option value="" hidden>location</option>
+                            <option *ngFor="let list of locationList" [value]="list.pk">{{list.location_name}}</option>
+                        </select>
+                       </div>
+                        </div>
+                  </form>
+  </div>
+  <div class="modal-footer ">
+    <div style="margin: 1em;">
+    <button class="btn btn-primary confirm-btn" (click)="okModal()">Ok</button>
+     <!-- TODO: Need to handle two button -->
+    <button class="btn btn-danger confirm-btn" *ngIf="showHide == true" (click)="cancelModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal-content"  *ngIf="attendenceTabClicked == true">
+        <div class="modal-header">
+          <h4 class="modal-title">Selected Student Attendence Details!</h4>
+          <button class="close" aria-label="Close" (click)="cancelModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" *ngIf="calendarOptions" style="background-color:lightblue">
+            <!-- <ng-fullcalendar #ucCalendar [options]="calendarOptions" (eventClick)="eventClick($event.detail)" (eventDrop)="updateEvent($event.detail)"
+            (eventResize)="updateEvent($event.detail)" (dayClick)="clickButton($event.detail)" ></ng-fullcalendar> -->
+        </div>
+        <div class="modal-footer ">
+          <div style="margin: 1em;">
+          <button class="btn btn-primary confirm-btn" (click)="okModal()">Ok</button>
+           <!-- TODO: Need to handle two button -->
+          <button class="btn btn-danger confirm-btn" *ngIf="showHide == true" (click)="cancelModal()">Cancel</button>
+          </div>
+        </div>
+      </div>
+      

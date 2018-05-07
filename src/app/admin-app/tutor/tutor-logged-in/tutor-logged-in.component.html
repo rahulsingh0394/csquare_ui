@@ -1,0 +1,420 @@
+<app-loggedInNavbar [sessionId]="sessionId"></app-loggedInNavbar>
+<div class="section text-center" style="background-color: rgb(255, 255, 255)!important;">
+    <div class="col-md-11 mr-auto ml-auto">
+        <div class="card card-header title">
+            Welcome {{name}}!
+        </div>
+        <div class="card-body">
+            <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+            <form [formGroup]="tutorManagementForm">
+                <ngb-tabset type="pills">
+                    <ngb-tab>
+                        <ng-template ngbTabTitle>
+                            <b>General Information</b>
+                        </ng-template>
+                        <ng-template ngbTabContent>
+                            <div class="card card-body" style="margin-top: 2em;">
+                                <div class="row">
+                                    <!-- <div class="col-md-12">
+                      I Am:
+                              <label class="checkbox-inline" for="isstudent">
+                                <input type="checkbox" [formControl]="isstudent" id="isstudent">&nbsp;&nbsp;Student/Parent
+                              </label>
+                              <label class="checkbox-inline" for="istutor">
+                                      <input type="checkbox" [formControl]="istutor" id="istutor">&nbsp;&nbsp;Tutor
+                                    </label>
+                      </div>       -->
+                                    <div class="col-md-6">
+                                        <div class="card card-body">
+                                            <div class="row row">
+                                                <div class="col-md-6">
+
+                                                    <img [src]="fileToUpload" class="img-thumbnail" style="position: fixed!important; height: 200px!important; width: 200px!important;"
+                                                        alt="User">
+
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="file" id="file" (change)="handleFileInput($event)">
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <button class="btn btn-success btn-round confirm-btn" (click)="upload()">Upload</button>
+
+                                                </div>
+                                                <div class="col-md-6 form-group" style="margin-top:200px;" [ngClass]="{'has-error': ((!firstName.valid && firstName.touched)), 'has-success': (firstName.valid && firstName.touched)}">
+                                                    <label for="firstName">First Name</label>
+                                                    <input type="text" class="form-control" formControlName="firstName" id="firstName">
+
+                                                    <small *ngIf="(!firstName.valid && firstName.touched)" class="text-danger">
+                                                        First Name is required.
+                                                    </small>
+                                                </div>
+                                                <div class="col-md-6 form-group" style="margin-top:200px;" [ngClass]="{'has-error': ((!lastName.valid && lastName.touched)), 'has-success': (lastName.valid && lastName.touched)}">
+                                                    <label for="lastName">Last Name</label>
+                                                    <input type="text" class="form-control" formControlName="lastName" id="lastName">
+                                                    <small *ngIf="(!lastName.valid && lastName.touched)" class="text-danger">
+                                                        Last Name is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card card-body">
+                                            <div class="row row">
+                                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!phone.valid && phone.touched)), 'has-success': (phone.valid && phone.touched)}">
+                                                    <label for="phone">Phone</label>
+                                                    <input type="text" class="form-control" formControlName="phone" id="phone">
+                                                    <div *ngIf="(!phone.valid && phone.touched)" class="text-danger">
+                                                        <small *ngIf="phone.errors.required">
+                                                            Phone is required.
+                                                        </small>
+                                                        <small *ngIf="phone.errors.pattern">
+                                                            Phone must be a number.
+                                                        </small>
+                                                        <small *ngIf="phone.errors.minlength">
+                                                            Phone must be at least 10.
+                                                        </small>
+                                                        <small *ngIf="phone.errors.maxlength">
+                                                            Phone must not be greater than 10.
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!gender.valid && gender.touched)), 'has-success': (gender.valid && gender.touched)}">
+                                                    <label for="gender">Gender</label>
+                                                    <select type="text" class="form-control" formControlName="gender" id="gender">
+                                                        <option value="" hidden>Gender</option>
+                                                        <option value="Male">Male</option>
+                                                        <option vlaue="Female">Female</option>
+                                                    </select>
+                                                    <small *ngIf="(!gender.valid && gender.touched)" class="text-danger">
+                                                        Gender is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                            <div class="row row">
+                                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!email.valid && email.touched)), 'has-success': (email.valid && email.touched)}">
+                                                    <label for="email">Email</label>
+                                                    <input type="text" class="form-control" formControlName="email" id="email">
+                                                    <small *ngIf="(!email.valid && email.touched)" class="text-danger">
+                                                        Email is required.
+                                                    </small>
+                                                </div>
+                                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!city.valid && city.touched)), 'has-success': (city.valid && city.touched)}">
+                                                    <label for="city">City</label>
+                                                    <select type="text" class="form-control" formControlName="city" id="city">
+                                                        <option value="" hidden>City</option>
+                                                        <option *ngFor="let list of cityList" [value]="list.value">{{list.title}}</option>
+                                                    </select>
+                                                    <small *ngIf="(!city.valid && city.touched)" class="text-danger">
+                                                        City is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+
+                                            <div class="row row">
+                                                <div class="form-group col-sm-6">
+                                                    <label for="locationName">Location</label>
+                                                    <input id="test" type="text" class="form-control" [formControl]="locationName" id="locationName" [ngbTypeahead]="search"
+                                                        placeholder="Location" />
+                                                    <small *ngIf="(!locationName.valid && locationName.touched)" class="text-danger">
+                                                        Location is required
+                                                    </small>
+                                                </div>
+                                                <input type="hidden" formControlName="location" class="form-control" id="location">
+                                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!address.valid && address.touched)), 'has-success': (address.valid && address.touched)}">
+                                                    <label for="address">Address</label>
+                                                    <textarea type="text" class="form-control" formControlName="address" id="address" rows="2">
+                                                    </textarea>
+                                                    <small *ngIf="(!address.valid && address.touched)" class="text-danger">
+                                                        Address is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button class="btn btn-primary btn-round" (click)="submit()">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab *ngIf="teachTab == true">
+                        <ng-template ngbTabTitle>
+                            <b>Teaching Information</b>
+                        </ng-template>
+                        <ng-template ngbTabContent>
+                            <div class="card card-body" style="margin-top: 2em;">
+                                <div class="row">
+                                    <div class="form-group col-sm-3" [ngClass]="{'has-error': ((!qualification.valid && qualification.touched)), 'has-success': (qualification.valid && qualification.touched)}">
+                                        <label for="qualification">Qualification</label>
+                                        <select class="form-control" formControlName="qualification" id="qualification">
+                                            <option *ngFor="let item of qualififcationList" [value]="item">{{item}}</option>
+                                        </select>
+                                        <small *ngIf="(!qualification.valid && qualification.touched)" class="text-danger">
+                                            Qualification is required.
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-sm-3" [ngClass]="{'has-error': ((!experience_in_years.valid && experience_in_years.touched)), 'has-success': (experience_in_years.valid && experience_in_years.touched)}">
+                                        <label for="experience_in_years">Experience</label>
+                                        <input type="text" class="form-control" formControlName="experience_in_years" id="experience_in_years">
+
+                                        <small *ngIf="(!experience_in_years.valid && experience_in_years.touched)" class="text-danger">
+                                            Experience is required.
+                                        </small>
+                                    </div>
+
+                                    <div class="form-group col-sm-3" [ngClass]="{'has-error': ((!prefferedTiming.valid && prefferedTiming.touched)), 'has-success': (prefferedTiming.valid && prefferedTiming.touched)}">
+                                        <label for="prefferedTiming">Preffered Timing</label>
+                                        <input type="text" class="form-control" formControlName="prefferedTiming" id="prefferedTiming">
+
+                                        <small *ngIf="(!prefferedTiming.valid && prefferedTiming.touched)" class="text-danger">
+                                            Preffered Timing is required.
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-sm-3" [ngClass]="{'has-error': ((!prefferedDays.valid && prefferedDays.touched)), 'has-success': (prefferedDays.valid && prefferedDays.touched)}">
+                                        <label for="prefferedDays">Preffered Days</label>
+                                        <select class="form-control" formControlName="prefferedDays" id="prefferedDays">
+                                            <option value="mon-thru">Monday - Friday</option>
+                                            <option value="fri-sun">Friday - Sunday</option>
+                                            <option value="All Days">All Days</option>
+                                        </select>
+                                        <small *ngIf="(!prefferedDays.valid && prefferedDays.touched)" class="text-danger">
+                                            Preffered Days are required.
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-sm-12" [ngClass]="{'has-error': ((!syllabus.valid && syllabus.touched)), 'has-success': (syllabus.valid && syllabus .touched)}">
+                                        <label for="syllabus">Syllabus Preffered</label>
+                                        <angular2-multiselect [data]="syllabusDis" class="form-control" formControlName="syllabus" id="syllabus" [(ngModel)]="selectedSyllabus"
+                                            [settings]="settingForSyllabus" (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)">
+                                        </angular2-multiselect>
+                                        <small *ngIf="(!syllabus.valid && syllabus.touched)" class="text-danger">
+                                            Syllabus is required.
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-sm-12" [ngClass]="{'has-error': ((!grade.valid && grade.touched)), 'has-success': (grade.valid && grade.touched)}">
+                                        <label for="grade">Grade</label>
+                                        <angular2-multiselect [data]="gradeDis" class="form-control" formControlName="grade" id="grade" [(ngModel)]="selected" [settings]="setting"
+                                            (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)">
+                                        </angular2-multiselect>
+                                        <small *ngIf="(!grade.valid && grade.touched)" class="text-danger">
+                                            Grade is required.
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-sm-12" [ngClass]="{'has-error': ((!subjects.valid && subjects.touched)), 'has-success': (subjects.valid && subjects.touched)}">
+                                        <label for="subjects">Preffered Subjects</label>
+                                        <angular2-multiselect [data]="subjectDis" class="form-control" formControlName="subjects" id="subjects" [(ngModel)]="selectedItems"
+                                            [settings]="settings" (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)">
+                                        </angular2-multiselect>
+                                        <small *ngIf="(!subjects.valid && subjects.touched)" class="text-danger">
+                                            Subjects are required.
+                                        </small>
+                                    </div>
+                                    <div class="col-md-12" style="margin-top: 4em;">
+                                        <button class="btn btn-primary btn-round" (click)="submit()">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab *ngIf="teachTab == false">
+                        <ng-template ngbTabTitle>
+                            <b>Teaching Information</b>
+                        </ng-template>
+                        <ng-template ngbTabContent>
+                            Please Complete Previous Steps and Submit.
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab *ngIf="doctab == true">
+                        <ng-template ngbTabTitle>
+                            <b>Document Verification</b>
+                        </ng-template>
+                        <ng-template ngbTabContent>
+                            <div class="card card-body" style="margin-top:2em;">
+
+                                <div class="card card-body">
+                                    <div class="row">
+                                        <h4>Adhaar and Id Verification</h4>
+                                        <br>
+                                        <br>
+                                        <div class="col-md-12" style="border-bottom: 1px solid #ccc;">
+                                            <br>
+                                            <br>
+                                            <label>Id Proof:</label>
+                                            <!-- <p class="help-btn">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i> 
+                    </p> -->
+                                            <input type="file" id="file" (change)="handleFileInput($event.target.files)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <button class="btn btn-success btn-round confirm-btn" (click)="upload()">Upload</button>
+
+                                        </div>
+                                        <br>
+                                        <br>
+
+                                        <div class="col-md-12" style="border-bottom: 1px solid #ccc;">
+                                            <br>
+                                            <br>
+                                            <label>Address Proof:</label>
+                                            <!-- <p class="help-btn">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i> 
+                    </p> -->
+                                            <input type="file" id="file" (change)="handleFileInput($event.target.files)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <button class="btn btn-success btn-round confirm-btn" (click)="upload()">Upload</button>
+
+                                        </div>
+                                        <br>
+                                        <br>
+
+                                        <div class="col-md-12" style="border-bottom: 1px solid #ccc;">
+                                            <br>
+                                            <br>
+                                            <label>Adhaar Verification:</label>
+                                            <!-- <p class="help-btn">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i> 
+                    </p> -->
+                                            <input type="file" id="file" (change)="handleFileInput($event.target.files)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <button class="btn btn-success btn-round confirm-btn" (click)="upload()">Upload</button>
+
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+
+                                </div>
+                                <div class="card card-body">
+                                    <div class="row">
+                                        <h4>Academics Verification</h4>
+                                        <br>
+                                        <br>
+                                        <div class="col-md-12" style="border-bottom: 1px solid #ccc;">
+                                            <br>
+                                            <br>
+                                            <label>Master Degree Upload:</label>
+                                            <!-- <p class="help-btn">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i> 
+                        </p> -->
+                                            <input type="file" id="file" (change)="handleFileInput($event.target.files)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <button class="btn btn-success btn-round confirm-btn" (click)="upload()">Upload</button>
+
+                                        </div>
+                                        <br>
+                                        <br>
+
+                                        <div class="col-md-12" style="border-bottom: 1px solid #ccc;">
+                                            <br>
+                                            <br>
+                                            <label>Graduation Degree Upload:</label>
+                                            <!-- <p class="help-btn">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i> 
+                        </p> -->
+                                            <input type="file" id="file" (change)="handleFileInput($event.target.files)">
+                                            <button class="btn btn-success btn-round confirm-btn" (click)="upload()">Upload</button>
+
+                                        </div>
+                                        <br>
+                                        <br>
+
+                                        <div class="col-md-12" style="border-bottom: 1px solid #ccc;">
+                                            <br>
+                                            <br>
+                                            <label>12th Markssheet Upload:</label>
+                                            <!-- <p class="help-btn">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i> 
+                        </p> -->
+                                            <input type="file" id="file" (change)="handleFileInput($event.target.files)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <button class="btn btn-success btn-round confirm-btn" (click)="upload()">Upload</button>
+
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="col-md-12" style="border-bottom: 1px solid #ccc;">
+                                            <br>
+                                            <br>
+                                            <label>10th Markssheet Upload:</label>
+                                            <!-- <p class="help-btn">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i> 
+                        </p> -->
+                                            <input type="file" id="file" (change)="handleFileInput($event.target.files)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <button class="btn btn-success btn-round confirm-btn" (click)="upload()">Upload</button>
+
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="col-md-12" style="margin-top: 3em;">
+                                            <button class="btn btn-primary btn-round" (click)="submit()">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab *ngIf="doctab == false">
+                        <ng-template ngbTabTitle>
+                            <b>Document Verification</b>
+                        </ng-template>
+                        <ng-template ngbTabContent>
+                            Please Complete Previous Steps and Submit.
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab *ngIf="verifiedTab == false">
+                        <ng-template ngbTabTitle>
+                            <a class="tabTitle" role="button" (click)="studentTab()">Students Details</a>
+                        </ng-template>
+                        <ng-template ngbTabContent>
+                            <div class="card card-body" style="margin-top:2em;">
+                                <div style="margin-top:2em;">
+                                    <ng2-smart-table [settings]="settingsForTable" [source]="source" (userRowSelect)="onSelect($event)"></ng2-smart-table>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab *ngIf="verifiedTab == true">
+                        <ng-template ngbTabTitle>
+                            <b>Students Details</b>
+                        </ng-template>
+                        <ng-template ngbTabContent>
+                            Please Complete Previous Steps and Submit.
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab *ngIf="verifiedTab == false">
+                        <ng-template ngbTabTitle>
+                            <a class="tabTitle" role="button" (click)="attendence()">Attendence Details</a>
+                        </ng-template>
+                        <ng-template ngbTabContent>
+                            <div class="card card-body" style="margin-top:2em;">
+                                <div style="margin-top:2em;">
+                                    <ng2-smart-table [settings]="settingsForTable" [source]="source" (userRowSelect)="onSelect($event)"></ng2-smart-table>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab *ngIf="verifiedTab == true">
+                        <ng-template ngbTabTitle>
+                            <b>Attendence Details</b>
+                        </ng-template>
+                        <ng-template ngbTabContent>
+                            Please Complete Previous Steps and Submit.
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab *ngIf="verifiedTab == true">
+                        <ng-template ngbTabTitle>
+                            <b>Payment Details</b>
+                        </ng-template>
+                        <ng-template ngbTabContent>
+
+                        </ng-template>
+                    </ngb-tab>
+                    <ngb-tab *ngIf="verifiedTab == false">
+                        <ng-template ngbTabTitle>
+                            <b>Payment Details</b>
+                        </ng-template>
+                        <ng-template ngbTabContent>
+                            Please Complete Previous Steps and Submit
+                        </ng-template>
+                    </ngb-tab>
+                </ngb-tabset>
+            </form>
+        </div>
+    </div>
+</div>

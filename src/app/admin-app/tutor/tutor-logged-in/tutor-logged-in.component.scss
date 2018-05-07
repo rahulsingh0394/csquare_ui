@@ -5,7 +5,6 @@
 
 .card-body {
     border: 1px solid #ccc;
-    border-radius: 4px;
     text-align: justify;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
@@ -13,6 +12,7 @@
 
 .card-header {
     border: 1px solid #ccc;
+    text-align: center;
     font-size: 2em;
     color: #f8591f;
 }
@@ -21,6 +21,33 @@
     color: #f8591f !important;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+}
+
+.info-title {
+    color: #f8591f !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-category {
+    color: #f8591f !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-body {
+    font-weight: bold;
+}
+
+.help-btn {
+    color: #009ddb;
+    font-family: 'SofiaProSemiBold';
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    top: 32px;
+    text-align: center;
+    margin-top: 3em !important;
 }
 
 // .checkbox-inline{
@@ -44,4 +71,9 @@
 :host /deep/ ng2-smart-table a.ng2-smart-sort-link.sort {
     font-weight: bold !important;
     color: #070000 !important;
+}
+
+.tabTitle {
+    font-weight: 900;
+    font-family: "Montserrat", "Helvetica", Arial, sans-serif;
 }

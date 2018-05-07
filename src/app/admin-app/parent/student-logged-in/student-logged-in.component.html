@@ -1,0 +1,36 @@
+<app-loggedInNavbar [sessionId]="sessionId"></app-loggedInNavbar>
+<div class="section text-center" style="background-color: rgb(255, 255, 255)!important;">
+  <div class="col-md-11 mr-auto ml-auto">
+    <div class="card card-header title">
+        Welcome {{name}}!
+    </div>
+    <div class="card-body">
+      <ngb-tabset type="pills">
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <b>General Information</b>
+          </ng-template>
+          <ng-template ngbTabContent>
+
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <b>Teaching Information</b>
+          </ng-template>
+          <ng-template ngbTabContent>
+
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <b>Document Verification</b>
+          </ng-template>
+          <ng-template ngbTabContent>
+
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
+    </div>
+  </div>
+</div>
