@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { LoadingModule } from 'ngx-loading';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FilterPipeModule } from '../shared/pipes/filters/fliter.module';
 import { SharedModule } from '../shared/shared.module';
@@ -33,6 +34,7 @@ import { BangaloreService } from './bangalore.service';
     // NgbCarouselConfig,
     routing,
     LoadingModule,
+    HttpClientModule,
     FilterPipeModule
   ],
   declarations: [

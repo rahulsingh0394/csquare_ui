@@ -10,14 +10,17 @@ const routes: Routes = [
         path: '',
         component: BangaloreComponent,
         children: [
+
+            { path: 'home-tuition/home-tuition-in-bangalore', component: BangaloreComponent },
+            { path: 'home-tuition/maths-tutors-in-bangalore', component: BangaloreComponent },
             // { path: 'banner',      component: BannerComponent },
             // { path: 'common-template',      component: CommonTemplateComponent },
-            { path: 'home-tuition', loadChildren: './home-tuition/home-tuition.module#HomeTuitionModule' },
+            //{ path: 'home-tuition', loadChildren: './home-tuition/home-tuition.module#HomeTuitionModule' },
             // { path: 'home-tutor', loadChildren: './home-tutor/home-tutor.module#HomeTutorModule'},
             // { path: 'private-tuition', loadChildren: './private-tuition/private-tuition.module#PrivateTuitionModule'},
             // { path: 'private-tutor', loadChildren: './private-tutor/private-tutor.module#PrivateTutorModule'},
-            { path: '', redirectTo: 'home-tuition', pathMatch: 'full' },
-            { path: '**', redirectTo: 'home-tuition' }
+            //{ path: '', redirectTo: 'home-tuition', pathMatch: 'full' },
+           // { path: '**', redirectTo: 'home-tuition' }
         ]
     }
 ];

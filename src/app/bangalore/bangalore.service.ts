@@ -1,19 +1,17 @@
 import { Injectable } from '@angular/core';
-import { HttpModule, Http, Response, RequestOptions, Headers } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import { environment } from '../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class BangaloreService {
 
   // url = "http://localhost:8083/addLead";
-  constructor(private http: Http) { 
+  constructor(private http: HttpClient) { 
   }
-  public getJSON(path: any): Observable<any> {
-    return this.http.get("../../assets/"+path+".json").map(req => req.json());
+  public getJSON(path: any) {
+    return this.http.get("assets/"+path+".json");
 }
 
 }
-export interface Contact {
+export interface Bangalore {
 
 }
