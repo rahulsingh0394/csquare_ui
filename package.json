@@ -1,19 +1,13 @@
 {
-  "name": "ng-universal-demo",
+  "name": "csquare-ui",
   "version": "0.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular/universal-starter.git"
+    "url": "https://github.com/rahulsingh0394/csquare_ui.git"
   },
   "contributors": [
-    "AngularClass <hello@angularclass.com>",
-    "PatrickJS <patrick@angularclass.com>",
-    "Jeff Whelpley <jeff@gethuman.com>",
-    "Jeff Cross <crossj@google.com>",
-    "Mark Pieszak <mpieszak84@gmail.com>",
-    "Jason Jean <jasonjean1993@gmail.com>",
-    "Fabian Wiles <fabian.wiles@gmail.com>"
+    "Rahul Singh <rahul.singh0394@gmail.com>"
   ],
   "scripts": {
     "ng": "ng",
