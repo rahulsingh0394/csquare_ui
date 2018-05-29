@@ -57,10 +57,8 @@ export class BangaloreComponent implements OnInit {
   t10Url: string;
   t10Exp: string;
   t10Desp: string;
-  area: string;
-  grade: string;
   page: any;
-  keyword: string;
+  h1Des: any;
 
 
   constructor(
@@ -86,9 +84,7 @@ export class BangaloreComponent implements OnInit {
           { name: 'author', content: 'csquareeducation.com' },
           { name: 'description', content: result['description'] }
         ]);
-
-        this.area = result['area'];
-        this.keyword = result['keyword'];
+        this.h1Des = result['h1Des'];
         this.t1 = result['t1'];
         this.t1Exp = result['t1Exp'];
         this.t1Url = result['t1Url'];

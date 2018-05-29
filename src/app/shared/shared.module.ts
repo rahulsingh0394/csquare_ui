@@ -12,6 +12,7 @@ import { FilterPipeModule } from './pipes/filters/fliter.module';
 import {Banner, BannerService} from './banner/banner.service';
 import { LoadingModule } from 'ngx-loading';
 import { BannerComponent } from './banner/banner.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
     imports: [
@@ -28,17 +29,20 @@ import { BannerComponent } from './banner/banner.component';
     entryComponents: [
          CommonModalComponent,
          LoggedInNavComponent,
-         BannerComponent
+         BannerComponent,
+         FormComponent
       ],
     declarations: [
         CommonModalComponent,
          LoggedInNavComponent,
-         BannerComponent
+         BannerComponent,
+         FormComponent
      ],
     exports:[  
         CommonModalComponent,
         LoggedInNavComponent,
-        BannerComponent
+        BannerComponent,
+        FormComponent
     ],
     providers: [ 
         LoggedInService,

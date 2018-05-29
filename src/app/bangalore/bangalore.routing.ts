@@ -12,7 +12,8 @@ const routes: Routes = [
         children: [
 
             { path: 'home-tuition/home-tuition-in-bangalore', component: BangaloreComponent },
-            { path: 'home-tuition/maths-tutors-in-bangalore', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/near-by-location-best-private-home-tutor/Ashok_Nagar', component: BangaloreComponent },
+            
             // { path: 'banner',      component: BannerComponent },
             // { path: 'common-template',      component: CommonTemplateComponent },
             //{ path: 'home-tuition', loadChildren: './home-tuition/home-tuition.module#HomeTuitionModule' },

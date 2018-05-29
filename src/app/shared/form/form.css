@@ -1,0 +1,173 @@
+.container-fluid {
+    margin-top: 6em;
+    font-family: 'Montserrat', sans-serif !important;
+}
+.breadcrumb-item {
+    display: inline !important;
+    text-transform: uppercase;
+}
+
+.card-body {
+    border: 1px solid #ccc;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1em;
+}
+
+.form-radio {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    text-align: left !important;
+    font-weight: 400;
+}
+
+a {
+    cursor: pointer;
+}
+
+.col-md-12 {
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+}
+
+p {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.fa-5x {
+    font-size: 100px;
+}
+
+.card-header {
+    border: 1px solid #ccc;
+    color: #f8591f !important;
+    text-align: center;
+    font-size: 45px;
+    border-radius: 0px !important;
+}
+.awesome {
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #313131;
+    font-weight: 700;
+    -webkit-animation: example 10s infinite;
+    /* Safari 4.0 - 8.0 */
+    animation: example 10s infinite;
+}
+
+@-webkit-keyframes example {
+    0% {
+        color: #000000
+    }
+    10% {
+        color: #f71e0f
+    }
+    20% {
+        color: #f84701
+    }
+    30% {
+        color: #9fa103
+    }
+    40% {
+        color: rgb(59, 168, 8)
+    }
+    50% {
+        color: #0c968a
+    }
+    60% {
+        color: rgb(0, 81, 255)
+    }
+    70% {
+        color: rgb(94, 9, 252)
+    }
+    80% {
+        color: #ff00d4
+    }
+    90% {
+        color: #d400ff
+    }
+    100% {
+        color: rgb(255, 8, 8)
+    }
+}
+
+/* Standard syntax */
+
+@keyframes example {
+    0% {
+        color: #000000
+    }
+    10% {
+        color: #f71e0f
+    }
+    20% {
+        color: #f84701
+    }
+    30% {
+        color: #9fa103
+    }
+    40% {
+        color: rgb(59, 168, 8)
+    }
+    50% {
+        color: #0c968a
+    }
+    60% {
+        color: rgb(0, 81, 255)
+    }
+    70% {
+        color: rgb(94, 9, 252)
+    }
+    80% {
+        color: #ff00d4
+    }
+    90% {
+        color: #d400ff
+    }
+    100% {
+        color: rgb(255, 8, 8)
+    }
+}
+.btn-primary{
+    border-radius: 0px;
+    font-size: 20px;
+    padding: 6px;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media(max-width: 500px) {
+    .fa-5x {
+        font-size: 30px;
+    }
+    .card-header {
+        font-size: 24px;
+        margin: 0px;
+    }
+    .card-body {
+        margin: 0px;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}

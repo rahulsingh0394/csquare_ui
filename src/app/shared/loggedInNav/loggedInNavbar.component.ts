@@ -88,7 +88,7 @@ export class LoggedInNavComponent implements OnInit {
 
                 this.userName = data.firstName + ' ' + data.lastName;
                 this.userEmail = data.email;
-                this.userPic = 'assets/img/he.jpg';
+                this.userPic = 'assets/img/he.png';
                 if (data.user_role == '2') {
                     //admin
                     this.lead = true;
