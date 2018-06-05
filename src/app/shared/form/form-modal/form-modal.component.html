@@ -1,0 +1,23 @@
+<div class="modal-content" data-backdrop="static" data-keyboard="false">
+    <div class="modal-header">
+        <button class="back" *ngIf="num > 1" aria-label="Close" (click)="back()">
+        <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+      </button>
+        <button class="close" aria-label="Close" (click)="cancelModal()">
+          <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+    </button>
+    </div>
+    <div class="modal-body">
+        <div *ngIf="num == 1">
+            <h2> We will ask a few questions to connect you with the right Tutors</h2>
+        </div>
+        <div *ngIf="num == 2">
+            <h2> We will ask a few questions to connect you with the right Tutors</h2>
+        </div>
+    </div>
+    <div class="modal-footer ">
+        <button class="btn btn-primary confirm-btn" (click)="okModal()">{{ok}}</button>
+        <!-- TODO: Need to handle two button -->
+        <button class="btn btn-danger confirm-btn" *ngIf="showHide" (click)="cancelModal()">Cancel</button>
+    </div>
+</div>

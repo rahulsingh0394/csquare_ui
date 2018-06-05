@@ -53,7 +53,20 @@ const routes: Routes = [
             { path: 'home-tutors-private-tutors/Syllabus-wise-best-private-home-tutor/IB_IGCSE', component: BangaloreComponent },
 
             //Routing By Subject Wise Pages 
-
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Account', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Biology', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Business_Studies', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Chemistry', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/English', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Geography', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Hindi', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/History', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Mathematics', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Maths', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Physics', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Science', component: BangaloreComponent },
+            { path: 'home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Social_Science', component: BangaloreComponent },
 
         ]
     }

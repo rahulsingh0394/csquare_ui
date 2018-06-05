@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
+import { FormModalComponent } from './form-modal/form-modal.component';
 
 @Component({
   selector: 'app-form',
@@ -15,6 +17,7 @@ export class FormComponent implements OnInit {
 
   constructor(private location: Location,
     private router: Router,
+    private modalService: NgbModal,
     private route: ActivatedRoute) {
     this.page = this.location.path();
     this.url = this.page.split('/');
@@ -37,6 +40,12 @@ export class FormComponent implements OnInit {
   }
 
   submit() {
+    let ngbModalOptions: NgbModalOptions = {
+      backdrop: 'static',
+      keyboard: false,
+      size: 'lg'
+    };
+    const modal = this.modalService.open(FormModalComponent, ngbModalOptions);
 
   }
 

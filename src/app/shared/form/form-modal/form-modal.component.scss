@@ -1,0 +1,55 @@
+.btn {
+    margin-right: 20px;
+    padding: 0 5em 0 1em;
+    text-align: left;
+}
+
+//Add a comment to this line
+.modal-content {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+}
+
+.back {
+    border: none;
+    float: left;
+    background-color: transparent;
+    font-size: 20px;
+    margin-top: -10px;
+    color: #ccc;
+}
+
+.close {
+    font-size: 20px;
+}
+
+.modal-footer {
+    padding: 1em 0 1em 2em;
+}
+
+.modal-body {
+    height: 470px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 5em;
+}
+
+.btn {
+    padding: 4px;
+}
+
+@media(max-width: 600px) {
+    .modal-body {
+        height: 300px;
+    }
+}
+
+@media(max-width: 900px) {
+    .modal-body {
+        height: 400px;
+    }
+}

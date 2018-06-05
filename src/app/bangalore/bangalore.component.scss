@@ -28,9 +28,24 @@
     font-weight: bold;
 }
 
+.desp {
+    font-size: 16px;
+}
+
+.img-circle {
+    margin-top: 25%;
+}
+
 @media(max-width: 600px) {
     .menu-item {
         font-size: 12px;
+    }
+    .desp {
+        font-size: 14px;
+    }
+    .img-circle {
+        margin-left: 15%;
+        margin-top: 0px;
     }
 }
 
@@ -44,9 +59,10 @@
     font-size: .5em !important;
 }
 
-.rounded.mx-auto.d-block {
+.rounded .mx-auto .d-block {
     width: 80%;
     height: 70%;
+    border-radius: 50%;
 }
 
 a {

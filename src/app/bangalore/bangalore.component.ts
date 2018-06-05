@@ -82,6 +82,7 @@ export class BangaloreComponent implements OnInit {
 
   classMenuList: any[] = [];
   syllabusMenuList: any[] = [];
+  subjectMenuList: any[] = [];
 
   constructor(
     private location: Location,
@@ -107,6 +108,12 @@ export class BangaloreComponent implements OnInit {
         let menu = module;
         for (let i = 0; i < menu['size']; i++){
           this.syllabusMenuList[i] = menu[i+1];
+        }
+      })
+      import('../json/bangalore/menu_for_subjects.json').then(module => {
+        let menu = module;
+        for (let i = 0; i < menu['size']; i++){
+          this.subjectMenuList[i] = menu[i+1];
         }
       })
       const url = this.page;
