@@ -24,13 +24,20 @@ export class FormComponent implements OnInit {
   ngOnInit() {
   }
 
-  buttonClick(data: any) {
-    debugger;
-    this.router.navigateByUrl("/"+data);
+  buttonClick(data: any, i: any) {
+    if (i == 0 || i == 1) {
+      this.router.navigateByUrl("/" + data);
+      window.location.reload();
+    } else if (i == 3) {
+      this.router.navigateByUrl('/bangalore/home-tutors-private-tutors/' + data);
+      window.location.reload();
+    } else if (i = 0) {
+      this.router.navigateByUrl('/home');
+    }
   }
 
-  submit(){
-    
+  submit() {
+
   }
 
 }

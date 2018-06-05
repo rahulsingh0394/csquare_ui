@@ -2,6 +2,7 @@
     margin-top: 6em;
     font-family: 'Montserrat', sans-serif !important;
 }
+
 .breadcrumb-item {
     display: inline !important;
     text-transform: uppercase;
@@ -55,6 +56,7 @@ p {
     font-size: 45px;
     border-radius: 0px !important;
 }
+
 .awesome {
     font-size: 2em;
     font-family: 'Montserrat', sans-serif;
@@ -102,6 +104,7 @@ p {
     }
 }
 
+
 /* Standard syntax */
 
 @keyframes example {
@@ -139,13 +142,15 @@ p {
         color: rgb(255, 8, 8)
     }
 }
-.btn-primary{
-    border-radius: 0px;
+
+.btn-primary {
+    border-radius: 6px;
     font-size: 20px;
-    padding: 6px;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding: 4px;
+    padding-left: 1em;
+    padding-right: 1em;
 }
+
 .overlay {
     background: rgba(0, 0, 0, 0.6);
     position: absolute;
@@ -157,6 +162,7 @@ p {
     align-items: center;
     justify-content: center;
 }
+
 @media(max-width: 500px) {
     .fa-5x {
         font-size: 30px;

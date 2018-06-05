@@ -1,0 +1,23 @@
+{
+    "size": "4",
+    "1": {
+        "menu_name": "CBSE",
+        "img": "assets/tutor_image/he.png",
+        "url": "/bangalore/home-tutors-private-tutors/Syllabus-wise-best-private-home-tutor/CBSE"
+    },
+    "2": {
+        "menu_name": "ICSE",
+        "img": "assets/tutor_image/he.png",
+        "url": "/bangalore/home-tutors-private-tutors/Syllabus-wise-best-private-home-tutor/ICSE"
+    },
+    "3": {
+        "menu_name": "State Board",
+        "img": "assets/tutor_image/he.png",
+        "url": "/bangalore/home-tutors-private-tutors/Syllabus-wise-best-private-home-tutor/State_Board"
+    },
+    "4": {
+        "menu_name": "IB IGCSE",
+        "img": "assets/tutor_image/he.png",
+        "url": "/bangalore/home-tutors-private-tutors/Syllabus-wise-best-private-home-tutor/IB_IGCSE"
+    }
+}

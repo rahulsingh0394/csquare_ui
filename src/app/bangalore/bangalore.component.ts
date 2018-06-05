@@ -57,9 +57,31 @@ export class BangaloreComponent implements OnInit {
   t10Url: string;
   t10Exp: string;
   t10Desp: string;
+  t11: string;
+  t11Url: string;
+  t11Exp: string;
+  t11Desp: string;
+  t12: string;
+  t12Url: string;
+  t12Exp: string;
+  t12Desp: string;
+  t13: string;
+  t13Url: string;
+  t13Exp: string;
+  t13Desp: string;
+  t14: string;
+  t14Url: string;
+  t14Exp: string;
+  t14Desp: string;
+  t15: string;
+  t15Url: string;
+  t15Exp: string;
+  t15Desp: string;
   page: any;
   h1Des: any;
 
+  classMenuList: any[] = [];
+  syllabusMenuList: any[] = [];
 
   constructor(
     private location: Location,
@@ -74,8 +96,19 @@ export class BangaloreComponent implements OnInit {
 
   ngOnInit() {
 
-
     if (this.page) {
+      import('../json/bangalore/menu_for_class.json').then(module => {
+        let menu = module;
+        for (let i = 0; i < menu['size']; i++){
+          this.classMenuList[i] = menu[i+1];
+        }
+      })
+      import('../json/bangalore/menu_for_syllabus.json').then(module => {
+        let menu = module;
+        for (let i = 0; i < menu['size']; i++){
+          this.syllabusMenuList[i] = menu[i+1];
+        }
+      })
       const url = this.page;
       import('../json' + url + '.json').then(module => {
         let result = module;
@@ -128,12 +161,33 @@ export class BangaloreComponent implements OnInit {
         this.t10Exp = result['t10Exp'];
         this.t10Url = result['t10Url'];
         this.t10Desp = result['t10Desp'];
+        this.t11 = result['t11'];
+        this.t11Exp = result['t11Exp'];
+        this.t11Url = result['t11Url'];
+        this.t11Desp = result['t11Desp'];
+        this.t12 = result['t12'];
+        this.t12Exp = result['t12Exp'];
+        this.t12Url = result['t12Url'];
+        this.t12Desp = result['t12Desp'];
+        this.t13 = result['t13'];
+        this.t13Exp = result['t13Exp'];
+        this.t13Url = result['t13Url'];
+        this.t13Desp = result['t13Desp'];
+        this.t14 = result['t14'];
+        this.t14Exp = result['t14Exp'];
+        this.t14Url = result['t14Url'];
+        this.t14Desp = result['t14Desp'];
+        this.t15 = result['t15'];
+        this.t15Exp = result['t15Exp'];
+        this.t15Url = result['t15Url'];
+        this.t15Desp = result['t15Desp'];
       });
     }
   }
 
   buttonClick(data: any) {
     this.router.navigateByUrl(data);
+    window.location.reload();
   }
 
 }
