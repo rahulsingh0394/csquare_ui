@@ -83,6 +83,7 @@ export class BangaloreComponent implements OnInit {
   classMenuList: any[] = [];
   syllabusMenuList: any[] = [];
   subjectMenuList: any[] = [];
+  locationMenuList: any[] = [];
 
   constructor(
     private location: Location,
@@ -100,20 +101,27 @@ export class BangaloreComponent implements OnInit {
     if (this.page) {
       import('../json/bangalore/menu_for_class.json').then(module => {
         let menu = module;
-        for (let i = 0; i < menu['size']; i++){
-          this.classMenuList[i] = menu[i+1];
+        for (let i = 0; i < menu['size']; i++) {
+          this.classMenuList[i] = menu[i + 1];
         }
       })
       import('../json/bangalore/menu_for_syllabus.json').then(module => {
         let menu = module;
-        for (let i = 0; i < menu['size']; i++){
-          this.syllabusMenuList[i] = menu[i+1];
+        for (let i = 0; i < menu['size']; i++) {
+          this.syllabusMenuList[i] = menu[i + 1];
         }
       })
       import('../json/bangalore/menu_for_subjects.json').then(module => {
         let menu = module;
-        for (let i = 0; i < menu['size']; i++){
-          this.subjectMenuList[i] = menu[i+1];
+        for (let i = 0; i < menu['size']; i++) {
+          this.subjectMenuList[i] = menu[i + 1];
+        }
+      })
+      import('../json/bangalore/menu_for_location.json').then(module => {
+        let menu = module;
+        for (let j = 0; j < 100; j++) {
+          let i = Math.floor(Math.random() * (menu['size'] - 1 + 1)) + 1;
+          this.locationMenuList[j] = menu[i];
         }
       })
       const url = this.page;

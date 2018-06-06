@@ -373,9 +373,13 @@
                     <div class="card card-header menu-title">
                         Find Home Tuitions For Your Locations:
                     </div>
-                    <div class="card card-body bg-transparent" routerLinkActive=active style="overflow-y: auto; height: 1600px; overflow-x: hidden;">
+                    <div class="card card-body bg-transparent" routerLinkActive="active">
+                        <ul *ngFor="let menu of locationMenuList">
 
-
+                            <li class="menu-item" style="padding-left: 4px;">
+                                <a role="button" (click)="buttonClick(menu.url)">{{menu.menu_name}}</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
