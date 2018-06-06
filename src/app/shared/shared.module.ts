@@ -13,7 +13,7 @@ import {Banner, BannerService} from './banner/banner.service';
 import { LoadingModule } from 'ngx-loading';
 import { BannerComponent } from './banner/banner.component';
 import { FormComponent } from './form/form.component';
-import { FormModalComponent } from './form/form-modal/form-modal.component';
+import { FormStudentModalComponent } from './form/form-student-modal/form-student-modal.component';
 
 @NgModule({
     imports: [
@@ -32,21 +32,21 @@ import { FormModalComponent } from './form/form-modal/form-modal.component';
          LoggedInNavComponent,
          BannerComponent,
          FormComponent,
-         FormModalComponent
+         FormStudentModalComponent
       ],
     declarations: [
         CommonModalComponent,
          LoggedInNavComponent,
          BannerComponent,
          FormComponent,
-         FormModalComponent
+         FormStudentModalComponent
      ],
     exports:[  
         CommonModalComponent,
         LoggedInNavComponent,
         BannerComponent,
         FormComponent,
-        FormModalComponent
+        FormStudentModalComponent
     ],
     providers: [ 
         LoggedInService,

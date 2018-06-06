@@ -49,6 +49,11 @@ export class BannerService {
     let options = new RequestOptions({ headers: headers });
     return this.http.get(`${environment.serverUrl}/searchLocationByCity/` + city, options).map(req => req.json());
   }
+  getRefLocationById(id: any): Observable<any> {
+    let headers = new Headers({ 'Content-Type': 'application/json;charset=UTF-8' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.get(`${environment.serverUrl}/getRefLocationById/` + id, options).map(req => req.json());
+  }
 }
 export interface Banner {
 

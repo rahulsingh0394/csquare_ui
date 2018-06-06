@@ -12,17 +12,22 @@
     width: 100%;
 }
 
+.form-data {
+    margin-top: 5em;
+}
+
 .back {
     border: none;
     float: left;
     background-color: transparent;
-    font-size: 20px;
-    margin-top: -10px;
-    color: #ccc;
+    font-size: 30px;
+    margin-top: -12px;
+    color: #66615b;
 }
 
 .close {
-    font-size: 20px;
+    font-size: 30px;
+    color: #66615b;
 }
 
 .modal-footer {
@@ -38,13 +43,29 @@ h2 {
     margin-top: 5em;
 }
 
+h3 {
+    font-size: 24px;
+    text-align: justify;
+}
+
 .btn {
     padding: 4px;
+}
+
+.form-control {
+    margin-top: 6em;
 }
 
 @media(max-width: 600px) {
     .modal-body {
         height: 300px;
+    }
+    h3 {
+        font-size: 16px;
+        text-align: justify;
+    }
+    .form-control {
+        margin-top: 4em;
     }
 }
 

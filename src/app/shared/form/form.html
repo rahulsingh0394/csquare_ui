@@ -8,18 +8,18 @@
                 <div class="col-md-6">
                     <div class="card card-body">
                         <h2>Please Identify Yourself.</h2>
-                        <form>
+                        <form [formGroup]="formData">
                             <div class="row row">
                                 <div class="col-md-12">
-                                    <input class="form-radio" type="radio" name="gender" value="male"> I am a Parent/Guardian
+                                    <input class="form-radio" type="radio" formControlName="leadType" value="Parent"> I am a Parent/Guardian
                                     <br>
                                 </div>
                                 <div class="col-md-12">
-                                    <input class="form-radio" type="radio" name="gender" value="female"> I am a Student
+                                    <input class="form-radio" type="radio" formControlName="leadType" value="Student"> I am a Student
                                     <br>
                                 </div>
                                 <div class="col-md-12">
-                                    <input class="form-radio" type="radio" name="gender" value="other"> I am a Tutor/Teacher looking for students
+                                    <input class="form-radio" type="radio" formControlName="leadType" value="Tutor"> I am a Tutor/Teacher looking for students
                                 </div>
                             </div>
                             <div style="float: right; margin-top: 1em;">
