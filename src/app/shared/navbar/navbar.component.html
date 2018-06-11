@@ -1,24 +1,22 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="navbar-translate" routerLinkActive="active">
         <a class="navbar-brand" [routerLink]="['/home']">
-            <img src="assets/img/cs-large.png" style="position: fixed!important; margin-top: -1.4em!important; height: 50px!important; width: 70px!important;"
-                alt="home tuition bangalore, home tutor">
+            <img src="assets/img-menu/logo.jpg" alt="home tuition bangalore, home tutor">
         </a>
-        <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02"
-            aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+        <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
             <span class="navbar-toggler-bar"></span>
             <span class="navbar-toggler-bar"></span>
             <span class="navbar-toggler-bar"></span>
         </button>
     </div>
     <div class="collapse navbar-collapse" id="navbarToggler">
-        <div class="row btn-nav" style="margin-left: 5em;margin-top:1em;">
+        <div class="row btn-nav" style="margin-left: 5em;">
             <a role="button" class="btn btn-danger btn-round btn-raised labelBtn" (click)="buttonClick('/studentForm')">&nbsp;Need Tutor?&nbsp;</a>
             <a role="button" class="btn btn-danger btn-round btn-raised labelBtn" (click)="buttonClick('/tutorForm')">&nbsp;&nbsp;Be A Tutor!&nbsp;&nbsp;</a>
         </div>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item" routerLinkActive="active">
-                <a [routerLink]="['/home']" class="nav-link">Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a [routerLink]="['/home']" href="javascript:void(0);" class="nav-link">Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
             </li>
             <!-- <li class="nav-item" routerLinkActive="active">
                             <a [routerLink]="['/studentForm']" class="nav-link">Get Tutor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>

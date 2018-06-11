@@ -1,33 +1,34 @@
 <app-banner></app-banner>
 <div class="container-fluid">
-    <div class="row first">
-        <div class="row row">
-            <div class="col-md-8 mobile">
-                <div class="card card-header">
+    <div class="row" style="margin-top: 6em!important;">
+        <div class="col-md-8 mobile">
+            <div class="card">
+                <div class="card-header">
                     <span>Why CsquareEducation
                                                 <i class="fa fa-question fa-5x" aria-hidden="true"></i>
                                         </span>
                 </div>
-                <div class="card card-body">
-                    <video onloadstart="this.volume=0" width="100% " height="300px;!important" controls autoplay>
-                                                <!-- <source src="PATH_TO_MP4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser. -->
-                                                <source src="assets/video/CsquareEducation Video Promo [360p].mp4" type="video/webm" />
-                                        </video>
+                <div class="card-body">
+                    <video onloadstart="this.volume=0" width="100%" height="300px;!important" controls autoplay>
+                    <source src="assets/video/CsquareEducation Video Promo [360p].mp4" type="video/webm" />
+                    </video>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card card-header">
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
                     <span style="margin-left: -2em;">Contact Us
                                                 <i class="fa fa-vcard-o fa-5x" aria-hidden="true"></i>
                                         </span>
                 </div>
-                <div class="card card-body">
+                <div class="card-body">
                     <p class="awesome">
                         <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;8041627767, &nbsp;7899342386, &nbsp;9036198865 </p>
-                    <small style="text-align: center;font-size: 12px;">(call timing: Monday to Saturady, 8AM to 9PM)</small>
+                    <small style="margin-left: 20%;font-size: 12px;">(call timing: Monday to Saturady, 8AM to 9PM)</small>
                     <p class="awesome">
                         <i class="fa fa-whatsapp"></i> &nbsp;8105118078</p>
-                    <small style="text-align: center;font-size: 12px;">Or</small>
+                    <small style="margin-left: 50%;font-size: 12px;">Or</small>
                     <p class="awesome" style="font-size: 16px!important;">
                         <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; Email Us On:
                         <br> csquarebangalore@gmail.com
@@ -37,7 +38,7 @@
         </div>
     </div>
     <hr/>
-    <div class="card card-header">
+    <div class="card card-header" style="margin-top: 3em!important;">
         <div class="row">
             <div class="col-md-2">
                 <span>
@@ -67,8 +68,8 @@
             </h3>
             <a role="button" (click)="isCollapsedS1 = !isCollapsedS1" [attr.aria-expanded]="!isCollapsedS1" aria-controls="collapseExampleS1">
                 <div class="icon icon-danger">
-                    <p style="text-align:center!important;">
-                        <i class="fa fa-chevron-down fa-2x" aria-hidden="true"></i>
+                    <p style="text-align:center!important;"><br>
+                        <button class="btn btn-primary">Read More...</button>
                     </p>
                 </div>
             </a>
@@ -94,8 +95,8 @@
             </h3>
             <a role="button" (click)="isCollapsedS2 = !isCollapsedS2" [attr.aria-expanded]="!isCollapsedS2" aria-controls="collapseExampleS2">
                 <div class="icon icon-danger">
-                    <p style="text-align:center!important;">
-                        <i class="fa fa-chevron-down fa-2x" aria-hidden="true"></i>
+                    <p style="text-align:center!important;"><br>
+                        <button class="btn btn-default">Read More...</button>
                     </p>
                 </div>
             </a>
@@ -123,8 +124,8 @@
             </h3>
             <a role="button" (click)="isCollapsedS3 = !isCollapsedS3" [attr.aria-expanded]="!isCollapsedS3" aria-controls="collapseExampleS3">
                 <div class="icon icon-danger">
-                    <p style="text-align:center!important;">
-                        <i class="fa fa-chevron-down fa-2x" aria-hidden="true"></i>
+                    <p style="text-align:center!important;"><br>
+                        <button class="btn btn-primary">Read More...</button>
                     </p>
                 </div>
             </a>
@@ -137,7 +138,31 @@
         </div>
     </div>
     <hr/>
-    <div class="data-result">
+    <div class="work-flow" style="margin-top: 6em!important;">
+        <h2 class="work-flow-heading">Work Process</h2>
+        <div class="row">
+            <ul class="process">
+                <li class="process-item">
+                    <span class="pro-step first">01</span>
+                    <p class="bottom20" style="margin-left: 4em;">Enquire For Tutor</p>
+                </li>
+                <li class="process-item">
+                    <span class="pro-step second">02</span>
+                    <p class="bottom20">Schedule A Demo Class</p>
+                </li>
+                <li class="process-item">
+                    <span class="pro-step third">03</span>
+                    <p class="bottom20">Subscribe</p>
+                </li>
+                <li class="process-item last">
+                    <span class="pro-step">04</span>
+                    <p class="bottom20">Start Class at Home</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr/>
+    <div class="data-result" style="margin-top: 6em!important;">
         <div class="row">
             <div class="col-md-4 data-view">
                 Client's
@@ -157,338 +182,189 @@
         </div>
     </div>
     <hr/>
-    <!-- <div class="card card-header">
-            <div class="row">
-                    <div class="col-md-2">
-                            <i class="fa fa-handshake-o fa-5x" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-md-10">
-                            <h2><a href="https://www.google.co.in/search?q=csquareeducation+review&rlz=1C1SQJL_enIN771IN771&oq=csquaree&aqs=chrome.5.69i59j69i57j69i60l3j69i59.5493j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3bae150fa4ad474b:0xc8bf27d9c9790e32,1,,," target="_blank" style="color:#f8591f!important;">Customer's Review</a>
-                            </h2>                            
-                            <small style="font-size:14px;color:#000;margin-left: 1em;"> Click Here <i class="fa fa-arrow-up" aria-hidden="true"></i> To Check Google Review</small>
+    <div class="testimonal" style="margin-top: 4em;">
+        <h6>Testimonials</h6>
+        <h2 style="color:#313131!important;margin-bottom: 1em;">What People Say</h2>
+        <ngu-carousel [inputs]="carouselOne" (carouselLoad)="myfunc($event)">
+            <ngu-item NguCarouselItem>
+                <div class="row">
+                    <div class="col-sm-4" style="text-align: center;">
+                        <span class="quoted1"><i class="fa fa-quote-right"></i></span>
+                        <div class="review-test1">
+                            <p class="bottom40">
+                                One of the best place to take tuition. Faculty and support provided by this institution is of best quality. My brother scored 95.6% in 10th board after getting good support and faculty by Csquareeducation. They help in all possible way. All the best,
+                                keep it up.
+                            </p>
                         </div>
+                        <div class="review-photo">
+                            <img src="assets/review/Nitesh.jpg">
+                        </div>
+                        <h4 class="name">Nitesh Kumar</h4>
+                        <small class="tagline">Our Client</small>
+                    </div>
+                    <div class="col-sm-4" style="text-align: center;">
+                        <span class="quoted2"><i class="fa fa-quote-right"></i></span>
+                        <div class="review-test2">
+                            <p class="bottom40">
+                                I have been working for CsquareEducation since 2015 and it has been amazing journey with CsquareEducation. They helped me in all possible ways from getting student's near by my place as well as with working hour according to my convenience.
+                            </p>
+                        </div>
+                        <div class="review-photo">
+                            <img src="assets/img/sinchana.jpg">
+                        </div>
+                        <h4 class="name">Sinchana</h4>
+                        <small class="tagline">Tutor For 3 Years</small>
+                    </div>
+                    <div class="col-sm-4" style="text-align: center;">
+                        <span class="quoted1"><i class="fa fa-quote-right"></i></span>
+                        <div class="review-test1">
+                            <p class="bottom40">
+                                I got very good tutor for my brother who is writing 12th exam even very good support from csquare. I can say csquare education is an one of the best home tuition provider in Bangalore. They helped us not only with studies but also in personality development.
+                            </p>
+                        </div>
+                        <div class="review-photo">
+                            <img src="assets/review/vidya.jpg">
+                        </div>
+                        <h4 class="name">Vidya Sagar</h4>
+                        <small class="tagline">Our Client</small>
+                    </div>
                 </div>
-    </div> -->
-    <!-- <ngb-carousel class="slider">
-        <ng-template ngbSlide>
-            <div class="row">
-            <div class="col-md-5" style="margin-top:2em;">
-                    <div class="card card-body">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                    <h4>Nitesh Kumar</h4>
-                                    <img src="assets/review/Nitesh.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block review-pic">
-                            </div>
-                            <div class="col-md-8">
-                                    <h4>a week ago</h4>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                <br><br>
-                                <p>
-                                    One of the best place to take tuition.
-                                    Faculty and support provided by this institution is of best quality.
-                                    My brother scored 95.6% in 10th board after getting good support and faculty by Csquareeducation.
-                                    All the best,keep it up</p>
-                            </div>
+            </ngu-item>
+            <ngu-item NguCarouselItem>
+                <div class="row">
+                    <div class="col-sm-4" style="text-align: center;">
+                        <span class="quoted2"><i class="fa fa-quote-right"></i></span>
+                        <div class="review-test2">
+                            <p class="bottom40">
+                                Very reliable for quality home tuition. Best home tutor provider according to me. I took home tuition for my brother and he got very good marks in 10th. They help us in many other possibilites such as student through-out monitoring in their progress etc.
+                            </p>
                         </div>
-                    </div>
-            </div>
-            <div class="col-md-5" style="margin-top:2em;">
-                    <div class="card card-body">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                    <h4> Vidya Sagar</h4>
-                                    <img src="assets/review/vidya.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block review-pic">
-                            </div>
-                            <div class="col-md-8">
-                                    <h4>a week ago</h4>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                <br><br>
-                                <p>I got very good tutor for my brother who is writing 12th exam even very good support from csquare. I can say csquare education is an one of the best home tuition provider in Bangalore.</p>
-                            </div>
+                        <div class="review-photo">
+                            <img src="assets/review/Vinay.jpg">
                         </div>
+                        <h4 class="name">Vinay Hawargi</h4>
+                        <small class="tagline">Our Client</small>
                     </div>
-            </div>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="row">
-            <div class="col-md-5" style="margin-top:2em;">
-                    <div class="card card-body">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                    <h4>Vinay Hawargi</h4>
-                                    <img src="assets/review/Vinay.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block review-pic">
-                            </div>
-                            <div class="col-md-8">
-                                    <h4>a week ago</h4>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                <br><br>
-                                <p>
-                                        Very reliable for quality home tuition. Best home tutor provider according to me.
-                                        I took home tuition for my brother and he got very good marks in 10th</p>
-                            </div>
+                    <div class="col-sm-4" style="text-align: center;">
+                        <span class="quoted1"><i class="fa fa-quote-right"></i></span>
+                        <div class="review-test1">
+                            <p class="bottom40">
+                                I got tutor from csquare, but he was creating to much problem to me, so I asked csquare to solved my problem. Csquare changed that tutor and aligned with another tutor in one week. Overall I can say good support and better result for student as well as
+                                parents.
+                            </p>
                         </div>
-                    </div>
-            </div>
-            <div class="col-md-5" style="margin-top:2em;">
-                    <div class="card card-body">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                    <h4>Anuj Agarwal</h4>
-                                    <img src="assets/review/Anuj.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block review-pic">
-                            </div>
-                            <div class="col-md-8">
-                                    <h4>a week ago</h4>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                <br><br>
-                                <p> I got tutor from csquare, but he was creating to much problem to me, so I asked csquare to solved my problem. Csquare changed that tutor and aligned with another tutor in one week. Overall I can say good support.</p>
-                            </div>
+                        <div class="review-photo">
+                            <img src="assets/review/Anuj.jpg">
                         </div>
+                        <h4 class="name">Anuj Agarwal</h4>
+                        <small class="tagline">Our Client</small>
                     </div>
-            </div>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="row">
-            <div class="col-md-5" style="margin-top:2em;">
-                    <div class="card card-body">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                    <h4>Ujjwal Agrawal</h4>
-                                    <img src="assets/review/Ujwal.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block review-pic">
-                            </div>
-                            <div class="col-md-8">
-                                    <h4>a week ago</h4>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                <br><br>
-                                <p>
-                                        Hello..<br>
-                                        i'm sharing my personal revel in, Csquare Education teachers are very experience first they increase our basic expertise to any subject matter and solve issues to low degree to high level, and teachers are very supportive and helpfull too.</p>
-                            </div>
+                    <div class="col-sm-4" style="text-align: center;">
+                        <span class="quoted2"><i class="fa fa-quote-right"></i></span>
+                        <div class="review-test2">
+                            <p class="bottom40">
+                                Hello.. i'm sharing my personal revel in, Csquare Education teachers are very experience first they increase our basic expertise to any subject matter and solve issues to low degree to high level, and teachers are very supportive and helpfull too.
+                            </p>
                         </div>
-                    </div>
-            </div>
-            <div class="col-md-5" style="margin-top:2em;">
-                    <div class="card card-body">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                    <h4>Pradeep</h4>
-                                    <img src="assets/review/pradeep.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block review-pic">
-                            </div>
-                            <div class="col-md-8">
-                                    <h4>a week ago</h4>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                <br><br>
-                               <p> I got best home tutor for my children where the service from csquare education is systematically reviewing my child's academics progress, I found best home tutor  in Bangalore. thank you csquare education</p>
-                            </div>
+                        <div class="review-photo">
+                            <img src="assets/review/Ujwal.jpg">
                         </div>
+                        <h4 class="name">Ujjwal Agrawal</h4>
+                        <small class="tagline">Our Client</small>
                     </div>
-            </div>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="row">
-            <div class="col-md-5" style="margin-top:2em;">
-                    <div class="card card-body">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                    <h4>Rahul Tayal</h4>
-                                    <img src="assets/review/RahulSublime.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block review-pic">
-                            </div>
-                            <div class="col-md-8">
-                                    <h4>a week ago</h4>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                <br><br>
-                                <p>
-                                        Sometimes tutors are creating problem, but Company is providing very good support...Overall I am happy with support</p>
-                            </div>
+                </div>
+            </ngu-item>
+            <ngu-item NguCarouselItem>
+                <div class="row">
+                    <div class="col-sm-4" style="text-align: center;">
+                        <span class="quoted1"><i class="fa fa-quote-right"></i></span>
+                        <div class="review-test1">
+                            <p class="bottom40">
+                                I got best home tutor for my children where the service from csquare education is systematically reviewing my child's academics progress, I found best home tutor in Bangalore. Thank you CsquareEducation for amazing service.
+                            </p>
                         </div>
-                    </div>
-            </div>
-            <div class="col-md-5" style="margin-top:2em;">
-                    <div class="card card-body">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                    <h4>Sandesh Kumar Singh</h4>
-                                    <img src="assets/review/sandesh.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block review-pic">
-                            </div>
-                            <div class="col-md-8">
-                                    <h4>a week ago</h4>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                <br><br>
-                                <p> I got very good tutor from CsquareEducation. They are doing regular monitoring and even once i got issue with tutor but they are resolved that issue very nicely.</p>
-                            </div>
+                        <div class="review-photo">
+                            <img src="assets/review/pradeep.jpg">
                         </div>
+                        <h4 class="name">Pradeep</h4>
+                        <small class="tagline">Our Client</small>
                     </div>
-            </div>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="row">
-            <div class="col-md-5" style="margin-top:2em;">
-                    <div class="card card-body">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                    <h4>Shubham Srivastava</h4>
-                                    <img src="assets/review/Viky.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block review-pic">
-                            </div>
-                            <div class="col-md-8">
-                                    <h4>a week ago</h4>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                <br><br>
-                                <p>
-                                        Luckily I got the opportunity to work here. Lots of memory attached as it is one of the unequaled institute I came across in near time as the environment, culture, care, academics, timeliness, punctuality is given utter importance. They have a great and hardworking team and the prime thing is that the focus is on everyone. No one go unnoticed. I have seen lot of happy parents. Great work. #CsqaureEducation</p>
-                            </div>
+                    <div class="col-sm-4" style="text-align: center;">
+                        <span class="quoted2"><i class="fa fa-quote-right"></i></span>
+                        <div class="review-test2">
+                            <p class="bottom40">
+                                Sometimes tutors are creating problem, but Company is providing very good support...I am getting service for my kid for last 3 years and he is doing good. Overall I am happy with support and service from CsquareEducation.
+                            </p>
                         </div>
-                    </div>
-            </div>
-            <div class="col-md-5" style="margin-top:2em;">
-                    <div class="card card-body">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                    <h4>Abhishek Singh </h4>
-                                    <img src="assets/review/Abhishek.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block review-pic">
-                            </div>
-                            <div class="col-md-8">
-                                    <h4>a week ago</h4>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                <br><br>
-                                <p>  I got an oppurtunity to work for CsquareEducation, can say ,Excellent institute. Hub of quality and highly qualified  tutors. Strongly recommend to guardians.</p>
-                            </div>
+                        <div class="review-photo">
+                            <img src="assets/review/RahulSublime.jpg">
                         </div>
+                        <h4 class="name">Rahul Tayal</h4>
+                        <small class="tagline">Our Client</small>
                     </div>
-            </div>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="row">
-            <div class="col-md-5" style="margin-top:2em;">
-                    <div class="card card-body">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                    <h4>Apporva</h4>
-                                    <img src="assets/img/apoorva.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block review-pic">
-                            </div>
-                            <div class="col-md-8">
-                                    <h4>a week ago</h4>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                <br><br>
-                                <p> I have been working in CsquareEducation for about more than two years. It's good place to start as a tutor. Working hours are flexible and the environment is pretty good.</p>
-                            </div>
+                    <div class="col-sm-4" style="text-align: center;">
+                        <span class="quoted1"><i class="fa fa-quote-right"></i></span>
+                        <div class="review-test1">
+                            <p class="bottom40">
+                                I got very good tutor from CsquareEducation. They are doing regular monitoring and even once i got issue with tutor but they are resolved that issue very nicely. Overall service is amazing. Keep it up CsquareEducation.
+                            </p>
                         </div>
-                    </div>
-            </div>
-            <div class="col-md-5" style="margin-top:2em;">
-                    <div class="card card-body">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                    <h4>Sinchana</h4>
-                                    <img src="assets/img/sinchana.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block review-pic">
-                            </div>
-                            <div class="col-md-8">
-                                    <h4>a week ago</h4>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                <br><br>
-                                <p>   I am a B.E. graduate from mechanical department. I graduated from Oxford College of Engineering.
-                                        I have teaching experience of 8 years as a home tutor in various reputed organization and i can take classes till 1st Year Engineering Students. 
-                                       I am friendly to students and can handle different kind of students with ease.</p>
-                            </div>
+                        <div class="review-photo">
+                            <img src="assets/review/sandesh.jpg">
                         </div>
+                        <h4 class="name">Sandesh Kumar Singh</h4>
+                        <small class="tagline">Our Client</small>
                     </div>
-            </div>
-            </div>
-        </ng-template>
-    </ngb-carousel>  -->
+                </div>
+            </ngu-item>
+            <button NguCarouselPrev class='leftRs'>Previous</button>
+            <button NguCarouselNext class='rightRs'>Next</button>
+        </ngu-carousel>
+    </div>
     <hr/>
-    <div class="card card-header mobile">
-        <div class="row">
-            <div class="col-md-2">
-                <img class="img img-thumbnail" src="assets/img/news.jpg" alt="home tuition bangalore, private tuition" />
-            </div>
-            <div class="col-md-10">
-                <h2>CsquareEducation In Media</h2>
+    <div class="card mobile" style="margin-top: 6em!important;margin-bottom: 6em;">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-2">
+                    <img class="img img-thumbnail" src="assets/img/news.jpg" alt="home tuition bangalore, private tuition" />
+                </div>
+                <div class="col-md-10">
+                    <h2>CsquareEducation In Media</h2>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="card card-body mobile">
-        <div class="row">
-            <div class="col-md-2">
-                <img src="assets/img/glassdoor-logo.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block">
-                <br>
-                <a href="https://www.glassdoor.co.in/Reviews/CsquareEducation-Reviews-E1798051.htm" target="_blank">GlassDoor</a>
-            </div>
-            <div class="col-md-2">
-                <img src="assets/img/e27-logo.png" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block">
-                <br>
-                <a href="https://e27.co/startup/csquareeducation" target="_blank">e27</a>
-            </div>
-            <div class="col-md-2">
-                <img src="assets/img/youngbuzz-logo.png" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block">
-                <br>
-                <a href="https://www.youngbuzz.com/tutors/csquare-education-btm-layout-bangalore/courses/jee-advance" target="_blank">YoungBuzz</a>
-            </div>
-            <div class="col-md-2">
-                <img src="assets/img/connect2india-logo.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block">
-                <br>
-                <a href="http://connect2india.com/Csquare-Education/3455050" target="_blank">connect2india</a>
-            </div>
-            <div class="col-md-2">
-                <img src="assets/img/datafox-logo.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block">
-                <br>
-                <a href="https://datafox.com/csquareeducation" target="_blank">Datafox</a>
-            </div>
-            <div class="col-md-2" style="border-right: none!important;">
-                <img src="assets/img/dragdeal-logo.png" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block">
-                <br>
-                <a href="https://www.dragdeal.com/business/36817/csquare-education/bangalore" target="_blank">DragDeal</a>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="assets/img/glassdoor-logo.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block">
+                    <br>
+                    <a role="button" class="btn btn-default link" href="https://www.glassdoor.co.in/Reviews/CsquareEducation-Reviews-E1798051.htm" target="_blank">GlassDoor</a>
+                </div>
+                <div class="col-md-2">
+                    <img src="assets/img/e27-logo.png" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block">
+                    <br>
+                    <a role="button" class="btn btn-primary link" href="https://e27.co/startup/csquareeducation" target="_blank">e27</a>
+                </div>
+                <div class="col-md-2">
+                    <img src="assets/img/youngbuzz-logo.png" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block">
+                    <br>
+                    <a role="button" class="btn btn-default link" href="https://www.youngbuzz.com/tutors/csquare-education-btm-layout-bangalore/courses/jee-advance" target="_blank">YoungBuzz</a>
+                </div>
+                <div class="col-md-2">
+                    <img src="assets/img/connect2india-logo.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block">
+                    <br>
+                    <a role="button" class="btn btn-primary link" href="http://connect2india.com/Csquare-Education/3455050" target="_blank">connect2india</a>
+                </div>
+                <div class="col-md-2">
+                    <img src="assets/img/datafox-logo.jpg" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block">
+                    <br>
+                    <a role="button" class="btn btn-default link" href="https://datafox.com/csquareeducation" target="_blank">Datafox</a>
+                </div>
+                <div class="col-md-2" style="border-right: none!important;">
+                    <img src="assets/img/dragdeal-logo.png" alt="home tuition bangalore, private tuition" class="rounded mx-auto d-block">
+                    <br>
+                    <a role="button" class="btn btn-primary link" href="https://www.dragdeal.com/business/36817/csquare-education/bangalore" target="_blank">DragDeal</a>
+                </div>
             </div>
         </div>
     </div>

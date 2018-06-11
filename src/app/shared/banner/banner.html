@@ -3,11 +3,11 @@
         <!-- <video id="video" autoplay loop muted playsinline src="assets/img/banner.mp4"></video> -->
         <img src="assets/img/banner.jpg">
         <div class="overlay">
-            <div class="row" style="margin-top:-8em!important;">
+            <div class="row">
                 <div class="col-md-2">
 
                 </div>
-                <div class="col-md-8 top">
+                <div class="col-md-8">
                     <h1>CsquareEducation</h1>
                 </div>
                 <div class="col-md-2">
@@ -16,7 +16,7 @@
                 <div class="col-md-2">
 
                 </div>
-                <div class="col-md-8" style="margin-top: 4em;">
+                <div class="col-md-8">
                     <h2>A Step Towards Learning.</h2>
                 </div>
                 <div class="col-md-2">
@@ -45,26 +45,18 @@
                                                                         
                                                                 </ng-template>
                                                         </ngb-carousel> -->
-                    <div class="row row">
-                        <div class="icon icon-danger icon-view-prev" *ngIf="count > 0">
-                            <a role="button" (click)="back(count)">
-                                <i class="fa fa-chevron-left fa-2x"></i>
-                                <br>Back
-                            </a>
-                        </div>
-                        <div class="icon icon-danger icon-view-next" *ngIf="isNext == true">
-                            <a role="button" (click)="next(count)">
-                                <i class="fa fa-chevron-right fa-2x"></i>
-                                <br>Next
-                            </a>
-                        </div>
-                    </div>
                 </div>
                 <div class="col-md-2"></div>
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <div class="icon icon-danger">
-                        <i class="fa fa-chevron-down fa-3x iconDown" aria-hidden="true" (click)="scrollElement(container1,500)"></i>
+                    <div class="row row">
+                        <div class="col-md-5"></div>
+                        <div class="col-md-2">
+                            <div class="icon icon-danger">
+                                <i class="fa fa-chevron-down fa-3x" aria-hidden="true" (click)="scrollElement(container1,500)"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-5"></div>
                     </div>
                 </div>
                 <div class="col-md-2"></div>

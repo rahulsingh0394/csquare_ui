@@ -8,7 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoadingModule } from 'ngx-loading';
 import { HttpModule } from '@angular/http';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
-
+import { NguCarouselModule } from '@ngu/carousel';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
@@ -30,7 +30,7 @@ import { TutorService } from './tutorForm/tutor.service';
     NavbarComponent,
     FooterComponent,
     StudentComponent,
-    TutorComponent
+    TutorComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-app' }),
@@ -43,6 +43,7 @@ import { TutorService } from './tutorForm/tutor.service';
     TransferHttpCacheModule,
     AngularMultiSelectModule,
     SharedModule,
+    NguCarouselModule,
     FilterPipeModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
