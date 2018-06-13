@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import { BannerService } from './banner.service';
-import {TweenMax, Bounce, Elastic} from "gsap";
+import {TweenMax, Bounce, Elastic, Power2} from "gsap";
 
 
 class leadGrade {
@@ -90,8 +90,23 @@ export class BannerComponent implements OnInit {
 
     ngOnInit() {
         TweenMax.from(document.getElementById("main"), 2, {opacity: 0});
-        TweenMax.from(document.getElementById("h1"), 2, {x: -1200, ease:Elastic.easeOut, delay: 1});
-        TweenMax.from(document.getElementById("h2"), 2, {x: -1200, ease:Bounce.easeOut, delay: 1.5});
+        TweenMax.from(document.getElementById("1"), 2, {y: -1200, rotation: 90, ease: Power2.easeOut, delay: 1});
+        TweenMax.from(document.getElementById("2"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 1.1});
+        TweenMax.from(document.getElementById("3"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 1.2});
+        TweenMax.from(document.getElementById("4"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 1.3});
+        TweenMax.from(document.getElementById("5"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 1.4});
+        TweenMax.from(document.getElementById("6"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 1.5});
+        TweenMax.from(document.getElementById("7"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 1.6});
+        TweenMax.from(document.getElementById("8"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 1.7});
+        TweenMax.from(document.getElementById("9"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 1.8});
+        TweenMax.from(document.getElementById("10"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 1.9});
+        TweenMax.from(document.getElementById("11"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 2.0});
+        TweenMax.from(document.getElementById("12"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 2.1});
+        TweenMax.from(document.getElementById("13"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 2.2});
+        TweenMax.from(document.getElementById("14"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 2.3});
+        TweenMax.from(document.getElementById("15"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 2.4});
+        TweenMax.from(document.getElementById("16"), 2, {y: -1200, rotation: 180, ease: Power2.easeOut, delay: 2.5});
+        TweenMax.from(document.getElementById("h2"), 2, {x: -1200, ease:Elastic.easeOut, delay: 2});
         TweenMax.from(document.getElementById("icon"), 2, {x: -1200, ease:Bounce.easeOut, delay: 2});
     }
 
