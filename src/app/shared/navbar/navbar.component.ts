@@ -5,6 +5,7 @@ import { NgbPopoverConfig } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModalComponent } from '../../shared/common-modal/common-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
+import {TweenMax} from "gsap";
 
 @Component({
     selector: 'app-navbar',
@@ -48,6 +49,10 @@ export class NavbarComponent implements OnInit {
     }
 
     ngOnInit() {
+        TweenMax.from(document.getElementById("nav"), 0.5, {opacity: 0, y: -50, delay: 1});
+        TweenMax.staggerFrom(document.getElementsByClassName("labelBtn"), 0.5, {opacity: 0, y: -50, delay: 1.5}, 0.2);
+        TweenMax.staggerFrom(document.getElementsByClassName("nav-item"), 0.5, {opacity: 0, y: -50, delay: 2}, 0.2);
+
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
     }

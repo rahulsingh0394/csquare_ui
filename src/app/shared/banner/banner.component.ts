@@ -1,20 +1,18 @@
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollToService } from 'ng2-scroll-to-el';
-import { Component, OnInit, Input, Renderer } from '@angular/core';
-import { FormGroup, AbstractControl, FormBuilder, Validators, MinLengthValidator } from '@angular/forms';
-import { Observable } from 'rxjs/Rx';
-import { ActivatedRoute, Params, Router } from '@angular/router';
-import { HttpModule, Http, Response } from '@angular/http';
+import { Component, OnInit, Renderer } from '@angular/core';
+import { FormGroup, AbstractControl, FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import {  Http } from '@angular/http';
 import { CommonModalComponent } from '../../shared/common-modal/common-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { HostListener, ElementRef } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
-import { SortPipe } from '../pipes/filters/filter.pipe';
 import { BannerService } from './banner.service';
+import {TweenMax, Bounce, Elastic} from "gsap";
 
 
 class leadGrade {
@@ -91,17 +89,12 @@ export class BannerComponent implements OnInit {
     }
 
     ngOnInit() {
-        // let input_group_focus = document.getElementsByClassName('form-control');
-        // let input_group = document.getElementsByClassName('input-group');
-        // for (let i = 0; i < input_group.length; i++) {
-        //     input_group[i].children[0].addEventListener('focus', function (){
-        //         input_group[i].classList.add('input-group-focus');
-        //     });
-        //     input_group[i].children[0].addEventListener('blur', function (){
-        //         input_group[i].classList.remove('input-group-focus');
-        //     });
-        // }
+        TweenMax.from(document.getElementById("main"), 2, {opacity: 0});
+        TweenMax.from(document.getElementById("h1"), 2, {x: -1200, ease:Elastic.easeOut, delay: 1});
+        TweenMax.from(document.getElementById("h2"), 2, {x: -1200, ease:Bounce.easeOut, delay: 1.5});
+        TweenMax.from(document.getElementById("icon"), 2, {x: -1200, ease:Bounce.easeOut, delay: 2});
     }
+
     scrollElement(element, duration) {
         this.scrollService.scrollTo(element, duration);
     }

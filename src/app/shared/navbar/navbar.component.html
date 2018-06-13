@@ -1,13 +1,8 @@
 <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="navbar-translate" routerLinkActive="active">
+    <div class="navbar-translate" routerLinkActive="active" id="nav">
         <a class="navbar-brand" [routerLink]="['/home']">
             <img src="assets/img-menu/logo.jpg" alt="home tuition bangalore, home tutor">
         </a>
-        <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
-            <span class="navbar-toggler-bar"></span>
-            <span class="navbar-toggler-bar"></span>
-            <span class="navbar-toggler-bar"></span>
-        </button>
     </div>
     <div class="collapse navbar-collapse" id="navbarToggler">
         <div class="row btn-nav" style="margin-left: 5em;">
@@ -15,7 +10,7 @@
             <a role="button" class="btn btn-danger btn-round btn-raised labelBtn" (click)="buttonClick('/tutorForm')">&nbsp;&nbsp;Be A Tutor!&nbsp;&nbsp;</a>
         </div>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item" routerLinkActive="active">
+            <li class="nav-item" routerLinkActive="active" id="nav">
                 <a [routerLink]="['/home']" href="javascript:void(0);" class="nav-link">Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
             </li>
             <!-- <li class="nav-item" routerLinkActive="active">
@@ -24,21 +19,21 @@
                         <li class="nav-item" routerLinkActive="active">
                             <a [routerLink]="['/tutorForm']" class="nav-link">Be Tutor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </li> -->
-            <li class="nav-item" routerLinkActive="active">
+            <li class="nav-item" routerLinkActive="active" id="nav">
                 <a [routerLink]="['/about']" class="nav-link">About Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="nav">
                 <a target="_blank" href="https://csquareeducation.com/blog/" target="_blank" class="nav-link">Blog &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
             </li>
-            <li class="nav-item" routerLinkActive="active">
+            <li class="nav-item" routerLinkActive="active" id="nav">
                 <a [routerLink]="['/question']" class="nav-link">Question Paper &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="nav">
                 <a href="https://www.payumoney.com/paybypayumoney/#/293697" class="nav-link" target="_blank">
                     Payment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </a>
             </li>
-            <li class="nav-item" routerLinkActive="active">
+            <li class="nav-item" routerLinkActive="active" id="nav">
                 <a [routerLink]="['/contact']" class="nav-link">Contact Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
             </li>
             <!-- <li class="nav-item" routerLinkActive="active">
