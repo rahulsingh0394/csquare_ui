@@ -1,46 +1,39 @@
-.container-fluid {
-    margin-top: 2em;
-}
-
-.tittle {
+h2{
+    margin-top: 5%;
     text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    color: #f8591f !important;
+    color:white;
+    font-size: 4em;
 }
-
-// .card{
-//     background-color: rgb(255, 255, 255);
-//     margin-left: 2em;
-//     margin-right: 1em;
-// }
+h1{
+    text-align: center;
+    color:white;
+    font-size: 4em;
+}
+.image{
+    width:300px;
+    height:150px;
+    padding-left: 30%;
+    float: center;  
+    margin-top:3%;  
+}
+h4{
+    font-size: 2em;
+    color:white;
+    padding-left: 30%;
+}
+p{
+    font-size: 15px;
+    color: white;
+    padding-left: 22%;
+}
 .card-header {
     text-align: center;
     font-size: 2em;
-    color: #f8591f !important;
+    color:white !important;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    border: 1px solid #ccc;
+    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 72%);  
 }
-
-.card-body {
-    color: rgb(8, 8, 8);
-    text-align: justify;
-    border: 1px solid #ccc;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.p {
-    margin-left: 2em;
-}
-
-.tittle1 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-left: 4em;
-}
-
 agm-map {
     height: 400px;
 }
