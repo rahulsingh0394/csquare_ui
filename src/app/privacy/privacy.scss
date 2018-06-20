@@ -11,9 +11,12 @@
 }
 
 .title {
-    color: #f8591f !important;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 69%);
+    color: #fff !important;
+    padding-bottom: 2%;
+    padding-top: 2%;
 }
 
 .info-title {
