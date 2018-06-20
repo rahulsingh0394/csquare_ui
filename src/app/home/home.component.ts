@@ -52,9 +52,9 @@ export class HomeComponent implements OnInit {
             loop: true,
             custom: 'banner'
           }
-        this.usersCount = 6000;
+        this.usersCount = 6200;
         this.studentCount = 200;
-        this.tutorCount = 5800;
+        this.tutorCount = 6000;
     }
 
     buttonClick(data: any) {

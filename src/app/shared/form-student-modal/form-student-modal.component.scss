@@ -1,0 +1,84 @@
+.btn {
+    margin-right: 20px;
+    padding: 0 5em 0 1em;
+    text-align: left;
+}
+
+//Add a comment to this line
+.modal-content {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+}
+
+.form-data {
+    margin-top: 5em;
+}
+
+.back {
+    border: none;
+    float: left;
+    background-color: transparent;
+    font-size: 30px;
+    margin-top: -12px;
+    color: #66615b;
+}
+
+.close {
+    font-size: 30px;
+    color: #66615b;
+}
+
+.modal-footer {
+    padding: 1em 0 1em 2em;
+}
+
+.modal-body {
+    height: 470px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 5em;
+}
+
+h3 {
+    font-size: 24px;
+    text-align: justify;
+}
+
+.btn {
+    padding: 4px;
+}
+
+.form-control {
+    margin-top: 6em;
+}
+
+@media(max-width: 600px) {
+    .modal-body {
+        margin-top: 3em;
+        height: 200px;
+        width: 80%;
+    }
+    h3 {
+        font-size: 16px;
+        text-align: justify;
+    }
+    .form-control {
+        margin-top: 4em;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .form-data {
+        margin-top: 2em;
+    }
+}
+
+@media(max-width: 900px) {
+    .modal-body {
+        height: 400px;
+    }
+}

@@ -8,10 +8,20 @@
     text-transform: uppercase;
 }
 
-.card-body {
+.card-header {
     border: 1px solid #ccc;
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
+    color: #fff !important;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 0px !important;
+    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 69%);
+}
+
+.card-body {
+    background-color: #fff !important;
+    border: 1px solid #ccc;
+    text-align: left;
+    margin-bottom: 2em;
 }
 
 h2 {
@@ -47,14 +57,6 @@ p {
 
 .fa-5x {
     font-size: 100px;
-}
-
-.card-header {
-    border: 1px solid #ccc;
-    color: #f8591f !important;
-    text-align: center;
-    font-size: 45px;
-    border-radius: 0px !important;
 }
 
 .awesome {
@@ -144,11 +146,18 @@ p {
 }
 
 .btn-primary {
-    border-radius: 6px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
     font-size: 20px;
     padding: 4px;
     padding-left: 1em;
     padding-right: 1em;
+}
+
+.btn-primary:hover {
+    background-color: #643094;
 }
 
 .overlay {
@@ -163,7 +172,7 @@ p {
     justify-content: center;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 600px) {
     .fa-5x {
         font-size: 30px;
     }
@@ -175,5 +184,14 @@ p {
         margin: 0px;
         margin-top: 1em;
         margin-bottom: 1em;
+    }
+    .col-md-6 {
+        margin: 1em;
+    }
+    h2 {
+        font-size: 20px!important;
+    }
+    .col-md-12 {
+        font-size: 16px;
     }
 }

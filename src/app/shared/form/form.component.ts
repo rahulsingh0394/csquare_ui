@@ -1,9 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/forms';
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
-import { FormStudentModalComponent } from './form-student-modal/form-student-modal.component';
+import { FormStudentModalComponent } from '../form-student-modal/form-student-modal.component';
 import { CommonModalComponent } from '../common-modal/common-modal.component';
 
 @Component({
@@ -74,6 +74,7 @@ export class FormComponent implements OnInit {
     } else if(this.type){
       const modal = this.modalService.open(FormStudentModalComponent, ngbModalOptions);
       modal.componentInstance.leadType = this.type;
+      modal.componentInstance.fromWhere = 'Bangalore';
     } else {
       const modal = this.modalService.open(CommonModalComponent, {size: 'lg'});
       modal.componentInstance.showHide = false;

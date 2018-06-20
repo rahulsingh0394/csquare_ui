@@ -7,7 +7,7 @@
                 <div class="col-md-2">
 
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 head">
                     <h1 id="1">C</h1>
                     <h1 id="2">S</h1>
                     <h1 id="3">Q</h1>
@@ -40,26 +40,32 @@
                 <div class="col-md-2">
 
                 </div>
-                <div class="col-md-8">
-                    <!-- <ngb-carousel >
-                                                                <ng-template ngbSlide>
-                                                                        <p>CsquareEducation is providing home tuition from various range. CsquareEducation provides flexible range to select home tutor or tuition teacher for their kids. </p> 
-                                                                           
-                                                                </ng-template>
-                                                                <ng-template ngbSlide>
-                                                                   
-                                                                        <p>CsquareEducation provides flexibility to replace your home tutor/private tutor at any time if you’re not satisfied with the way of teaching of current tutor.</p>
-                                                                        
-                                                                </ng-template>
-                                                                <ng-template ngbSlide>
-                                                                        <p>Many of us need female tutor/ teacher for our kid’s as they handle kid’s in better way and they understand them in better way.</p>
-                                                                       
-                                                                </ng-template>
-                                                                <ng-template ngbSlide>
-                                                                        <p>Csquareeducation do documents verification for all their home tutor or tuition teacher. Every aspects of recruitment process is well verified.</p>
-                                                                        
-                                                                </ng-template>
-                                                        </ngb-carousel> -->
+                <div class="col-md-8" style="text-align: center;margin-top: 2em;">
+                    <button class="btn btn-primary" (click)="lead()">Get A Free Demo Class <span>(Only For Student's/Parent's)</span></button>
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-8" style="margin-top: 1em;">
+                    <ngu-carousel [inputs]="carouselOne" (carouselLoad)="myfunc($event)">
+                        <ngu-item NguCarouselItem>
+                            <h3>CsquareEducation is providing home tuition from various range. CsquareEducation provides flexible range to select home tutor or tuition teacher for their kids. </h3>
+                        </ngu-item>
+                        <ngu-item NguCarouselItem>
+                            <h3>CsquareEducation provides flexibility to replace your home tutor/private tutor at any time if you’re not satisfied with the way of teaching of current tutor.</h3>
+                        </ngu-item>
+                        <ngu-item NguCarouselItem>
+                            <h3>Many of us need female tutor/ teacher for our kid’s as they handle kid’s in better way and they understand them in better way.</h3>
+                        </ngu-item>
+                        <ngu-item NguCarouselItem>
+                            <h3>Csquareeducation do documents verification for all their home tutor or tuition teacher. Every aspects of recruitment process is well verified.</h3>
+                        </ngu-item>
+                        <button NguCarouselPrev class='leftRs'>Previous</button>
+                        <button NguCarouselNext class='rightRs'>Next</button>
+                    </ngu-carousel>
                 </div>
                 <div class="col-md-2"></div>
                 <div class="col-md-2"></div>

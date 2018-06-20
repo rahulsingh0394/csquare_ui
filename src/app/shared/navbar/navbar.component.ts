@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, Input } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, Input, Renderer2} from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { NgbPopover } from '@ng-bootstrap/ng-bootstrap';
 import { NgbPopoverConfig } from '@ng-bootstrap/ng-bootstrap';
@@ -6,6 +6,7 @@ import { CommonModalComponent } from '../../shared/common-modal/common-modal.com
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import {TweenMax} from "gsap";
+import { HostListener } from "@angular/core";
 
 @Component({
     selector: 'app-navbar',
@@ -19,14 +20,25 @@ export class NavbarComponent implements OnInit {
     greeting = {};
     name = 'World';
     @ViewChild('p') public popover: NgbPopover;
+    @ViewChild(".nav-link") el: ElementRef;
 
     showLink: object;
+    screenHeight: any;
+    screenWidth: any;
+
+    @HostListener('window:resize', ['$event'])
+    onResize(event?) {
+      this.screenHeight = window.innerHeight;
+      this.screenWidth = window.innerWidth;
+}
 
     constructor(public location: Location,
         private element: ElementRef,
         config: NgbPopoverConfig,
         private router: Router,
+        private renderer: Renderer2,
         private modalService: NgbModal) {
+        this.onResize();
         this.sidebarVisible = false;
     }
 
@@ -49,12 +61,16 @@ export class NavbarComponent implements OnInit {
     }
 
     ngOnInit() {
-        TweenMax.from(document.getElementById("nav"), 0.5, {opacity: 0, y: -50, delay: 1});
-        TweenMax.staggerFrom(document.getElementsByClassName("labelBtn"), 0.5, {opacity: 0, y: -50, delay: 1.5}, 0.2);
-        TweenMax.staggerFrom(document.getElementsByClassName("nav-item"), 0.5, {opacity: 0, y: -50, delay: 2}, 0.2);
-
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
+        console.log("Width: "+this.screenWidth +" and " + "Height: "+this.screenHeight);
+        if(this.screenWidth > 1000 && this.screenHeight > 700){
+            TweenMax.from(document.getElementById("nav"), 0.5, {opacity: 0, y: -50, delay: 1});
+            TweenMax.staggerFrom(document.getElementsByClassName("labelBtn"), 0.5, {opacity: 0, y: -50, delay: 1.5}, 0.2);
+            TweenMax.staggerFrom(document.getElementsByClassName("nav-item"), 0.5, {opacity: 0, y: -50, delay: 2}, 0.2);
+        }
+        
+
     }
     sidebarOpen() {
         const toggleButton = this.toggleButton;
@@ -62,7 +78,7 @@ export class NavbarComponent implements OnInit {
 
         setTimeout(function () {
             toggleButton.classList.add('toggled');
-        }, 500);
+        }, 100);
         html.classList.add('nav-open');
 
         this.sidebarVisible = true;
@@ -91,4 +107,24 @@ export class NavbarComponent implements OnInit {
         this.router.navigateByUrl(data);
     }
 
+    menuToggle(event:any) {
+       // console.log(event.target);
+       // this.remove();
+       this.remove();
+        this.renderer.addClass(event.target,"active");
+    }
+
+    // remove(){
+    //     this.renderer.removeClass(this.element.nativeElement.querySelectorAll('.nav-link'), "active");
+    // }
+
+    remove(){
+        // you'll get your through 'elements' below code
+        let elements = this.element.nativeElement.querySelectorAll('.nav-link');
+        console.log(elements)
+        elements.forEach(element => {
+            this.renderer.removeClass(element, "active");
+        });
+        //this.renderer.removeClass(elements, "active");
+    }
 }

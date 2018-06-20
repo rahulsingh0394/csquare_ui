@@ -52,6 +52,7 @@
         "ngx-loading": "^1.0.14",
         "popper.js": "^1.14.3",
         "rxjs": "^5.5.2",
+        "scrollmagic": "^2.0.5",
         "zone.js": "^0.8.14"
     },
     "devDependencies": {

@@ -13,7 +13,6 @@ import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-//import { BannerComponent } from './shared/banner/banner.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FilterPipeModule } from './shared/pipes/filters/fliter.module';
@@ -26,7 +25,6 @@ import { TutorService } from './tutorForm/tutor.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    // BannerComponent,
     NavbarComponent,
     FooterComponent,
     StudentComponent,

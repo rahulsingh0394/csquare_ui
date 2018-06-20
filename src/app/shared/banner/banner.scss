@@ -15,12 +15,18 @@ h2 {
     font-size: 24px;
     color: #fff;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
 }
 
 h1 {
     color: #fff !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 5vw;
     text-align: center;
     font-weight: bold;
@@ -47,6 +53,32 @@ h1 {
     font-size: 30px;
 }
 
+.leftRs {
+    display: none!important;
+}
+
+.rightRs {
+    display: none!important;
+}
+
+.btn-primary {
+    background-color: #00bcd4;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+span {
+    font-size: 12px;
+}
+
+:host /deep/ .ngucarouselPointDefault[_ngcontent-c4] .ngucarouselPoint[_ngcontent-c4] li[_ngcontent-c4] {
+    background: #00bcd4!important;
+}
+
+:host /deep/ .ngucarouselPointDefault[_ngcontent-c4] .ngucarouselPoint[_ngcontent-c4] li.active[_ngcontent-c4] {
+    background: #643094!important;
+}
+
 @media(max-width:600px) {
     .overlay {
         margin: 0px;
@@ -58,7 +90,17 @@ h1 {
     h2 {
         font-size: 14px;
     }
+    h3 {
+        font-size: 12px;
+        margin-left: 10px;
+    }
     .icon-danger {
         margin-left: 14em!important;
+    }
+    .head {
+        margin-left: 10%;
+    }
+    .btn-primary {
+        font-size: 12px;
     }
 }

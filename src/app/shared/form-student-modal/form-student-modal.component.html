@@ -1,0 +1,55 @@
+<div class="modal-content" data-backdrop="static" data-keyboard="false">
+    <div class="modal-header">
+        <button class="back" *ngIf="num > 1" aria-label="Close" (click)="back()">
+        <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+      </button>
+        <button class="close" aria-label="Close" (click)="cancelModal()">
+          <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+    </button>
+    </div>
+    <div class="modal-body">
+        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+        <form [formGroup]="enquiryForm">
+            <div *ngIf="num == 1">
+                <h2> We will ask a few questions to connect you with the right Tutors</h2>
+            </div>
+            <div *ngIf="num == 2" class="form-data">
+                <h3>Please Select City Where You Need Home Tuition Service.</h3>
+                <select type="text" class="form-control" formControlName="city" id="city">
+                            <option value="" hidden>City</option>
+                            <option *ngFor="let city of cityList" [value]="city.pK">{{city.city_name}}</option>
+                        </select>
+            </div>
+            <div *ngIf="num == 3" class="form-data">
+                <h3>Please Enter Near-By Location Or Pincode Where You Need Home Tuition Service.</h3>
+                <input id="test" type="text" class="form-control" [formControl]="locationName" id="locationName" [ngbTypeahead]="search" placeholder="Location" />
+            </div>
+            <div *ngIf="num == 4" class="form-data">
+                <h3>Please Select Grade For Which You Need Home Tuition.</h3>
+                <select class="form-control" formControlName="grade" id="grade" placeholder="Grade">
+                        <option value="" hidden>Grade</option>
+                        <option *ngFor="let list of gradeList | sortBy: 'sortorder'" [value]="list.pk">{{list.grade}}</option>
+                </select>
+            </div>
+            <div *ngIf="num == 5" class="form-data">
+                <h3>Please Enter Your Name As Our Representative Might Contact You For Better Service.</h3>
+                <input type="text" class="form-control" formControlName="firstName" id="firstName" placeholder="Name">
+            </div>
+            <div *ngIf="num == 6" class="form-data">
+                <h3>Please Provide Your Email Id For Better Service And To Get Login Credentials.</h3>
+                <input type="text" class="form-control" formControlName="email" id="email" placeholder="Email">
+            </div>
+            <div *ngIf="num == 7" class="form-data">
+                <h3>Please Provide Your Conatct Number For Verification And Better Service.</h3>
+                <input type="text" class="form-control" formControlName="phone" id="phone" placeholder="Phone Number">
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer ">
+        <button class="btn btn-danger" style="float: left;" (click)="okModal()" *ngIf="num == 3">Skip</button>
+        <button class="btn btn-primary confirm-btn" (click)="okModal()" *ngIf="num != 6">{{ok}}</button>
+        <button class="btn btn-primary confirm-btn" (click)="submit()" *ngIf="num == 6">Submit</button>
+        <!-- TODO: Need to handle two button -->
+        <button class="btn btn-danger confirm-btn" *ngIf="showHide" (click)="cancelModal()">Cancel</button>
+    </div>
+</div>

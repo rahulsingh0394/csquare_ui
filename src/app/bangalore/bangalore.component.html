@@ -1,314 +1,60 @@
 <app-form></app-form>
 <div class="main">
-    <div class="section text-center" style="background-color: rgb(255, 255, 255)!important;">
+    <div class="section text-center">
         <div class="col-md-11 mr-auto ml-auto">
-            <div class="card card-header" style="margin-top: 2em;background-color: #fff;  ">
-                <h1 class="title">{{h1Des}}</h1>
+            <div class="card-header">
+                <h1>{{h1Des}}</h1>
             </div>
             <div class="row">
-                <div class="col-md-8">
-                    <div class="card card-header title">
-                        {{t1}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t1Url}}" alt="home tuition in bangalore, private tuition in bangalore, tuition teacher in bangalore" class="img-circle">
+                <div class="col-md-8" style="margin-top: 1em;">
+                    <div *ngFor="let item of tutorDetails; let i = index" [attr.data-index]="i">
+                        <div *ngIf="i%2 == 0" style="margin-bottom: 2em;">
+                            <span class="quoted1"><i class="fa fa-quote-right"></i></span>
+                            <div class="review-test1">
+                                <h4 class="name">{{item.name}}</h4>
+                                <small class="tagline">Experience: {{item.exp}}</small><br>
+                                <div class="star">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <p class="bottom40">
+                                    {{item.desp}}
+                                </p>
                             </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t1Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <h3 class="desp">
-                                    {{t1Desp}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-header title">
-                        {{t2}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t2Url}}" alt="home tutor in bangalore, private tutor in bangalore, tuition teacher in bangalore" class="img-circle">
-                            </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t2Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <h3 class="desp">{{t2Desp}}</h3>
+                            <div class="review-photo">
+                                <img src="{{item.url}}">
                             </div>
                         </div>
-                    </div>
-                    <div class="card card-header title">
-                        {{t3}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t3Url}}" alt="home tuition in bangalore, private tuition in bangalore, tuition teacher in bangalore" class="img-circle">
+                        <div *ngIf="i%2 != 0" style="margin-bottom: 2em;">
+                            <span class="quoted2"><i class="fa fa-quote-right"></i></span>
+                            <div class="review-test2">
+                                <h4 class="name">{{item.name}}</h4>
+                                <small class="tagline">Experience: {{item.exp}}</small><br>
+                                <div class="star">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <p class="bottom40">
+                                    {{item.desp}}
+                                </p>
                             </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t3Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <h3 class="desp">{{t3Desp}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-header title">
-                        {{t4}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t4Url}}" alt="home tutor in bangalore, private tutor in bangalore, tuition teacher in bangalore" class="img-circle">
-                            </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t4Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <h3 class="desp">{{t4Desp}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-header title">
-                        {{t5}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t5Url}}" alt="home tuition in bangalore, private tuition in bangalore, tuition teacher in bangalore" class="img-circle">
-                            </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t5Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <h3 class="desp">{{t5Desp}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a role="button" class="btn btn-primary btn-round btn-raised" (click)="buttonClick('/studentForm')" style="color: #fff!important;">&nbsp;&nbsp;&nbsp;Need a Private Tutor? Click Here&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
-                        <a role="button" class="btn btn-primary btn-round btn-raised" (click)="buttonClick('/tutorForm')" style="color: #fff!important;">Want to be a Home Tutor? Click Here</a>
-
-                    </div>
-
-                    <div class="card card-header title">
-                        {{t6}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t6Url}}" alt="home tutor in bangalore, private tutor in bangalore, tuition teacher in bangalore" class="img-circle">
-                            </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t6Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <h3 class="desp">{{t6Desp}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-header title">
-                        {{t7}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t7Url}}" alt="home tuition in bangalore, private tuition in bangalore, tuition teacher in bangalore" class="img-circle">
-                            </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t7Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <h3 class="desp">{{t7Desp}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-header title">
-                        {{t8}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t8Url}}" alt="home tutor in bangalore, private tutor in bangalore, tuition teacher in bangalore" class="img-circle">
-                            </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t8Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <h3 class="desp">{{t8Desp}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-header title">
-                        {{t9}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t9Url}}" alt="home tuition in bangalore, private tuition in bangalore, tuition teacher in bangalore" class="img-circle">
-                            </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t9Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <h3 class="desp">{{t9Desp}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-header title">
-                        {{t10}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t10Url}}" alt="home tutor in bangalore, private tutor in bangalore, tuition teacher in bangalore" class="img-circle">
-                            </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t10Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <h3 class="desp">{{t10Desp}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a role="button" class="btn btn-primary btn-round btn-raised" (click)="buttonClick('/studentForm')" style="color: #fff!important;">&nbsp;&nbsp;&nbsp;Need a Private Tutor? Click Here&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
-                        <a role="button" class="btn btn-primary btn-round btn-raised" (click)="buttonClick('/tutorForm')" style="color: #fff!important;">Want to be a Home Tutor? Click Here</a>
-                    </div>
-                    <div class="card card-header title">
-                        {{t11}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t11Url}}" alt="home tutor in bangalore, private tutor in bangalore, tuition teacher in bangalore" class="img-circle">
-                            </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t11Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <h3 class="desp">{{t11Desp}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-header title">
-                        {{t12}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t12Url}}" alt="home tutor in bangalore, private tutor in bangalore, tuition teacher in bangalore" class="img-circle">
-                            </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t12Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <h3 class="desp">{{t12Desp}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-header title">
-                        {{t13}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t13Url}}" alt="home tutor in bangalore, private tutor in bangalore, tuition teacher in bangalore" class="img-circle">
-                            </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t13Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <h3 class="desp">{{t13Desp}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-header title">
-                        {{t14}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t14Url}}" alt="home tutor in bangalore, private tutor in bangalore, tuition teacher in bangalore" class="img-circle">
-                            </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t14Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <h3 class="desp">{{t14Desp}}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card card-header title">
-                        {{t15}}
-                    </div>
-                    <div class="card card-body bg-transparent">
-                        <div class="row row">
-                            <div class="col-md-4">
-                                <img src="{{t15Url}}" alt="home tutor in bangalore, private tutor in bangalore, tuition teacher in bangalore" class="img-circle">
-                            </div>
-                            <div class="col-md-8">
-                                <h4>Experience: {{t15Exp}}</h4>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <h3 class="desp">{{t15Desp}}</h3>
+                            <div class="review-photo">
+                                <img src="{{item.url}}">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card card-header menu-title" style="margin-top: 1.6em;">
+                    <div class="card-header menu-title" style="margin-top: 1.6em;">
                         Question Papers:
                     </div>
-                    <div class="card card-body bg-transparent" routerLinkActive="active">
+                    <div class="card-body bg-transparent" routerLinkActive="active">
                         <ul>
                             <li class="menu-item">
                                 <img src="assets/img-menu/question/questionpaperX.jpg" width="30" height="30">&nbsp;&nbsp;
@@ -336,48 +82,48 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="card card-header menu-title">
+                    <div class="card-header menu-title">
                         Find Home Tuition For Your Syllabus:
                     </div>
-                    <div class="card card-body bg-transparent" routerLinkActive="active">
+                    <div class="card-body bg-transparent" routerLinkActive="active">
                         <ul *ngFor="let menu of syllabusMenuList">
                             <li class="menu-item">
                                 <img src="{{menu.img}}" width="50" height="50">&nbsp;&nbsp;
-                                <a role="button" (click)="buttonClick(menu.url)">{{menu.menu_name}}</a>
+                                <a role="button" (click)="buttonClick(menu.url)">Top 10 {{menu.menu_name}} Home Tutor</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="card card-header menu-title">
+                    <div class="card-header menu-title">
                         Find Home Tuition For Your Grade:
                     </div>
-                    <div class="card card-body bg-transparent" routerLinkActive="active">
+                    <div class="card-body bg-transparent" routerLinkActive="active">
                         <ul *ngFor="let menu of classMenuList">
                             <li class="menu-item">
                                 <img src="{{menu.img}}" width="50" height="50">&nbsp;&nbsp;
-                                <a role="button" (click)="buttonClick(menu.url)">{{menu.menu_name}}</a>
+                                <a role="button" (click)="buttonClick(menu.url)">Top 10 {{menu.menu_name}} Home Tutor</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="card card-header menu-title">
+                    <div class="card-header menu-title">
                         Find Home Tuition For Your Subject:
                     </div>
-                    <div class="card card-body bg-transparent" routerLinkActive="active">
+                    <div class="card-body bg-transparent" routerLinkActive="active">
                         <ul *ngFor="let menu of subjectMenuList">
 
                             <li class="menu-item">
                                 <img src="{{menu.img}}" width="50" height="50">&nbsp;&nbsp;
-                                <a role="button" (click)="buttonClick(menu.url)">{{menu.menu_name}}</a>
+                                <a role="button" (click)="buttonClick(menu.url)">Top 10 {{menu.menu_name}} Home Tutor</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="card card-header menu-title">
+                    <div class="card-header menu-title">
                         Find Home Tuitions For Your Locations:
                     </div>
-                    <div class="card card-body bg-transparent" routerLinkActive="active">
+                    <div class="card-body bg-transparent" routerLinkActive="active">
                         <ul *ngFor="let menu of locationMenuList">
 
-                            <li class="menu-item" style="padding-left: 4px;">
-                                <a role="button" (click)="buttonClick(menu.url)">{{menu.menu_name}}</a>
+                            <li class="menu-item" style="padding-left: 4px; text-align: justify!important;">
+                                <a role="button" (click)="buttonClick(menu.url)">To 10 Home Tutor Near {{menu.menu_name}}</a>
                             </li>
                         </ul>
                     </div>
