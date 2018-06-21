@@ -1,12 +1,10 @@
-import { Component, OnInit, ElementRef, ViewChild, Input, Renderer2} from '@angular/core';
-import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Component, OnInit, ElementRef, ViewChild, Renderer2} from '@angular/core';
+import { Location } from '@angular/common';
 import { NgbPopover } from '@ng-bootstrap/ng-bootstrap';
 import { NgbPopoverConfig } from '@ng-bootstrap/ng-bootstrap';
-import { CommonModalComponent } from '../../shared/common-modal/common-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import {TweenMax} from "gsap";
-import { HostListener } from "@angular/core";
 
 @Component({
     selector: 'app-navbar',
@@ -26,19 +24,11 @@ export class NavbarComponent implements OnInit {
     screenHeight: any;
     screenWidth: any;
 
-    @HostListener('window:resize', ['$event'])
-    onResize(event?) {
-      this.screenHeight = window.innerHeight;
-      this.screenWidth = window.innerWidth;
-}
-
     constructor(public location: Location,
         private element: ElementRef,
         config: NgbPopoverConfig,
         private router: Router,
-        private renderer: Renderer2,
-        private modalService: NgbModal) {
-        this.onResize();
+        private renderer: Renderer2) {
         this.sidebarVisible = false;
     }
 
@@ -63,12 +53,12 @@ export class NavbarComponent implements OnInit {
     ngOnInit() {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
-        console.log("Width: "+this.screenWidth +" and " + "Height: "+this.screenHeight);
-        if(this.screenWidth > 1000 && this.screenHeight > 700){
-            TweenMax.from(document.getElementById("nav"), 0.5, {opacity: 0, y: -50, delay: 1});
-            TweenMax.staggerFrom(document.getElementsByClassName("labelBtn"), 0.5, {opacity: 0, y: -50, delay: 1.5}, 0.2);
-            TweenMax.staggerFrom(document.getElementsByClassName("nav-item"), 0.5, {opacity: 0, y: -50, delay: 2}, 0.2);
-        }
+        // console.log("Width: "+this.screenWidth +" and " + "Height: "+this.screenHeight);
+        // if(this.screenWidth > 900){
+        //     TweenMax.from(document.getElementById("nav"), 0.5, {opacity: 0, y: -50, delay: 1});
+        //     TweenMax.staggerFrom(document.getElementsByClassName("labelBtn"), 0.5, {opacity: 0, y: -50, delay: 1.5}, 0.2);
+        //     TweenMax.staggerFrom(document.getElementsByClassName("nav-item"), 0.5, {opacity: 0, y: -50, delay: 2}, 0.2);
+        // }
         
 
     }

@@ -60,3 +60,13 @@ img {
 .nav-link:focus {
     outline: none!important;
 }
+
+.mobile {
+    display: none;
+}
+
+@media(max-width: 900px) {
+    .mobile {
+        display: inline;
+    }
+}

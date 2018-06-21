@@ -1,39 +1,62 @@
-h2{
+.row {
+    margin-top: 4em;
+}
+
+h2 {
     margin-top: 5%;
     text-align: center;
-    color:white;
+    color: white;
     font-size: 4em;
 }
-h1{
+
+h1 {
     text-align: center;
-    color:white;
+    color: white;
     font-size: 4em;
 }
-.image{
-    width:300px;
-    height:150px;
+
+.image {
+    width: 300px;
+    height: 150px;
     padding-left: 30%;
-    float: center;  
-    margin-top:3%;  
+    float: center;
+    margin-top: 3%;
 }
-h4{
+
+h4 {
     font-size: 2em;
-    color:white;
+    color: white;
     padding-left: 30%;
 }
-p{
+
+p {
     font-size: 15px;
     color: white;
-    padding-left: 22%;
+    padding-left: 30%;
 }
+
 .card-header {
     text-align: center;
     font-size: 2em;
-    color:white !important;
+    color: white !important;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 72%);  
+    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 72%);
 }
+
 agm-map {
     height: 400px;
+}
+
+.form-control {
+    background-color: rgb(245, 245, 245);
+}
+
+@media(max-width: 600px) {
+    .image {
+        padding-left: 20%;
+    }
+    p {
+        padding-left: 20%;
+    }
 }

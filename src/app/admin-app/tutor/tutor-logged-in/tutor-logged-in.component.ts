@@ -235,7 +235,7 @@ export class TutorLoggedInComponent implements OnInit {
         if (this.imgUrl) {
 
         } else {
-          this.imgUrl = 'assets/img/he.png';
+          this.imgUrl = 'assets/tutor_image/he.png';
         }
         this.service.searchTutor(formData).subscribe(res => {
           let data: any = res[0];

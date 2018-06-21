@@ -141,25 +141,74 @@
     <hr/>
     <div class="work-flow" style="margin-top: 6em!important;">
         <h2 class="work-flow-heading">Work Process</h2>
+        <br>
+        <p class="bottom20" style="text-align: center;">
+            Click On Any Step To Know More About It!
+        </p>
         <div class="row">
             <ul class="process">
                 <li class="process-item">
-                    <span class="pro-step first">01</span>
-                    <p class="bottom20" style="margin-left: 4em;">Enquire For Tutor</p>
+                    <span class="pro-step first" (click)="firstStep1()">01</span>
+                    <p class="bottom20">Enquire For Tutor</p>
                 </li>
                 <li class="process-item">
-                    <span class="pro-step second">02</span>
+                    <span class="pro-step second" (click)="firstStep2()">02</span>
                     <p class="bottom20">Schedule A Demo Class</p>
                 </li>
                 <li class="process-item">
-                    <span class="pro-step third">03</span>
+                    <span class="pro-step third" (click)="firstStep3()">03</span>
                     <p class="bottom20">Subscribe</p>
                 </li>
                 <li class="process-item last">
-                    <span class="pro-step">04</span>
+                    <span class="pro-step" (click)="firstStep4()">04</span>
                     <p class="bottom20">Start Class at Home</p>
                 </li>
             </ul>
+        </div>
+        <div class="row enquire-detail" *ngIf="detail1 == true">
+            <h6 style="color: #fff;font-size: 1em; font-weight: bold;margin-left: 35%;">Hello There! </h6><br>
+            <p class="bottom10">
+                This section will close in <b><u>{{time1}} sec</u></b>.<br>
+                <br>Need to know about how to make a enquiry for a Home or Private or Tuition Tutor or Teacher. We are here to help. Just follow these simple steps and you are all set to go.
+                <br>1. You can see <span><b><u>Need Tutor</u></b></span> button on top-left of this page. (If you are on mobile click button on top-right and there you see Need Tutor)
+                <br>2. Just Click on that and fill the form and our representative will call you shortly and help you to get right tutor or teacher.
+                <br>3. Or scroll to top of this page. In banner you can see <span><b><u>Get A Free Demo Class button</u></b></span>. Click on it and follow steps.
+                <br>4. And you are all done. Any Further Query Contact Us On <b><u>&nbsp;8041627767, &nbsp;7899342386, &nbsp;9036198865</u></b>
+            </p>
+        </div>
+        <div class="row enquire-detail" *ngIf="detail2 == true">
+            <h6 style="color: #fff;font-size: 1em; font-weight: bold;margin-left: 35%;">Hello There! </h6><br>
+            <p class="bottom10">
+                This section will close in <b><u>{{time2}} sec</u></b>.<br>
+                <br>Need to know about how to Schedule a Demo Class. No Worries. Hope You have completed Previous Steps.
+                <br>1. So Once You fill out Need Tutor Form. Our representative will call or contact you through provided details.
+                <br>2. Just update him/her right time for a Tutor/Teacher to take up demo class at you door step.
+                <br>3. Once you provide him/her avaiable time slot, he/she will arrange best tutor/teacher for you.
+                <br>4. if not statisfied with the tutor you can just let us know through phone call or email and we will aranage another Demo class for you.
+                <br>5. Any Further Query Contact Us On <b><u>&nbsp;8041627767, &nbsp;7899342386, &nbsp;9036198865</u></b>
+            </p>
+        </div>
+        <div class="row enquire-detail" *ngIf="detail3 == true">
+            <h6 style="color: #fff;font-size: 1em; font-weight: bold;margin-left: 35%;">Hello There! </h6><br>
+            <p class="bottom10">
+                This section will close in <b><u>{{time3}} sec</u></b>.<br>
+                <br>Need to know about Subscription . Well just follow these simple steps and you are all set to go. But before this don't forget to complete previous steps.
+                <br>1. So now you are statisfied with demo class and tutor/teacher provided to you by our representative.
+                <br>2. That's amazing! Now you just need to pay Rs 1000 as registration fees and you might have received confirmation email.
+                <br>3. That's all you have to do rest we will handle and provide you reports and all progress reports for student every month.
+                <br>4. Any Further Query Contact Us On <b><u>&nbsp;8041627767, &nbsp;7899342386, &nbsp;9036198865</u></b>
+            </p>
+        </div>
+        <div class="row enquire-detail" *ngIf="detail4 == true">
+            <h6 style="color: #fff;font-size: 1em; font-weight: bold;margin-left: 35%;">Hello There! </h6><br>
+            <p class="bottom10">
+                This section will close in <b><u>{{time4}} sec</u></b>.<br>
+                <br>Need to know about how to Start class. Awesome now you a member of CsquareEducation family and we Welcome you to our family.
+                <br>1. Since you are done with demo and subscription, you just need to inform our representative/assigned tutor/teacher when you want your class to start.
+                <br>2. After class start you can request for any changes if you are not comfortable with classes for timing changes or tutor change with some authentic reason.
+                <br>3. If everything is going fine just review us on google, facebook or anywhere else where you find CsquareEducation and please recommend us.
+                <br>4. Thank You. Any Further Query Contact Us On <b><u>&nbsp;8041627767, &nbsp;7899342386, &nbsp;9036198865</u></b>
+            </p>
         </div>
     </div>
     <hr/>

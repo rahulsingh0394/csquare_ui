@@ -21,6 +21,7 @@ h2 {
 h3 {
     font-size: 20px;
     color: #fff;
+    text-align: center;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -44,7 +45,7 @@ h1 {
     background: linear-gradient(90deg, #423f9c 31%, #862359 69%);
     background-image: linear-gradient(90deg, rgb(66, 63, 156) 31%, rgb(134, 35, 89) 69%);
     border-radius: 50%;
-    margin-left: 14px;
+    margin-left: 20%;
 }
 
 .fa-3x {
@@ -90,12 +91,15 @@ span {
     h2 {
         font-size: 14px;
     }
+    span {
+        font-size: 8px;
+    }
     h3 {
-        font-size: 12px;
-        margin-left: 10px;
+        font-size: 10px;
+        padding: 10px;
     }
     .icon-danger {
-        margin-left: 14em!important;
+        margin-left: 40%!important;
     }
     .head {
         margin-left: 10%;

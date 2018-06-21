@@ -335,8 +335,8 @@ li {
     content: ''!important;
     position: absolute!important;
     top: 27%!important;
-    left: -47%!important;
-    width: 67%!important;
+    left: -58%!important;
+    width: 79%!important;
     height: 1px!important;
     background: #fff!important;
     z-index: 1!important;
@@ -346,8 +346,8 @@ li {
     content: ''!important;
     position: absolute!important;
     top: 25%!important;
-    left: -103%!important;
-    width: 130%!important;
+    left: -100%!important;
+    width: 128%!important;
     height: 1px!important;
     background: #fff!important;
     z-index: 1!important;
@@ -357,8 +357,8 @@ li {
     content: ''!important;
     position: absolute!important;
     top: 25%!important;
-    left: -52%!important;
-    width: 75%!important;
+    left: -53%!important;
+    width: 76%!important;
     height: 1px!important;
     background: #fff!important;
     z-index: 1!important;
@@ -366,12 +366,6 @@ li {
 
 li:first-child::before {
     display: none;
-}
-
-@media(max-width: 600px) {
-    .work-flow {
-        display: none;
-    }
 }
 
 .pro-step {
@@ -472,6 +466,12 @@ h4 {
     font-family: 'Raleway', sans-serif;
 }
 
+.bottom10 {
+    color: #fff!important;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
 @media(min-width: 500px) {
     .laptop {
         display: none;
@@ -523,4 +523,17 @@ h4 {
         margin-left: 0px;
         margin-top: 1em;
     }
+}
+
+:host /deep/ .ngucarouselPointDefault[_ngcontent-c4] .ngucarouselPoint[_ngcontent-c4] li[_ngcontent-c4] {
+    background: #00bcd4!important;
+}
+
+:host /deep/ .ngucarouselPointDefault[_ngcontent-c4] .ngucarouselPoint[_ngcontent-c4] li.active[_ngcontent-c4] {
+    background: #643094!important;
+}
+
+.enquire-detail {
+    margin: 3% 5% 0 15%;
+    text-align: justify;
 }
