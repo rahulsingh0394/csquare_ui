@@ -24,7 +24,6 @@ export class StudentLoggedInComponent implements OnInit {
       this.sessionId = params['id'];
 
       this.service.getUserById(this.studentIdParam).subscribe(data => {
-        console.log(data);
         this.name = data.firstName;
       });
     })

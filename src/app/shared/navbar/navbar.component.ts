@@ -111,7 +111,6 @@ export class NavbarComponent implements OnInit {
     remove(){
         // you'll get your through 'elements' below code
         let elements = this.element.nativeElement.querySelectorAll('.nav-link');
-        console.log(elements)
         elements.forEach(element => {
             this.renderer.removeClass(element, "active");
         });

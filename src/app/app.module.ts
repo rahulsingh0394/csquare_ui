@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TransferHttpCacheModule } from '@nguniversal/common';
@@ -34,6 +35,7 @@ import { TutorService } from './tutorForm/tutor.service';
     BrowserModule.withServerTransition({ appId: 'my-app' }),
     NgbModule.forRoot(),
     ScrollToModule.forRoot(),
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     LoadingModule,

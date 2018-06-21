@@ -178,7 +178,6 @@ export class LeadComponent implements OnInit {
   }
 
   getLeadType(value: any) {
-    debugger;
     const index = this.leadList.findIndex(item => {
       if (item.pK == value) {
         return true;
