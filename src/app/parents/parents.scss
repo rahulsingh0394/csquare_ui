@@ -1,47 +1,41 @@
-.card-body {
-    border: 1px solid #ccc;
-    text-align: justify;
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-}
-
 .title {
-    background:  #00e4ce ;
-    color: white  !important;
+    background: #00e4ce;
+    color: white !important;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 2em;
     text-align: center;
 }
 
-.info-title {
-    color: #f8591f !important;
-    font-family: 'Montserrat', sans-serif;
-}
-
 .card-header {
     border: 1px solid #ccc;
-    border-radius: 0px;
+    color: #fff !important;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 0px !important;
+    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 69%);
 }
 
-.card-category {
-    color: #f8591f !important;
-    font-family: 'Montserrat', sans-serif;
+li {
+    list-style: none;
+    cursor: pointer;
 }
 
-.rounded.mx-auto.d-block {
-    width: 80%;
-    height: 70%;
+.card-body {
+    background-color: #fff !important;
+    border: 1px solid #ccc;
+    text-align: left;
+    margin-bottom: 2em;
 }
 
 a {
-    color: #862359 !important;
+    color: #00abc9 !important;
     font-weight: bold;
     font-size: 1em;
 }
 
 a:hover {
-    color: #00abc9 !important;
+    color: #862359 !important;
 }
 
 .heading {
@@ -57,6 +51,7 @@ a:hover {
     color: orange;
 }
 
+
 /* Three column layout */
 
 .side {
@@ -71,11 +66,13 @@ a:hover {
     width: 70%;
 }
 
+
 /* Place text to the right */
 
 .right {
     text-align: right;
 }
+
 
 /* Clear floats after the columns */
 
@@ -89,6 +86,7 @@ a:hover {
     margin: 0 3em 0 3em;
 }
 
+
 /* The bar container */
 
 .bar-container {
@@ -97,6 +95,7 @@ a:hover {
     text-align: center;
     color: white;
 }
+
 
 /* Individual bars */
 
@@ -130,6 +129,7 @@ a:hover {
     background-color: #f44336;
 }
 
+
 /* Responsive layout - make the columns stack on top of each other instead of next to each other */
 
 @media (max-width: 500px) {
@@ -152,6 +152,7 @@ a:hover {
 * {
     box-sizing: border-box;
 }
+
 p {
     font-size: 1em;
     line-height: 1.5em;
@@ -259,14 +260,29 @@ p {
     margin-top: -20px;
 }
 
+.menu-item {
+    font-size: 14px;
+}
+
+.menu-title {
+    color: #fff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px!important;
+    font-weight: bold;
+}
+
 @media(max-width: 600px) {
     .tagline {
         margin-left: 36%;
     }
     .star {
-        margin-left: 31%;
+        margin-left: 31%!important;
+    }
+    .menu-item {
+        font-size: 12px;
     }
 }
+
 .star {
     margin-left: 43%;
 }

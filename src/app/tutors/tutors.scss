@@ -1,50 +1,61 @@
-.card-body {
-    border: 1px solid #ccc;
-    text-align: justify;
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.card-header {
-    border: 1px solid #ccc;
-    border-radius: 0px;
-}
-
 .title {
     color: white !important;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 2em;
-    background:  #00e4ce;
+    background: #00e4ce;
 }
 
-.info-title {
-    color: #f8591f !important;
-    font-family: 'Montserrat', sans-serif;
+.card-header {
+    border: 1px solid #ccc;
+    color: #fff !important;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 0px !important;
+    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 69%);
 }
 
-.card-category {
-    color: #f8591f !important;
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.card-body {
+    background-color: #fff !important;
+    border: 1px solid #ccc;
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+.menu-item {
+    font-size: 14px;
+}
+
+.menu-title {
+    color: #fff !important;
     font-family: 'Montserrat', sans-serif;
+    font-size: 18px!important;
+    font-weight: bold;
 }
-.rounded.mx-auto.d-block{
-    width: 80%;
-    height: 70%;
-}
+
 a {
-    color: #862359 !important;
+    color: #00abc9 !important;
     font-weight: bold;
     font-size: 1em;
 }
-a:hover{
-    color: #00abc9 !important;
+
+a:hover {
+    color: #862359 !important;
 }
+
 .checked {
     color: orange;
 }
+
 .fa {
     font-size: 25px;
 }
+
 .quoted1 .fa {
     height: 50px!important;
     width: 50px!important;
@@ -141,7 +152,7 @@ a:hover{
     color: #00bcd4;
     font-size: 1em!important;
     font-weight: 400!important;
-    margin-left: 45%;
+    margin-left: 42%;
     margin-top: -20px;
 }
 
@@ -150,9 +161,10 @@ a:hover{
         margin-left: 36%;
     }
     .star {
-        margin-left: 31%;
+        margin-left: 31%!important;
     }
 }
+
 .star {
     margin-left: 43%;
 }

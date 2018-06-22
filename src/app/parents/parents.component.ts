@@ -1,21 +1,52 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-parents-review',
   templateUrl: './parents.html',
-  styleUrls: ['./parents.scss'],
-  providers: [NgbCarouselConfig],
+  styleUrls: ['./parents.scss']
 })
 
 export class ParentsComponent implements OnInit {
 
-  constructor(config: NgbCarouselConfig) {
-    config.interval = 3000;
-    config.wrap = true;
-    config.keyboard = false;
-  }
 
-  ngOnInit() { }
+  classMenuList: any[] = [];
+  syllabusMenuList: any[] = [];
+  subjectMenuList: any[] = [];
+  locationMenuList: any[] = [];
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    import('../json/bangalore/menu_for_class.json').then(module => {
+      let menu = module;
+      for (let i = 0; i < menu['size']; i++) {
+        this.classMenuList[i] = menu[i + 1];
+      }
+    })
+    import('../json/bangalore/menu_for_syllabus.json').then(module => {
+      let menu = module;
+      for (let i = 0; i < menu['size']; i++) {
+        this.syllabusMenuList[i] = menu[i + 1];
+      }
+    })
+    import('../json/bangalore/menu_for_subjects.json').then(module => {
+      let menu = module;
+      for (let i = 0; i < menu['size']; i++) {
+        this.subjectMenuList[i] = menu[i + 1];
+      }
+    })
+    import('../json/bangalore/menu_for_location.json').then(module => {
+      let menu = module;
+      for (let j = 0; j < 90; j++) {
+        let i = Math.floor(Math.random() * (menu['size'] - 1 + 1)) + 1;
+        this.locationMenuList[j] = menu[i];
+      }
+    })
+   }
+
+   buttonClick(data: any) {
+    this.router.navigateByUrl(data);
+  }
 
 }
