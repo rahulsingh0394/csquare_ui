@@ -6,19 +6,20 @@
 }
 
 .card-header {
-    border: 1px solid #ccc;
-    color: #f8591f !important;
+    color: white !important;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    background:#00e4ce; 
     font-size: 2em;
-    text-align: center;
-    border-radius: 0px;
 }
 
 .title {
-    color: #f8591f !important;
+    color: white !important;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 72%);
+    font-size: 2em;
+    padding: 2% 2%;
 }
 
 .info-title {
