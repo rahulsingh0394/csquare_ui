@@ -2,28 +2,28 @@
     margin-top: 2em;
 }
 
-.fa-5x {
-    font-size: 100px;
+.fa-3x {
+    font-size: 80px;
 }
 
 .btn-primary {
-    background: #00bcd4;
+    background: #382f69;
     border: none;
     border-radius: 20px;
 }
 
 .btn-primary:hover {
-    background: #643094;
+    background: #00bcd4;
 }
 
 .btn-default {
-    background: #643094;
+    background: #00bcd4;
     border: none;
     border-radius: 20px;
 }
 
 .btn-default:hover {
-    background: #00bcd4;
+    background: #382f69;
 }
 
 .card-header {
@@ -32,12 +32,13 @@
     text-align: center;
     font-size: 35px;
     border-radius: 0px !important;
-    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 69%);
+    background-color: #5e50ad;
 }
 
 .card-body {
     background-color: #fff !important;
     border: 1px solid #ccc;
+    font-size: 14px!important;
 }
 
 .awesome {
@@ -53,7 +54,7 @@
 
 h6 {
     text-align: center;
-    color: #00bcd4;
+    color: #382f69;
 }
 
 .quoted1 .fa {
@@ -88,7 +89,7 @@ h6 {
 .quoted2 .fa {
     height: 50px!important;
     width: 50px!important;
-    background: #643094;
+    background: #382f69;
     color: #fff;
     border-radius: 50%;
     font-size: 20px;
@@ -111,7 +112,7 @@ h6 {
 .review-test2:hover {
     border: none;
     color: #fff!important;
-    background: #643094!important;
+    background: #382f69!important;
 }
 
 .leftRs {
@@ -144,7 +145,7 @@ h6 {
     font-size: 1.125rem!important;
     font-weight: 500!important;
     line-height: 1.2!important;
-    font-family: 'Open Sans', sans-serif!important;
+    font-family: 'Raleway', sans-serif;
 }
 
 .tagline {
@@ -246,12 +247,12 @@ h6 {
     color: rgb(0, 0, 0);
 }
 
-@media(max-width: 500px) {
+@media(max-width: 600px) {
     .first {
         margin-left: 0px;
     }
-    .fa-5x {
-        font-size: 30px;
+    .fa-3x {
+        font-size: 24px;
     }
     .card-header {
         font-size: 24px;
@@ -283,14 +284,14 @@ h2 {
 
 h5 {
     text-align: center;
-    color: #00bcd4 !important;
+    color: #382f69 !important;
     font-size: 24px;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
 }
 
 .work-flow {
-    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 69%);
+    background: linear-gradient(to right, #fff 0%, #7062b9 10%, #5b45c9 20%, #35248b 50%, #5b45c9 80%, #7062b9 90%, #fff 100%);
 }
 
 .work-flow-heading {
@@ -402,17 +403,13 @@ li:first-child::before {
 }
 
 .data-result {
-    background: linear-gradient(90deg, #423f9c 31%, #862359 69%);
-    background-image: linear-gradient(90deg, rgb(66, 63, 156) 31%, rgb(134, 35, 89) 69%);
+    margin-bottom: 3em;
+    background: linear-gradient(to right, #fff 0%, #7062b9 10%, #5b45c9 20%, #35248b 50%, #5b45c9 80%, #7062b9 90%, #fff 100%);
 }
 
 .slider {
     margin-left: 12em;
     background-color: #fff;
-}
-
-.fa-5x {
-    font-size: 100px;
 }
 
 .service-img {
@@ -472,24 +469,21 @@ h4 {
     font-size: 14px;
 }
 
-@media(min-width: 500px) {
+@media(min-width: 600px) {
     .laptop {
         display: none;
     }
-    .data-view {
-        margin: 0px;
-        font-size: 24px;
-    }
 }
 
-@media(max-width: 500px) {
+@media(max-width: 600px) {
+    .data-view {
+        margin: 0px!important;
+        font-size: 20px!important;
+    }
     h2 {
         margin: 0px;
         padding: 0px;
         font-size: 24px !important;
-    }
-    .fa-5x {
-        font-size: 24px;
     }
     .mobile {
         display: none;
@@ -523,6 +517,37 @@ h4 {
         margin-left: 0px;
         margin-top: 1em;
     }
+    .pro-step {
+        margin-left: -40%;
+    }
+    .bottom20 {
+        margin-left: -40%;
+    }
+    .work-tag {
+        margin-left: 0px!important;
+    }
+    .first:first-child::before {
+        display: inline;
+    }
+    .first::before {
+        left: -45%!important;
+        width: 45%!important;
+    }
+    .second::before {
+        left: -43%!important;
+        width: 40%!important;
+    }
+    .third::before {
+        left: -54%!important;
+        width: 55%!important;
+    }
+    .third {
+        margin-left: -52%!important;
+    }
+    .last::before {
+        left: -45%!important;
+        width: 43%!important;
+    }
 }
 
 :host /deep/ .ngucarouselPointDefault[_ngcontent-c4] .ngucarouselPoint[_ngcontent-c4] li[_ngcontent-c4] {
@@ -530,7 +555,7 @@ h4 {
 }
 
 :host /deep/ .ngucarouselPointDefault[_ngcontent-c4] .ngucarouselPoint[_ngcontent-c4] li.active[_ngcontent-c4] {
-    background: #643094!important;
+    background: #382f69!important;
 }
 
 .enquire-detail {

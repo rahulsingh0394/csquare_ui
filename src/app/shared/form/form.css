@@ -1,6 +1,5 @@
 .container-fluid {
     margin-top: 6em;
-    font-family: 'Montserrat', sans-serif !important;
 }
 
 .breadcrumb-item {
@@ -14,7 +13,7 @@
     text-align: center;
     font-size: 35px;
     border-radius: 0px !important;
-    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 69%);
+    background-color: #5e50ad;
 }
 
 .card-body {
@@ -51,7 +50,7 @@ a {
 
 p {
     font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: rgb(0, 0, 0);
 }
 
@@ -61,7 +60,7 @@ p {
 
 .awesome {
     font-size: 2em;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
     color: #313131;
     font-weight: 700;
@@ -146,7 +145,7 @@ p {
 }
 
 .btn-primary {
-    background-color: #00bcd4;
+    background-color: #382f69;
     color: #fff;
     border: none;
     border-radius: 20px;
@@ -157,7 +156,7 @@ p {
 }
 
 .btn-primary:hover {
-    background-color: #643094;
+    background-color: #00bcd4;
 }
 
 .overlay {

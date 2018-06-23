@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="navbar-translate" id="nav">
         <a class="navbar-brand" [routerLink]="['/home']">
-            <img src="assets/img/cs-large.png" alt="home tuition bangalore, home tutor">
+            <img id="logo" src="assets/img/cs-large.png" width="60px" height="52px" alt="home tuition bangalore, home tutor">
+            <img id="logo-head" src="assets/img/head.png" alt="CsquareEducation- A Step towards Learning">
         </a>
         <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
             <span class="navbar-toggler-bar"></span>
@@ -10,7 +11,7 @@
             </button>
     </div>
     <div class="collapse navbar-collapse" id="navbarToggler">
-        <div class="row btn-nav" style="margin-left: 5em;">
+        <div class="row btn-nav">
             <a role="button" class="btn btn-danger btn-round btn-raised labelBtn" (click)="buttonClick('/studentForm')">&nbsp;Need Tutor?&nbsp;</a>
             <a role="button" class="btn btn-danger btn-round btn-raised labelBtn" (click)="buttonClick('/tutorForm')">&nbsp;&nbsp;Be A Tutor!&nbsp;&nbsp;</a>
         </div>
@@ -18,17 +19,11 @@
             <li class="nav-item">
                 <div [routerLink]="['/home']" class="nav-link" (click)="menuToggle($event)">Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
             </li>
-            <li class="nav-item mobile">
-                <div [routerLink]="['/studentForm']" class="nav-link" (click)="menuToggle($event)">Need Tutor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-            </li>
-            <li class="nav-item mobile">
-                <div [routerLink]="['/tutorForm']" class="nav-link" (click)="menuToggle($event)">Be A Tutor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-            </li>
             <li class="nav-item">
                 <div [routerLink]="['/about']" class="nav-link" (click)="menuToggle($event)">About Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
             </li>
             <li class="nav-item">
-                <a target="_blank" href="https://csquareeducation.com/blog/" target="_blank" class="nav-link">Blog &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <a target="_blank" href="http://csquareeducation.co.in/blog/" target="_blank" class="nav-link">Blog &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
             </li>
             <li class="nav-item">
                 <div [routerLink]="['/question']" class="nav-link" (click)="menuToggle($event)">Question Paper &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>

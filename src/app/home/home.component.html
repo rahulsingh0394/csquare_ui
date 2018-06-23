@@ -1,8 +1,7 @@
 <app-banner></app-banner>
 <div class="container-fluid">
-    <div class="row" style="margin-top: 6em!important;">
-        <div class="col-md-8 mobile">
-            <div id="trigger1" class="spacer s0"></div>
+    <div class="row" style="margin-top: 2em!important;">
+        <!-- <div class="col-md-8 mobile">
             <div class="card" id="animate1">
                 <div class="card-header">
                     <span>Why CsquareEducation
@@ -15,13 +14,27 @@
                     </video>
                 </div>
             </div>
+        </div> -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Need Tutor?
+                </div>
+                <div class="card-body" style="text-align: justify!important;">
+                    <h2 style="color: #000!important; font-size: 18px;margin-top: 0px;">How Need Tutor Works? </h2>
+                    <h3><br>Need a Home Tuition/ Private Tutition or Home Tutor/ Private tutor or Tuition Teacher for yourself or your kid. Awesome We are here to help. Just follow these simple steps and you are all set to go.
+                        <br>1. You can see <span><b><u>Need Tutor</u></b></span> button on top-left of this page. (If you are &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on mobile click button on top-right and there you see Need Tutor).
+                        <br>2. Just Click on that and fill the form and our representative will call &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you shortly and help you to get right tutor or teacher.
+                        <br>3. In case you don't have time to fill Need Tutor Form then follow next &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;step and we will do rest for you.
+                        <br>4. In top section you can see Get A Free Demo Class button. Click on &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;it and follow steps.
+                        <br>5. And you are all done. Any Further Query Contact Us <i class="fa fa-hand-o-right fa-2x" aria-hidden="true"></i></h3>
+                </div>
+            </div>
         </div>
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header">
-                    <span style="margin-left: -2em;">Contact Us
-                                                <i class="fa fa-vcard-o fa-5x" aria-hidden="true"></i>
-                                        </span>
+                    <span>Contact Us </span>
                 </div>
                 <div class="card-body">
                     <p class="awesome">
@@ -37,13 +50,29 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Be Tutor!
+                </div>
+                <div class="card-body" style="text-align: justify!important;">
+                    <h2 style="color: #000!important; font-size: 18px;margin-top: 0px; margin-bottom: 0px;">How Be Tutor Works? </h2>
+                    <h3><br>Want to be a Home tutor or Private Tutor or Tuition Teacher and bring some change to current education system. Amazing!
+                        <br>1. You can see <span><b><u>Be Tutor</u></b></span> button on top-left of this page. (If you are on &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mobile click button on top-right and there you see Be Tutor)
+                        <br>2. Just Click on that and fill the form and you will get a confirmation &nbsp;&nbsp;&nbsp;email. Once we find a student according to your requirement we &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;will call you or inform by email.
+                        <br>3. In coming time we will be broadcasting student requirement to your &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cell phones and you can contact us if it you are ok for it.
+                        <br>4. Moreover we will be providing tutor login application through which &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you can get all details of on going classes and many more.
+                        <br>5. And you are all done. Any Further Query Contact Us <i class="fa fa-hand-o-left fa-2x" aria-hidden="true"></i></h3>
+                </div>
+            </div>
+        </div>
     </div>
     <hr/>
-    <div class="card card-header" style="margin-top: 3em!important;">
+    <div class="card card-header">
         <div class="row">
             <div class="col-md-2">
                 <span>
-                                        <i class="fa fa-cogs fa-5x" aria-hidden="true"></i>
+                                        <i class="fa fa-cogs fa-3x" aria-hidden="true"></i>
                                 </span>
             </div>
             <div class="col-md-8">
@@ -51,7 +80,7 @@
             </div>
             <div class="col-md-2">
                 <span>
-                                        <i class="fa fa-cogs fa-5x" aria-hidden="true"></i>
+                                        <i class="fa fa-cogs fa-3x" aria-hidden="true"></i>
                                 </span>
             </div>
         </div>
@@ -67,6 +96,11 @@
                 online portal which will provides wide opportunities to students and parents in order to select their best and required home tutor for their development.
                 <br>
             </h3>
+            <div id="collapseExampleS1" [ngbCollapse]="!isCollapsedS1">
+                <h3>Csquareeducation is one of the perfect web portal which provides best as well as professionally experienced home tutor. In Csquareeducation our tutors are highly skilled with well experienced in their related qualifications. In Csquareeducation
+                    all tutor’s performance gets monitored every week and every month by a well defined professional team. Csquareeducation, not only monitors the tutor’s performance but we will also help students who have registered with us, we will
+                    provide all kinds of possible help for his/her academic growth as well as social growth.</h3>
+            </div>
             <a role="button" (click)="isCollapsedS1 = !isCollapsedS1" [attr.aria-expanded]="!isCollapsedS1" aria-controls="collapseExampleS1">
                 <div class="icon icon-danger">
                     <p style="text-align:center!important;"><br>
@@ -74,13 +108,6 @@
                     </p>
                 </div>
             </a>
-            <div id="collapseExampleS1" [ngbCollapse]="!isCollapsedS1">
-                <div class="card card-body">
-                    <h4>Csquareeducation is one of the perfect web portal which provides best as well as professionally experienced home tutor. In Csquareeducation our tutors are highly skilled with well experienced in their related qualifications. In Csquareeducation
-                        all tutor’s performance gets monitored every week and every month by a well defined professional team. Csquareeducation, not only monitors the tutor’s performance but we will also help students who have registered with us, we will
-                        provide all kinds of possible help for his/her academic growth as well as social growth.</h4>
-                </div>
-            </div>
         </div>
     </div>
     <div class="row">
@@ -94,6 +121,10 @@
                 best and wide opportunity and a convenient environment to our tutors.
                 <br>
             </h3>
+            <div id="collapseExampleS2" [ngbCollapse]="!isCollapsedS2">
+                <h3>Only because of a best tutor, students will able to concentrate on their studies without distracting their mind on other activities. Hence best tutor is required to achieve any kind of achievements from students. We are offering both part
+                    time as well as full time tutor jobs. We consider our tutors as our own members and are asset for Csquareeducation.</h3>
+            </div>
             <a role="button" (click)="isCollapsedS2 = !isCollapsedS2" [attr.aria-expanded]="!isCollapsedS2" aria-controls="collapseExampleS2">
                 <div class="icon icon-danger">
                     <p style="text-align:center!important;"><br>
@@ -101,12 +132,6 @@
                     </p>
                 </div>
             </a>
-            <div id="collapseExampleS2" [ngbCollapse]="!isCollapsedS2">
-                <div class="card card-body">
-                    <h4>Only because of a best tutor, students will able to concentrate on their studies without distracting their mind on other activities. Hence best tutor is required to achieve any kind of achievements from students. We are offering both
-                        part time as well as full time tutor jobs. We consider our tutors as our own members and are asset for Csquareeducation.</h4>
-                </div>
-            </div>
         </div>
         <div class="col-md-4 service-dis mobile">
             <img class="img img-thumbnail service-img" src="assets/img/C3.jpg" alt="home tuition bangalore, private tuition" />
@@ -123,6 +148,10 @@
                 every students and learners to learn, know about information and receive instructions, anywhere and at their own convenient timings through e-learning classes.
                 <br>
             </h3>
+            <div id="collapseExampleS3" [ngbCollapse]="!isCollapsedS3">
+                <h3>There are lot of benefits with this online classes or e-learning classes. Particularly these sort of classes are used for the students who are working part-time or full-time & busy working professionals, who can’t spend enough time or
+                    separate time to attend regular classes or spending extra time to go for a coaching center. For those student’s online tuition or online classes were one of the perfect solution.</h3>
+            </div>
             <a role="button" (click)="isCollapsedS3 = !isCollapsedS3" [attr.aria-expanded]="!isCollapsedS3" aria-controls="collapseExampleS3">
                 <div class="icon icon-danger">
                     <p style="text-align:center!important;"><br>
@@ -130,19 +159,13 @@
                     </p>
                 </div>
             </a>
-            <div id="collapseExampleS3" [ngbCollapse]="!isCollapsedS3">
-                <div class="card card-body">
-                    <h4>There are lot of benefits with this online classes or e-learning classes. Particularly these sort of classes are used for the students who are working part-time or full-time & busy working professionals, who can’t spend enough time
-                        or separate time to attend regular classes or spending extra time to go for a coaching center. For those student’s online tuition or online classes were one of the perfect solution.</h4>
-                </div>
-            </div>
         </div>
     </div>
     <hr/>
-    <div class="work-flow" style="margin-top: 6em!important;">
+    <div class="work-flow">
         <h2 class="work-flow-heading">Work Process</h2>
         <br>
-        <p class="bottom20" style="text-align: center;">
+        <p class="bottom20 work-tag" style="text-align: center;">
             Click On Any Step To Know More About It!
         </p>
         <div class="row">
@@ -209,26 +232,6 @@
                 <br>3. If everything is going fine just review us on google, facebook or anywhere else where you find CsquareEducation and please recommend us.
                 <br>4. Thank You. Any Further Query Contact Us On <b><u>&nbsp;8041627767, &nbsp;7899342386, &nbsp;9036198865</u></b>
             </p>
-        </div>
-    </div>
-    <hr/>
-    <div class="data-result" style="margin-top: 6em!important;">
-        <div class="row">
-            <div class="col-md-4 data-view">
-                Client's
-                <i class="fa fa-user-plus fa-2x" aria-hidden="true"></i>
-                <br> {{usersCount}}+
-            </div>
-            <div class="col-md-4 data-view">
-                Tutor's
-                <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-                <br> {{tutorCount}}+
-            </div>
-            <div class="col-md-4 data-view">
-                Review's
-                <i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
-                <br> {{studentCount}}+
-            </div>
         </div>
     </div>
     <hr/>
@@ -372,7 +375,7 @@
         </ngu-carousel>
     </div>
     <hr/>
-    <div class="card mobile" style="margin-top: 6em!important;margin-bottom: 6em;">
+    <div class="card mobile">
         <div class="card-header">
             <div class="row">
                 <div class="col-md-2">
@@ -415,6 +418,26 @@
                     <br>
                     <a role="button" class="btn btn-primary link" href="https://www.dragdeal.com/business/36817/csquare-education/bangalore" target="_blank">DragDeal</a>
                 </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="data-result">
+        <div class="row">
+            <div class="col-md-4 data-view">
+                Client's
+                <i class="fa fa-user-plus fa-2x" aria-hidden="true"></i>
+                <br> {{usersCount}}+
+            </div>
+            <div class="col-md-4 data-view">
+                Tutor's
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                <br> {{tutorCount}}+
+            </div>
+            <div class="col-md-4 data-view">
+                Review's
+                <i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
+                <br> {{studentCount}}+
             </div>
         </div>
     </div>

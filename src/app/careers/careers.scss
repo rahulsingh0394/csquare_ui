@@ -2,48 +2,42 @@
     border: 1px solid #ccc;
     text-align: justify;
     font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .card-header {
     color: white !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    background:#00e4ce; 
+    background-color: #5e50ad;
     font-size: 2em;
 }
 
 .title {
     color: white !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 72%);
+    background-color: #5e50ad;
     font-size: 2em;
     padding: 2% 2%;
 }
 
 .info-title {
     color: #f8591f !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .card-category {
     color: #f8591f !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .heading {
     font-size: 25px;
-    margin: 0 0 0 1em;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .heading {
         font-size: 15px;
-        margin: 0 0 0 2em;
     }
-}
-
-.main {
-    margin-top: 2em;
 }

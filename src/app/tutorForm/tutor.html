@@ -1,4 +1,4 @@
-<div class="page-header" style="background-image:linear-gradient(
+<div class="wrapper" style="background-image:linear-gradient(
     rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0.8)
      ), url('assets/img/1.gif')">
@@ -8,12 +8,12 @@
         </ngx-loading>
         <div class="row">
             <div class="col-md-12">
-                <div class="card bg-transparent" style="padding: 1em 1em 1em 1em;margin-top: 10em;">
-                    <div class="card card-header" style="font-size:1em;text-align:center;font-weight:bold;background-color:white!important;opacity:.76;">
-                        <h3 class="title">Want to be the change? or Want to change?</h3>
-                        <h4 class="tagline">Enroll now as Home Tutors/Online Tutors.</h4>
+                <div class="card bg-transparent">
+                    <div class="card-header">
+                        <h1>Want to be the change? or Want to change?</h1>
+                        <h2>Enroll now as Home Tutors/Online Tutors.</h2>
                     </div>
-                    <div class="card card-body" style="background-color:white!important;opacity:.76;">
+                    <div class="card-body">
                         <!-- <div class="social-line text-center">
                                 <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
                                     <i class="fa fa-facebook-square"></i>
@@ -27,21 +27,21 @@
                             </div> -->
                         <form [formGroup]="tutorForm">
                             <div class="row row">
-                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!firstName.valid && firstName.touched)), 'has-success': (firstName.valid && firstName.touched)}">
+                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!firstName.valid && firstName.touched)), 'has-success': (firstName.valid && firstName.touched)}">
                                     <label for="firstName">First Name</label>
                                     <input type="text" class="form-control" formControlName="firstName" id="firstName">
                                     <small *ngIf="(!firstName.valid && firstName.touched)" class="text-danger">
                                         First Name is required.
                                     </small>
                                 </div>
-                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!lastName.valid && lastName.touched)), 'has-success': (lastName.valid && lastName.touched)}">
+                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!lastName.valid && lastName.touched)), 'has-success': (lastName.valid && lastName.touched)}">
                                     <label for="lastName">Last Name</label>
                                     <input type="text" class="form-control" formControlName="lastName" id="lastName">
                                     <small *ngIf="(!lastName.valid && lastName.touched)" class="text-danger">
                                         Last Name is required.
                                     </small>
                                 </div>
-                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!phone.valid && phone.touched)), 'has-success': (phone.valid && phone.touched)}">
+                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!phone.valid && phone.touched)), 'has-success': (phone.valid && phone.touched)}">
                                     <label for="phone">Phone</label>
                                     <input type="text" class="form-control" formControlName="phone" id="phone">
                                     <div *ngIf="(!phone.valid && phone.touched)" class="text-danger">
@@ -59,34 +59,31 @@
                                         </small>
                                     </div>
                                 </div>
-                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!syllabus.valid && syllabus.touched)), 'has-success': (syllabus.valid && syllabus .touched)}">
+                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!syllabus.valid && syllabus.touched)), 'has-success': (syllabus.valid && syllabus .touched)}">
                                     <label for="syllabus">Syllabus Preffered</label>
-                                    <angular2-multiselect [data]="syllabusDis" class="form-control" formControlName="syllabus" id="syllabus" [(ngModel)]="selectedSyllabus"
-                                        [settings]="settingForSyllabus" (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)">
+                                    <angular2-multiselect [data]="syllabusDis" class="form-control" formControlName="syllabus" id="syllabus" [(ngModel)]="selectedSyllabus" [settings]="settingForSyllabus" (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)">
                                     </angular2-multiselect>
                                     <small *ngIf="(!syllabus.valid && syllabus.touched)" class="text-danger">
                                         Syllabus is required.
                                     </small>
                                 </div>
-                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!grade.valid && grade.touched)), 'has-success': (grade.valid && grade.touched)}">
+                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!grade.valid && grade.touched)), 'has-success': (grade.valid && grade.touched)}">
                                     <label for="grade">Grade</label>
-                                    <angular2-multiselect [data]="gradeDis" class="form-control" formControlName="grade" id="grade" [(ngModel)]="selected" [settings]="setting"
-                                        (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)">
+                                    <angular2-multiselect [data]="gradeDis" class="form-control" formControlName="grade" id="grade" [(ngModel)]="selected" [settings]="setting" (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)">
                                     </angular2-multiselect>
                                     <small *ngIf="(!grade.valid && grade.touched)" class="text-danger">
                                         Grade is required.
                                     </small>
                                 </div>
-                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!subjects.valid && subjects.touched)), 'has-success': (subjects.valid && subjects.touched)}">
+                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!subjects.valid && subjects.touched)), 'has-success': (subjects.valid && subjects.touched)}">
                                     <label for="subjects">Preffered Subjects</label>
-                                    <angular2-multiselect [data]="subjectDis" class="form-control" formControlName="subjects" id="subjects" [(ngModel)]="selectedItems"
-                                        [settings]="settings" (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)">
+                                    <angular2-multiselect [data]="subjectDis" class="form-control" formControlName="subjects" id="subjects" [(ngModel)]="selectedItems" [settings]="settings" (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)">
                                     </angular2-multiselect>
                                     <small *ngIf="(!subjects.valid && subjects.touched)" class="text-danger">
                                         Subjects are required.
                                     </small>
                                 </div>
-                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!gender.valid && gender.touched)), 'has-success': (gender.valid && gender.touched)}">
+                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!gender.valid && gender.touched)), 'has-success': (gender.valid && gender.touched)}">
                                     <label for="gender">Gender</label>
                                     <select type="text" class="form-control" formControlName="gender" id="gender">
                                         <option value="" hidden>Gender</option>
@@ -97,7 +94,7 @@
                                         Gender is required.
                                     </small>
                                 </div>
-                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!email.valid && email.touched)), 'has-success': (email.valid && email.touched)}">
+                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!email.valid && email.touched)), 'has-success': (email.valid && email.touched)}">
                                     <label for="email">Email</label>
                                     <input type="text" class="form-control" formControlName="email" id="email">
                                     <small *ngIf="(!email.valid && email.touched)" class="text-danger">
@@ -105,7 +102,7 @@
                                     </small>
                                 </div>
 
-                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!qualification.valid && qualification.touched)), 'has-success': (qualification.valid && qualification.touched)}">
+                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!qualification.valid && qualification.touched)), 'has-success': (qualification.valid && qualification.touched)}">
                                     <label for="qualification">Qualification</label>
                                     <select class="form-control" formControlName="qualification" id="qualification">
                                         <option *ngFor="let item of qualififcationList" [value]="item">{{item}}</option>
@@ -114,7 +111,7 @@
                                         Qualification is required.
                                     </small>
                                 </div>
-                                <div class="form-group col-sm-4" [ngClass]="{'has-error': ((!city.valid && city.touched)), 'has-success': (city.valid && city.touched)}">
+                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!city.valid && city.touched)), 'has-success': (city.valid && city.touched)}">
                                     <label for="city">City</label>
                                     <select type="text" class="form-control" formControlName="city" id="city">
                                         <option value="" hidden>City</option>
@@ -124,17 +121,17 @@
                                         City is required.
                                     </small>
                                 </div>
-                                <div class="form-group col-sm-4">
+                                <div class="form-group col-sm-6">
                                     <label for="locationName">Location</label>
-                                    <input id="test" type="text" class="form-control" [formControl]="locationName" id="locationName" [ngbTypeahead]="search"
-                                        placeholder="Location" />
+                                    <input id="test" type="text" class="form-control" [formControl]="locationName" id="locationName" [ngbTypeahead]="search" placeholder="Location" />
                                     <small>Please Select City and then Location.</small>
                                     <small *ngIf="(!locationName.valid && locationName.touched)" class="text-danger">
                                         Location is required
                                     </small>
                                 </div>
                                 <input type="hidden" formControlName="location" class="form-control" id="location">
-                                <div class="form-group col-sm-12" [ngClass]="{'has-error': ((!address.valid && address.touched)), 'has-success': (address.valid && address.touched)}">
+                                <div class="col-sm-6"></div>
+                                <div class="form-group col-sm-6" [ngClass]="{'has-error': ((!address.valid && address.touched)), 'has-success': (address.valid && address.touched)}">
                                     <label for="address">Address</label>
                                     <textarea type="text" class="form-control" rows="2" formControlName="address" id="address">
                                     </textarea>
@@ -142,7 +139,7 @@
                                         Address is required.
                                     </small>
                                 </div>
-                                <div class="form-group col-sm-12">
+                                <div class="form-group col-sm-6">
                                     <label for="comment">Comment</label>
                                     <textarea type="text" class="form-control" rows="2" formControlName="comment" id="comment">
                                     </textarea>
@@ -150,7 +147,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button class="btn btn-success btn-round" (click)="submit()">Submit</button>
+                                    <button class="btn btn-default btn-round" (click)="submit()">Submit</button>
                                     <button class="btn btn-primary btn-round" (click)="cancel()">Reset</button>
                                     <button class="btn btn-danger btn-round" (click)="buttonClick('/home')">Cancel</button>
                                 </div>

@@ -11,11 +11,12 @@
 }
 
 h2 {
-    margin-top: 0px;
-    font-size: 24px;
-    color: #fff;
-    text-align: center;
+    color: #fff !important;
     font-family: 'Raleway', sans-serif;
+    font-size: 2.5vw;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
 }
 
 h3 {
@@ -26,12 +27,11 @@ h3 {
 }
 
 h1 {
-    color: #fff !important;
-    font-family: 'Raleway', sans-serif;
-    font-size: 5vw;
+    margin-top: 0px;
+    font-size: 24px;
+    color: #fff;
     text-align: center;
-    font-weight: bold;
-    display: inline-block;
+    font-family: 'Raleway', sans-serif;
 }
 
 .icon-danger {
@@ -42,10 +42,13 @@ h1 {
     text-align: center !important;
     color: #fff !important;
     margin-top: 1em;
-    background: linear-gradient(90deg, #423f9c 31%, #862359 69%);
-    background-image: linear-gradient(90deg, rgb(66, 63, 156) 31%, rgb(134, 35, 89) 69%);
+    background: linear-gradient(to right, #fff 0%, #7062b9 10%, #5b45c9 20%, #35248b 50%, #5b45c9 80%, #7062b9 90%, #fff 100%);
     border-radius: 50%;
     margin-left: 20%;
+}
+
+.icon-danger:hover {
+    background: #00bcd4;
 }
 
 .fa-3x {
@@ -63,9 +66,15 @@ h1 {
 }
 
 .btn-primary {
-    background-color: #00bcd4;
+    background-color: #35248b;
+    border: 1px solid #35248b;
     font-size: 20px;
     border-radius: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #00bcd4;
+    border: 1px solid #00bcd4;
 }
 
 span {
@@ -73,11 +82,11 @@ span {
 }
 
 :host /deep/ .ngucarouselPointDefault[_ngcontent-c4] .ngucarouselPoint[_ngcontent-c4] li[_ngcontent-c4] {
-    background: #00bcd4!important;
+    background: #35248b!important;
 }
 
 :host /deep/ .ngucarouselPointDefault[_ngcontent-c4] .ngucarouselPoint[_ngcontent-c4] li.active[_ngcontent-c4] {
-    background: #643094!important;
+    background: #00bcd4!important;
 }
 
 @media(max-width:600px) {
@@ -86,10 +95,10 @@ span {
         margin-top: -6em;
     }
     h1 {
-        font-size: 24px;
+        font-size: 10px;
     }
     h2 {
-        font-size: 14px;
+        font-size: 10px;
     }
     span {
         font-size: 8px;

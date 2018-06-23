@@ -1,7 +1,3 @@
-.row {
-    margin-top: 4em;
-}
-
 h2 {
     margin-top: 5%;
     text-align: center;
@@ -39,9 +35,29 @@ p {
     text-align: center;
     font-size: 2em;
     color: white !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 72%);
+    background-color: #5e50ad;
+}
+
+.btn-primary {
+    background: #382f69;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-primary:hover {
+    background: #00bcd4;
+}
+
+.btn-default {
+    background: #643094;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-default:hover {
+    background: #00bcd4;
 }
 
 agm-map {
@@ -49,7 +65,7 @@ agm-map {
 }
 
 .form-control {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(255, 255, 255);
 }
 
 @media(max-width: 600px) {

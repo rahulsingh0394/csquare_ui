@@ -149,7 +149,9 @@ export class BangaloreComponent implements OnInit {
 
   buttonClick(data: any) {
     this.router.navigateByUrl(data);
-    window.location.reload();
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
   }
 
 }

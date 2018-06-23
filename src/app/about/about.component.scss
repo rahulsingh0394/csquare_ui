@@ -6,7 +6,7 @@
 }
 
 .card-header {
-    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 69%);
+    background-color: #5e50ad;
     color: #fff !important;
     text-align: center;
     font-size: 35px;
@@ -59,9 +59,9 @@
 }
 
 .detail1 {
-    background: linear-gradient(90deg, #423f9c 31%, #862359 69%);
-    background-image: linear-gradient(90deg, rgb(66, 63, 156) 31%, rgb(134, 35, 89) 69%);
+    background: linear-gradient(to right, #fff 0%, #7062b9 10%, #5b45c9 20%, #35248b 50%, #5b45c9 80%, #7062b9 90%, #fff 100%);
     margin-top: -2.2em;
+    padding: 1em;
     height: 100px;
     position: relative;
     transition: all .4s ease-in-out;
@@ -70,6 +70,7 @@
 .detail2 {
     background: linear-gradient(90deg, #00e4ce 31%, #00abc9 69%);
     margin-top: -2.2em;
+    padding: 1em;
     height: 100px;
     position: relative;
     transition: all .4s ease-in-out;
@@ -82,7 +83,7 @@
     font-size: 18px!important;
     font-weight: 500!important;
     line-height: 1.2!important;
-    font-family: 'Open Sans', sans-serif!important;
+    font-family: 'Raleway', sans-serif;
     padding-bottom: 20px;
 }
 

@@ -1,7 +1,7 @@
 .title {
     background: #00e4ce;
     color: white !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 2em;
     text-align: center;
@@ -13,7 +13,7 @@
     text-align: center;
     font-size: 35px;
     border-radius: 0px !important;
-    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 69%);
+    background-color: #5e50ad;
 }
 
 li {
@@ -29,13 +29,13 @@ li {
 }
 
 a {
-    color: #00abc9 !important;
+    color: #382f69 !important;
     font-weight: bold;
     font-size: 1em;
 }
 
 a:hover {
-    color: #862359 !important;
+    color: #00bcd4 !important;
 }
 
 .heading {
@@ -191,12 +191,15 @@ p {
     .tagline {
         color: #fff;
     }
+    .name {
+        color: #fff;
+    }
 }
 
 .quoted2 .fa {
     height: 50px!important;
     width: 50px!important;
-    background: #643094;
+    background: #382f69;
     color: #fff;
     border-radius: 50%;
     font-size: 20px;
@@ -219,8 +222,11 @@ p {
 .review-test2:hover {
     border: none;
     color: #fff!important;
-    background: #643094!important;
+    background: #382f69!important;
     .tagline {
+        color: #fff;
+    }
+    .name {
         color: #fff;
     }
 }
@@ -248,7 +254,7 @@ p {
     font-size: 2em!important;
     font-weight: 500!important;
     line-height: 1.2!important;
-    font-family: 'Open Sans', sans-serif!important;
+    font-family: 'Raleway', sans-serif;
     margin-top: -40px;
 }
 
@@ -266,7 +272,7 @@ p {
 
 .menu-title {
     color: #fff !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 18px!important;
     font-weight: bold;
 }

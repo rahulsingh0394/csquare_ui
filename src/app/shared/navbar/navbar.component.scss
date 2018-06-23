@@ -1,21 +1,24 @@
 .labelBtn {
     height: 40px;
     color: #fff !important;
-    border: 1px solid #862359 !important;
-    background-color: #862359 !important;
+    border: 1px solid #35248b;
+    background-color: #35248b !important;
     padding-left: 2px;
     padding-right: 2px;
-    font-family: 'Montserrat', sans-serif;
+    margin-left: 1em;
+    font-family: 'Raleway', sans-serif;
     text-transform: none;
     position: relative;
+    z-index: 1000;
 }
 
 .labelBtn:hover {
     height: 150px;
-    background-color: #862359 !important;
-    border: 1px solid #862359 !important;
-    color: #00bcd4 !important;
+    background-color: #00bcd4 !important;
+    border: 1px solid #00bcd4 !important;
+    color: #fff !important;
     padding-top: 6em;
+    z-index: 1000;
 }
 
 .nav-link {
@@ -30,24 +33,22 @@
     padding-right: 2px!important;
 }
 
-img {
+#logo {
     position: relative;
-    padding-top: 3em;
-    height: 90px;
-    width: 90px;
+    margin-left: -12%;
+}
+
+#logo-head {
+    width: 130px;
+    margin-left: -5px;
 }
 
 .navbar-collapse::after {
-    background: linear-gradient(90deg, #423f9c 31%, #862359 69%)!important;
-    background-image: linear-gradient(90deg, rgb(66, 63, 156) 31%, rgb(134, 35, 89) 69%)!important;
+    background-color: #35248b;
 }
 
 .navbar-collapse .navbar-nav>.nav-item>.nav-link {
     color: #fff !important;
-}
-
-.navbar-toggler-bar {
-    color: #fff!important;
 }
 
 .active {
@@ -68,5 +69,10 @@ img {
 @media(max-width: 900px) {
     .mobile {
         display: inline;
+    }
+    .labelBtn {
+        margin-left: 5em;
+        background-color: #00bcd4!important;
+        border: 1px solid #00bcd4;
     }
 }

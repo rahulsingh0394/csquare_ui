@@ -4,7 +4,7 @@
     text-align: center;
     font-size: 35px;
     border-radius: 0px !important;
-    background: linear-gradient(90deg, #00e4ce 31%, #00abc9 69%);
+    background-color: #5e50ad;
 }
 
 .card-body {
@@ -20,7 +20,7 @@
 
 .menu-title {
     color: #fff !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 18px!important;
     font-weight: bold;
 }
@@ -49,11 +49,11 @@ h1 {
 }
 
 a {
-    color: #06b7f1 !important;
+    color: #382f69 !important;
 }
 
 a:hover {
-    color: #643094 !important;
+    color: #00bcd4 !important;
 }
 
 .checked {
@@ -168,12 +168,15 @@ li {
     .tagline {
         color: #fff;
     }
+    .name {
+        color: #fff;
+    }
 }
 
 .quoted2 .fa {
     height: 50px!important;
     width: 50px!important;
-    background: #643094;
+    background: #5e50ad;
     color: #fff;
     border-radius: 50%;
     font-size: 20px;
@@ -196,8 +199,11 @@ li {
 .review-test2:hover {
     border: none;
     color: #fff!important;
-    background: #643094!important;
+    background: #5e50ad!important;
     .tagline {
+        color: #fff;
+    }
+    .name {
         color: #fff;
     }
 }
@@ -225,7 +231,7 @@ li {
     font-size: 2em!important;
     font-weight: 500!important;
     line-height: 1.2!important;
-    font-family: 'Open Sans', sans-serif!important;
+    font-family: 'Raleway', sans-serif;
     margin-top: -40px;
 }
 

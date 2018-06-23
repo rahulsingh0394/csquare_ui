@@ -22,12 +22,12 @@
     background-color: transparent;
     font-size: 30px;
     margin-top: -12px;
-    color: #66615b;
+    color: #382f69;
 }
 
 .close {
     font-size: 30px;
-    color: #66615b;
+    color: #00bcd4;
 }
 
 .modal-footer {
@@ -54,6 +54,24 @@ h3 {
 
 .form-control {
     margin-top: 6em;
+}
+
+.btn-primary {
+    background-color: #382f69;
+    outline: none;
+    border: 1px solid #382f69;
+    border-radius: 20px;
+    padding: 6px;
+}
+
+.btn-danger {
+    border-radius: 20px;
+    padding: 6px;
+}
+
+.btn-primary:hover {
+    background-color: #00bcd4;
+    border: 1px solid #00bcd4;
 }
 
 @media(max-width: 600px) {

@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 .spinner {
     width: 100px;
     height: 100px;
@@ -10,27 +11,36 @@
     margin-left: -100px;
     -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
     animation: sk-rotateplane 1.2s infinite ease-in-out;
-  }
-  
-  @-webkit-keyframes sk-rotateplane {
-    0% { -webkit-transform: perspective(120px) }
-    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
-    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
-  }
-  
-  @keyframes sk-rotateplane {
-    0% { 
-      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-      -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
-    } 50% { 
-      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
-    } 100% { 
-      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-      -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+}
+
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
     }
-  }
-  .loader {
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    }
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+.loader {
     border: 2em solid #f7f8f8;
     border-radius: 50%;
     border-top: 2em solid #f59f1e;
@@ -40,21 +50,33 @@
     position: absolute;
     left: 40%;
     top: 40%;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
     animation: spin 2s linear infinite;
-  }
-  
-  /* Safari */
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  .loadersub {
+}
+
+
+/* Safari */
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loadersub {
     border: 2em solid #f7f8f8;
     border-radius: 50%;
     border-top: 2em solid #52f344;
@@ -65,36 +87,53 @@
     position: absolute;
     left: 40%;
     top: 40%;
-    -webkit-animation: spin 4s linear infinite; /* Safari */
+    -webkit-animation: spin 4s linear infinite;
+    /* Safari */
     animation: spin 4s linear infinite;
-  }
-  
-  /* Safari */
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  .para{
+}
+
+
+/* Safari */
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.para {
     margin-top: 35%;
     margin-left: 40%;
-   }
-  @media (max-width:500px) {
-   .loader{
-    margin-top: 16em; 
-    top: 60%;
-    left: 30%;
-   } 
-   .loadersub{
-    top: 60%;
-    left: 30%;
-   }
-   .para{
-    margin-top: 70%;
-    margin-left: 30%;
-   }
-  }
+}
+
+@media (max-width:500px) {
+    .loader {
+        margin-top: 16em;
+        top: 60%;
+        left: 30%;
+    }
+    .loadersub {
+        top: 60%;
+        left: 30%;
+    }
+    .para {
+        margin-top: 70%;
+        margin-left: 30%;
+    }
+}
+
+body {
+    font-family: 'Raleway', sans-serif!important;
+}
