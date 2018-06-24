@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-parents-review',
@@ -15,7 +16,13 @@ export class ParentsComponent implements OnInit {
   subjectMenuList: any[] = [];
   locationMenuList: any[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private meta: Meta, private title: Title) {
+    this.title.setTitle('Parents and Students review for CsquareEducation');
+    this.meta.addTags([
+      { name: 'author', content: 'csquareeducation.com' },
+      { name: 'description', content: 'See what Parent and Students enrolled with us have to say about our services. we are trying to deliver best home tuition or private tuition in india.' }
+    ]);
+  }
 
   ngOnInit() {
     import('../json/bangalore/menu_for_class.json').then(module => {

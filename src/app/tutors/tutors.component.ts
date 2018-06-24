@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-tutors-review',
@@ -14,7 +15,14 @@ export class TutorsComponent implements OnInit {
   subjectMenuList: any[] = [];
   locationMenuList: any[] = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private meta: Meta, private title: Title) {
+    title.setTitle('Tutors review on CsquareEducation');
+
+    meta.addTags([
+      { name: 'author', content: 'csquareeducation.com' },
+      { name: 'description', content: 'See what home tutor or private tutor or tuition teacher enrolled with CsquareEducation have to say about us. We provide best services for tutors so they can deliver best result to students.' }
+    ]);
+   }
 
   ngOnInit() {
     import('../json/bangalore/menu_for_class.json').then(module => {

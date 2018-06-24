@@ -95,6 +95,11 @@ export class BangaloreComponent implements OnInit {
     private route: ActivatedRoute
   ) {
     this.page = this.location.path();
+    this.title.setTitle('Best Home/Private Tuition Tutor in bangalore for CBSE, ISCE & State Board');
+        this.meta.addTags([
+          { name: 'author', content: 'csquareeducation.com' },
+          { name: 'description', content: 'Best ✓Qualified ✓Experienced ✓certified ✓trusted private tutor at your home in bangalore. Services: personal tuition teacher, Online Classes for ICSE, CBSE, State, IGCSE board for Math, Science, English, Geometry, Social, Chemistry, Physic, Hindi.' }
+        ]);
   }
 
   ngOnInit() {

@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
         config.interval = 10000;
         config.wrap = false;
         config.keyboard = false;
-        title.setTitle('Best private home Tuition Tutor, Teacher & Online Classes for Math, Science');
+        title.setTitle('Best Private Home Tuition Tutor, Teacher & Online Classes all over India');
 
         meta.addTags([
             { name: 'author', content: 'csquareeducation.com' },

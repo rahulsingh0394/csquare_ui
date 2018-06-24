@@ -54,11 +54,11 @@ export class QuesComponent implements OnInit {
     config.wrap = true;
     config.keyboard = false;
 
-    title.setTitle('Cbse, Icse, Karnataka Board Previous Year Question Paper class 10 & 12');
+    title.setTitle('One Click Cbse, Icse, Karnataka Board Previous Year Question Paper');
 
     meta.addTags([
       { name: 'author', content: 'csquareeducation.com' },
-      { name: 'description', content: 'Previous 5 years question paper cbse, icse, karnataka board for class 10 & 12 of mathematics, physics, chemistry, biology, english, social-science, hindi and other in one click.' }
+      { name: 'description', content: 'Previous 5 ,10 years question paper cbse, icse, karnataka board for class 10 & 12 of mathematics, physics, chemistry, biology, english, social-science, hindi and other in one click.' }
     ]);
   }
 

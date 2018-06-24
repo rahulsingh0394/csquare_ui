@@ -7,14 +7,12 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { HttpModule, Http, Response } from '@angular/http';
 import { CommonModalComponent } from '../shared/common-modal/common-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-
+import { Meta, Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.html',
-  styleUrls: ['./contact.scss'],
-  providers: [NgbCarouselConfig],
+  styleUrls: ['./contact.scss']
 })
 
 export class ContactComponent implements OnInit {
@@ -34,12 +32,16 @@ export class ContactComponent implements OnInit {
     private router: Router,
     private service: ContactService,
     private http: Http,
+    private meta: Meta,
+    private title: Title,
     private route: ActivatedRoute,
-    private modalService: NgbModal, config: NgbCarouselConfig) {
+    private modalService: NgbModal,) {
     this.initForm();
-    config.interval = 3000;
-    config.wrap = true;
-    config.keyboard = false;
+    this.title.setTitle('Contact Us: CsquareEducation');
+    this.meta.addTags([
+      { name: 'author', content: 'csquareeducation.com' },
+      { name: 'description', content: 'Need to know about home tuition, private tuition, tuition teacher or tutor job in india. Contact us at CsquareEducation or fill need tutor or be tutor form and we will do rest for you.' }
+    ]);
   }
 
   ngOnInit() { }
