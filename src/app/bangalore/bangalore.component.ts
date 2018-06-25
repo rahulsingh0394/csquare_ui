@@ -104,52 +104,55 @@ export class BangaloreComponent implements OnInit {
 
   ngOnInit() {
 
-    if (this.page) {
-      import('../json/bangalore/menu_for_class.json').then(module => {
-        let menu = module;
-        for (let i = 0; i < menu['size']; i++) {
-          this.classMenuList[i] = menu[i + 1];
-        }
-      })
-      import('../json/bangalore/menu_for_syllabus.json').then(module => {
-        let menu = module;
-        for (let i = 0; i < menu['size']; i++) {
-          this.syllabusMenuList[i] = menu[i + 1];
-        }
-      })
-      import('../json/bangalore/menu_for_subjects.json').then(module => {
-        let menu = module;
-        for (let i = 0; i < menu['size']; i++) {
-          this.subjectMenuList[i] = menu[i + 1];
-        }
-      })
-      import('../json/bangalore/menu_for_location.json').then(module => {
-        let menu = module;
-        for (let j = 0; j < 90; j++) {
-          let i = Math.floor(Math.random() * (menu['size'] - 1 + 1)) + 1;
-          this.locationMenuList[j] = menu[i];
-        }
-      })
-      const url = this.page;
-      import('../json' + url + '.json').then(module => {
-        let result = module;
-        this.title.setTitle(result['title']);
-        this.meta.addTags([
-          { name: 'author', content: 'www.csquareeducation.com' },
-          { name: 'description', content: result['description'] }
-        ]);
-        this.h1Des = result['h1Des'];
-        let i = 1;
-        for(i = 1; i <= 15; i++){
-          let data = {};
-          data['name'] = result['t'+i];
-          data['exp'] = result['t'+i+'Exp'];
-          data['url'] = result['t'+i+'Url'];
-          data['desp'] = result['t'+i+'Desp'];
-          this.tutorDetails.push(data);
-        }
-      });
-    }
+    setTimeout(() => {
+      if (this.page) {
+        import('../json/bangalore/menu_for_class.json').then(module => {
+          let menu = module;
+          for (let i = 0; i < menu['size']; i++) {
+            this.classMenuList[i] = menu[i + 1];
+          }
+        })
+        import('../json/bangalore/menu_for_syllabus.json').then(module => {
+          let menu = module;
+          for (let i = 0; i < menu['size']; i++) {
+            this.syllabusMenuList[i] = menu[i + 1];
+          }
+        })
+        import('../json/bangalore/menu_for_subjects.json').then(module => {
+          let menu = module;
+          for (let i = 0; i < menu['size']; i++) {
+            this.subjectMenuList[i] = menu[i + 1];
+          }
+        })
+        import('../json/bangalore/menu_for_location.json').then(module => {
+          let menu = module;
+          for (let j = 0; j < 90; j++) {
+            let i = Math.floor(Math.random() * (menu['size'] - 1 + 1)) + 1;
+            this.locationMenuList[j] = menu[i];
+          }
+        })
+        const url = this.page;
+        import('../json' + url + '.json').then(module => {
+          let result = module;
+          this.title.setTitle(result['title']);
+          this.meta.addTags([
+            { name: 'author', content: 'www.csquareeducation.com' },
+            { name: 'description', content: result['description'] }
+          ]);
+          this.h1Des = result['h1Des'];
+          let i = 1;
+          for(i = 1; i <= 15; i++){
+            let data = {};
+            data['name'] = result['t'+i];
+            data['exp'] = result['t'+i+'Exp'];
+            data['url'] = result['t'+i+'Url'];
+            data['desp'] = result['t'+i+'Desp'];
+            this.tutorDetails.push(data);
+          }
+        });
+      }
+    }, 500);
+    
   }
 
   buttonClick(data: any) {
