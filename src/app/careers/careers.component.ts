@@ -13,7 +13,7 @@ export class CareersComponent implements OnInit {
     title.setTitle('Careers at CsquareEducation for different Position');
 
     meta.addTags([
-        { name: 'author', content: 'csquareeducation.com' },
+        { name: 'author', content: 'www.csquareeducation.com' },
         { name: 'description', content: 'Want a home private tutor job in india or Want a BDA/ sales executive jobs. Check vacancies for available position in CsquareEducation Careers Page.' }
     ]);
   }

@@ -57,7 +57,7 @@ export class QuesComponent implements OnInit {
     title.setTitle('One Click Cbse, Icse, Karnataka Board Previous Year Question Paper');
 
     meta.addTags([
-      { name: 'author', content: 'csquareeducation.com' },
+      { name: 'author', content: 'www.csquareeducation.com' },
       { name: 'description', content: 'Previous 5 ,10 years question paper cbse, icse, karnataka board for class 10 & 12 of mathematics, physics, chemistry, biology, english, social-science, hindi and other in one click.' }
     ]);
   }

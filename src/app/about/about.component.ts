@@ -19,7 +19,7 @@ export class AboutComponent implements OnInit {
         title.setTitle('About us :CsquareEducation');
 
         meta.addTags([
-            { name: 'author', content: 'csquareeducation.com' },
+            { name: 'author', content: 'www.csquareeducation.com' },
             { name: 'description', content: 'CsquareEducation is home tutoring & Online Classes service provider with very dedicated and qualified team. We are working towands enhancement of education in India.' }
         ]);
     }

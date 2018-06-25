@@ -19,7 +19,7 @@ export class TutorsComponent implements OnInit {
     title.setTitle('Tutors review on CsquareEducation');
 
     meta.addTags([
-      { name: 'author', content: 'csquareeducation.com' },
+      { name: 'author', content: 'www.csquareeducation.com' },
       { name: 'description', content: 'See what home tutor or private tutor or tuition teacher enrolled with CsquareEducation have to say about us. We provide best services for tutors so they can deliver best result to students.' }
     ]);
    }

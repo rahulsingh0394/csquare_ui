@@ -17,7 +17,7 @@ export class MediaComponent implements OnInit {
     config.keyboard = false;
     this.title.setTitle('CsquareEducation In Media and News');
     this.meta.addTags([
-      { name: 'author', content: 'csquareeducation.com' },
+      { name: 'author', content: 'www.csquareeducation.com' },
       { name: 'description', content: 'CsquareEducation in media and news for achivements and success. We provide home tuition, private tuition, question paper for CBSE, ICSE, State Boards. We also provide Home tutor jobs.'  }
     ]);
   }

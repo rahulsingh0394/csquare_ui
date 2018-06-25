@@ -97,7 +97,7 @@ export class BangaloreComponent implements OnInit {
     this.page = this.location.path();
     this.title.setTitle('Best Home/Private Tuition Tutor in bangalore for CBSE, ISCE & State Board');
         this.meta.addTags([
-          { name: 'author', content: 'csquareeducation.com' },
+          { name: 'author', content: 'www.csquareeducation.com' },
           { name: 'description', content: 'Best ✓Qualified ✓Experienced ✓certified ✓trusted private tutor at your home in bangalore. Services: personal tuition teacher, Online Classes for ICSE, CBSE, State, IGCSE board for Math, Science, English, Geometry, Social, Chemistry, Physic, Hindi.' }
         ]);
   }
@@ -135,7 +135,7 @@ export class BangaloreComponent implements OnInit {
         let result = module;
         this.title.setTitle(result['title']);
         this.meta.addTags([
-          { name: 'author', content: 'csquareeducation.com' },
+          { name: 'author', content: 'www.csquareeducation.com' },
           { name: 'description', content: result['description'] }
         ]);
         this.h1Des = result['h1Des'];

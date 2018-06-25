@@ -39,7 +39,7 @@ export class ContactComponent implements OnInit {
     this.initForm();
     this.title.setTitle('Contact Us: CsquareEducation');
     this.meta.addTags([
-      { name: 'author', content: 'csquareeducation.com' },
+      { name: 'author', content: 'www.csquareeducation.com' },
       { name: 'description', content: 'Need to know about home tuition, private tuition, tuition teacher or tutor job in india. Contact us at CsquareEducation or fill need tutor or be tutor form and we will do rest for you.' }
     ]);
   }

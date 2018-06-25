@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
         title.setTitle('Best Private Home Tuition Tutor, Teacher & Online Classes all over India');
 
         meta.addTags([
-            { name: 'author', content: 'csquareeducation.com' },
+            { name: 'author', content: 'www.csquareeducation.com' },
             { name: 'description', content: 'Best ✓Qualified ✓Experienced ✓certified ✓trusted private tutor at your home. Services: personal tuition teacher, Online Classes for ICSE, CBSE, State, IGCSE board for Math, Science, English, Geometry, Social, Chemistry, Physic, Hindi along with 10th & 12th board exam previous year question paper ...' }
         ]);
     }
