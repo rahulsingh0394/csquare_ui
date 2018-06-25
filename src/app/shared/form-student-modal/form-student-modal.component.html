@@ -8,6 +8,9 @@
     </button>
     </div>
     <div class="modal-body">
+        <div *ngIf="error">
+            <h2 class="text-error">{{error}}</h2>
+        </div>
         <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
         <form [formGroup]="enquiryForm">
             <div *ngIf="num == 1">

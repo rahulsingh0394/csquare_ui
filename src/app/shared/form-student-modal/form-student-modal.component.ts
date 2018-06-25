@@ -7,6 +7,7 @@ import { SortPipe } from '../pipes/filters/filter.pipe';
 import { BannerService } from '../banner/banner.service';
 import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Rx';
+import { setTimeout } from 'timers';
 
 class leadGrade {
   gradeId: string;
@@ -55,12 +56,13 @@ export class FormStudentModalComponent implements OnInit {
   nameDis: boolean = false;
   public loading = false;
   showCity: boolean = false;
+  error: any;
 
 
   constructor(
     public fb: FormBuilder,
     private activeModal: NgbActiveModal,
-    private service: BannerService,
+    private service: BannerService
   ) {
     this.service.getAllRefCites().subscribe(data => {
       this.cityList = data;
@@ -197,7 +199,18 @@ export class FormStudentModalComponent implements OnInit {
     this.loading = true;
     this.service.addLead(formData).subscribe(enquiry => {
       this.loading = false;
-      this.activeModal.close('Y');
+      if(enquiry._body == 'Email Successfully Created'){
+        setTimeout(() => {
+          this.activeModal.close('Y');
+        }, 10000);
+        this.error = 'Thank you ' + this.firstName.value + ' for contacting CsquareEducation. Our representative  will contact you soon.' 
+      } else {
+        setTimeout(() => {
+          this.activeModal.close('Y');
+        }, 10000);
+        this.error = 'Hello ' + this.email.value + ' . This email already exists. Please try with some another emaial ID.'
+
+      }
     });
   }
 }
