@@ -175,6 +175,9 @@ p {
     .fa-5x {
         font-size: 30px;
     }
+    .overlay {
+        margin-top: -5em;
+    }
     .card-header {
         font-size: 24px;
         margin: 0px;

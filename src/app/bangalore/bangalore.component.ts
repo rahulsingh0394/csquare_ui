@@ -3,6 +3,9 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 import { BangaloreService } from './bangalore.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Meta, Title } from "@angular/platform-browser";
+import { PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser} from '@angular/common';
+import { Ng2DeviceService } from 'ng2-device-detector';
 
 
 @Component({
@@ -86,14 +89,19 @@ export class BangaloreComponent implements OnInit {
   locationMenuList: any[] = [];
   tutorDetails: any [] = [];
 
+  testBrowser: any;
+  deviceInfo = null;
+
   constructor(
     private location: Location,
     private router: Router,
     private meta: Meta,
     private title: Title,
     private service: BangaloreService,
-    private route: ActivatedRoute
-  ) {
+    private deviceService: Ng2DeviceService,
+    private route: ActivatedRoute,
+    @Inject(PLATFORM_ID) private platformId: string){
+      this.testBrowser = isPlatformBrowser(platformId);
     this.page = this.location.path();
     this.title.setTitle('Best Home/Private Tuition Tutor in bangalore for CBSE, ISCE & State Board');
         this.meta.addTags([
@@ -104,33 +112,9 @@ export class BangaloreComponent implements OnInit {
 
   ngOnInit() {
 
-    setTimeout(() => {
-      if (this.page) {
-        import('../json/bangalore/menu_for_class.json').then(module => {
-          let menu = module;
-          for (let i = 0; i < menu['size']; i++) {
-            this.classMenuList[i] = menu[i + 1];
-          }
-        })
-        import('../json/bangalore/menu_for_syllabus.json').then(module => {
-          let menu = module;
-          for (let i = 0; i < menu['size']; i++) {
-            this.syllabusMenuList[i] = menu[i + 1];
-          }
-        })
-        import('../json/bangalore/menu_for_subjects.json').then(module => {
-          let menu = module;
-          for (let i = 0; i < menu['size']; i++) {
-            this.subjectMenuList[i] = menu[i + 1];
-          }
-        })
-        import('../json/bangalore/menu_for_location.json').then(module => {
-          let menu = module;
-          for (let j = 0; j < 90; j++) {
-            let i = Math.floor(Math.random() * (menu['size'] - 1 + 1)) + 1;
-            this.locationMenuList[j] = menu[i];
-          }
-        })
+    if(this.testBrowser == true){
+      this.deviceInfo = this.deviceService.getDeviceInfo();
+      if(this.deviceInfo.device == 'iphone' || this.deviceInfo.device == 'android'){
         const url = this.page;
         import('../json' + url + '.json').then(module => {
           let result = module;
@@ -141,7 +125,7 @@ export class BangaloreComponent implements OnInit {
           ]);
           this.h1Des = result['h1Des'];
           let i = 1;
-          for(i = 1; i <= 15; i++){
+          for(i = 1; i <= 5; i++){
             let data = {};
             data['name'] = result['t'+i];
             data['exp'] = result['t'+i+'Exp'];
@@ -150,9 +134,53 @@ export class BangaloreComponent implements OnInit {
             this.tutorDetails.push(data);
           }
         });
-      }
-    }, 500);
-    
+      } else {
+      const url = this.page;
+      import('../json' + url + '.json').then(module => {
+        let result = module;
+        this.title.setTitle(result['title']);
+        this.meta.addTags([
+          { name: 'author', content: 'www.csquareeducation.com' },
+          { name: 'description', content: result['description'] }
+        ]);
+        this.h1Des = result['h1Des'];
+        let i = 1;
+        for(i = 1; i <= 15; i++){
+          let data = {};
+          data['name'] = result['t'+i];
+          data['exp'] = result['t'+i+'Exp'];
+          data['url'] = result['t'+i+'Url'];
+          data['desp'] = result['t'+i+'Desp'];
+          this.tutorDetails.push(data);
+        }
+      });
+      import('../json/bangalore/menu_for_class.json').then(module => {
+        let menu = module;
+        for (let i = 0; i < menu['size']; i++) {
+          this.classMenuList[i] = menu[i + 1];
+        }
+      })
+      import('../json/bangalore/menu_for_syllabus.json').then(module => {
+        let menu = module;
+        for (let i = 0; i < menu['size']; i++) {
+          this.syllabusMenuList[i] = menu[i + 1];
+        }
+      })
+      import('../json/bangalore/menu_for_subjects.json').then(module => {
+        let menu = module;
+        for (let i = 0; i < menu['size']; i++) {
+          this.subjectMenuList[i] = menu[i + 1];
+        }
+      })
+      import('../json/bangalore/menu_for_location.json').then(module => {
+        let menu = module;
+        for (let j = 0; j < 90; j++) {
+          let i = Math.floor(Math.random() * (menu['size'] - 1 + 1)) + 1;
+          this.locationMenuList[j] = menu[i];
+        }
+      })
+    }
+  }
   }
 
   buttonClick(data: any) {

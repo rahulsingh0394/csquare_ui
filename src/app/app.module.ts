@@ -10,6 +10,7 @@ import { LoadingModule } from 'ngx-loading';
 import { HttpModule } from '@angular/http';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 import { NguCarouselModule } from '@ngu/carousel';
+import { Ng2DeviceDetectorModule } from 'ng2-device-detector';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
@@ -35,6 +36,7 @@ import { TutorService } from './tutorForm/tutor.service';
     BrowserModule.withServerTransition({ appId: 'my-app' }),
     NgbModule.forRoot(),
     ScrollToModule.forRoot(),
+    Ng2DeviceDetectorModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
