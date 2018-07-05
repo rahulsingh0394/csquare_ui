@@ -104,7 +104,7 @@
             <a role="button" (click)="isCollapsedS1 = !isCollapsedS1" [attr.aria-expanded]="!isCollapsedS1" aria-controls="collapseExampleS1">
                 <div class="icon icon-danger">
                     <p style="text-align:center!important;"><br>
-                        <button class="btn btn-primary">Read More...</button>
+                        <button class="btn btn-primary" (click)="changeButton1()">{{readMore1}}</button>
                     </p>
                 </div>
             </a>
@@ -128,7 +128,7 @@
             <a role="button" (click)="isCollapsedS2 = !isCollapsedS2" [attr.aria-expanded]="!isCollapsedS2" aria-controls="collapseExampleS2">
                 <div class="icon icon-danger">
                     <p style="text-align:center!important;"><br>
-                        <button class="btn btn-default">Read More...</button>
+                        <button class="btn btn-primary" (click)="changeButton2()">{{readMore2}}</button>
                     </p>
                 </div>
             </a>
@@ -155,7 +155,7 @@
             <a role="button" (click)="isCollapsedS3 = !isCollapsedS3" [attr.aria-expanded]="!isCollapsedS3" aria-controls="collapseExampleS3">
                 <div class="icon icon-danger">
                     <p style="text-align:center!important;"><br>
-                        <button class="btn btn-primary">Read More...</button>
+                        <button class="btn btn-primary" (click)="changeButton3()">{{readMore3}}</button>
                     </p>
                 </div>
             </a>

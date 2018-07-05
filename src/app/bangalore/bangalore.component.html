@@ -1,131 +1,140 @@
-<app-form></app-form>
-<div class="main">
-    <div class="section text-center">
-        <div class="col-md-11 mr-auto ml-auto">
-            <div class="card-header">
-                <h1>{{h1Des}}</h1>
-            </div>
-            <div class="row">
-                <div class="col-md-8" style="margin-top: 1em;">
-                    <div *ngFor="let item of tutorDetails; let i = index" [attr.data-index]="i">
-                        <div *ngIf="i%2 == 0" style="margin-bottom: 2em;">
-                            <span class="quoted1"><i class="fa fa-quote-right"></i></span>
-                            <div class="review-test1">
-                                <h4 class="name">{{item.name}}</h4>
-                                <small class="tagline">Experience: {{item.exp}}</small><br>
-                                <div class="star">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-                                <p class="bottom40">
-                                    {{item.desp}}
-                                </p>
-                            </div>
-                            <div class="review-photo">
-                                <img src="{{item.url}}">
-                            </div>
-                        </div>
-                        <div *ngIf="i%2 != 0" style="margin-bottom: 2em;">
-                            <span class="quoted2"><i class="fa fa-quote-right"></i></span>
-                            <div class="review-test2">
-                                <h4 class="name">{{item.name}}</h4>
-                                <small class="tagline">Experience: {{item.exp}}</small><br>
-                                <div class="star">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                </div>
-                                <p class="bottom40">
-                                    {{item.desp}}
-                                </p>
-                            </div>
-                            <div class="review-photo">
-                                <img src="{{item.url}}">
-                            </div>
-                        </div>
-                    </div>
+<div *ngIf="show == false">
+    <div style="top: 35%; left: 35%;">
+        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '4px' }"></ngx-loading>
+        <h4 style="margin-top: 1em;">
+            Please Wait While Page Loads...</h4>
+    </div>
+</div>
+<div *ngIf="show == true">
+    <app-form></app-form>
+    <div class="main">
+        <div class="section text-center">
+            <div class="col-md-11 mr-auto ml-auto">
+                <div class="card-header">
+                    <h1>{{h1Des}}</h1>
                 </div>
-                <div class="col-md-4 mobile">
-                    <div class="card-header menu-title" style="margin-top: 1.6em;">
-                        Question Papers:
+                <div class="row">
+                    <div class="col-md-8" style="margin-top: 1em;">
+                        <div *ngFor="let item of tutorDetails; let i = index" [attr.data-index]="i">
+                            <div *ngIf="i%2 == 0" style="margin-bottom: 2em;">
+                                <span class="quoted1"><i class="fa fa-quote-right"></i></span>
+                                <div class="review-test1">
+                                    <h4 class="name">{{item.name}}</h4>
+                                    <small class="tagline">Experience: {{item.exp}}</small><br>
+                                    <div class="star">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                    <p class="bottom40">
+                                        {{item.desp}}
+                                    </p>
+                                </div>
+                                <div class="review-photo">
+                                    <img src="{{item.url}}">
+                                </div>
+                            </div>
+                            <div *ngIf="i%2 != 0" style="margin-bottom: 2em;">
+                                <span class="quoted2"><i class="fa fa-quote-right"></i></span>
+                                <div class="review-test2">
+                                    <h4 class="name">{{item.name}}</h4>
+                                    <small class="tagline">Experience: {{item.exp}}</small><br>
+                                    <div class="star">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <p class="bottom40">
+                                        {{item.desp}}
+                                    </p>
+                                </div>
+                                <div class="review-photo">
+                                    <img src="{{item.url}}">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body bg-transparent" routerLinkActive="active">
-                        <ul>
-                            <li class="menu-item">
-                                <img src="assets/img-menu/question/questionpaperX.jpg" width="30" height="30">&nbsp;&nbsp;
-                                <a [routerLink]="['/question']">Cbse Class 10 Question Paper</a>
-                            </li>
-                            <li class="menu-item">
-                                <img src="assets/img-menu/question/questionpaperXII.jpg" width="30" height="30">&nbsp;&nbsp;
-                                <a [routerLink]="['/question']">Cbse Class 12 Question Paper</a>
-                            </li>
-                            <li class="menu-item">
-                                <img src="assets/img-menu/question/icsequestionpaperXII.jpg" width="30" height="30">&nbsp;&nbsp;
-                                <a [routerLink]="['/question']">ICSE Class 10 Question Paper</a>
-                            </li>
-                            <li class="menu-item">
-                                <img src="assets/img-menu/question/icsequestionpaperXII.jpg" width="30" height="30">&nbsp;&nbsp;
-                                <a [routerLink]="['/question']">ICSE Class 12 Question Paper</a>
-                            </li>
-                            <li class="menu-item">
-                                <img src="assets/img-menu/question/karnatakaboardX.jpg" width="30" height="30">&nbsp;&nbsp;
-                                <a [routerLink]="['/question']">Karnataka Board 10 Question Paper</a>
-                            </li>
-                            <li class="menu-item">
-                                <img src="assets/img-menu/question/karnatakaboardXII.jpg" width="30" height="30">&nbsp;&nbsp;
-                                <a [routerLink]="['/question']">Karnataka Board 12 Question Paper</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-header menu-title">
-                        Find Home Tuition For Your Syllabus:
-                    </div>
-                    <div class="card-body bg-transparent" routerLinkActive="active">
-                        <ul *ngFor="let menu of syllabusMenuList">
-                            <li class="menu-item">
-                                <img src="{{menu.img}}" width="50" height="50">&nbsp;&nbsp;
-                                <a role="button" (click)="buttonClick(menu.url)">Top 10 {{menu.menu_name}} Home Tutor</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-header menu-title">
-                        Find Home Tuition For Your Grade:
-                    </div>
-                    <div class="card-body bg-transparent" routerLinkActive="active">
-                        <ul *ngFor="let menu of classMenuList">
-                            <li class="menu-item">
-                                <img src="{{menu.img}}" width="50" height="50">&nbsp;&nbsp;
-                                <a role="button" (click)="buttonClick(menu.url)">Top 10 {{menu.menu_name}} Home Tutor</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-header menu-title">
-                        Find Home Tuition For Your Subject:
-                    </div>
-                    <div class="card-body bg-transparent" routerLinkActive="active">
-                        <ul *ngFor="let menu of subjectMenuList">
+                    <div class="col-md-4 mobile">
+                        <div class="card-header menu-title" style="margin-top: 1.6em;">
+                            Question Papers:
+                        </div>
+                        <div class="card-body bg-transparent" routerLinkActive="active">
+                            <ul>
+                                <li class="menu-item">
+                                    <img src="assets/img-menu/question/questionpaperX.jpg" width="30" height="30">&nbsp;&nbsp;
+                                    <a [routerLink]="['/question']">Cbse Class 10 Question Paper</a>
+                                </li>
+                                <li class="menu-item">
+                                    <img src="assets/img-menu/question/questionpaperXII.jpg" width="30" height="30">&nbsp;&nbsp;
+                                    <a [routerLink]="['/question']">Cbse Class 12 Question Paper</a>
+                                </li>
+                                <li class="menu-item">
+                                    <img src="assets/img-menu/question/icsequestionpaperXII.jpg" width="30" height="30">&nbsp;&nbsp;
+                                    <a [routerLink]="['/question']">ICSE Class 10 Question Paper</a>
+                                </li>
+                                <li class="menu-item">
+                                    <img src="assets/img-menu/question/icsequestionpaperXII.jpg" width="30" height="30">&nbsp;&nbsp;
+                                    <a [routerLink]="['/question']">ICSE Class 12 Question Paper</a>
+                                </li>
+                                <li class="menu-item">
+                                    <img src="assets/img-menu/question/karnatakaboardX.jpg" width="30" height="30">&nbsp;&nbsp;
+                                    <a [routerLink]="['/question']">Karnataka Board 10 Question Paper</a>
+                                </li>
+                                <li class="menu-item">
+                                    <img src="assets/img-menu/question/karnatakaboardXII.jpg" width="30" height="30">&nbsp;&nbsp;
+                                    <a [routerLink]="['/question']">Karnataka Board 12 Question Paper</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-header menu-title">
+                            Find Home Tuition For Your Syllabus:
+                        </div>
+                        <div class="card-body bg-transparent" routerLinkActive="active">
+                            <ul *ngFor="let menu of syllabusMenuList">
+                                <li class="menu-item">
+                                    <img src="{{menu.img}}" width="50" height="50">&nbsp;&nbsp;
+                                    <a role="button" (click)="buttonClick(menu.url)">Top 10 {{menu.menu_name}} Home Tutor</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-header menu-title">
+                            Find Home Tuition For Your Grade:
+                        </div>
+                        <div class="card-body bg-transparent" routerLinkActive="active">
+                            <ul *ngFor="let menu of classMenuList">
+                                <li class="menu-item">
+                                    <img src="{{menu.img}}" width="50" height="50">&nbsp;&nbsp;
+                                    <a role="button" (click)="buttonClick(menu.url)">Top 10 {{menu.menu_name}} Home Tutor</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-header menu-title">
+                            Find Home Tuition For Your Subject:
+                        </div>
+                        <div class="card-body bg-transparent" routerLinkActive="active">
+                            <ul *ngFor="let menu of subjectMenuList">
 
-                            <li class="menu-item">
-                                <img src="{{menu.img}}" width="50" height="50">&nbsp;&nbsp;
-                                <a role="button" (click)="buttonClick(menu.url)">Top 10 {{menu.menu_name}} Home Tutor</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-header menu-title">
-                        Find Home Tuitions For Your Locations:
-                    </div>
-                    <div class="card-body bg-transparent" routerLinkActive="active">
-                        <ul *ngFor="let menu of locationMenuList">
+                                <li class="menu-item">
+                                    <img src="{{menu.img}}" width="50" height="50">&nbsp;&nbsp;
+                                    <a role="button" (click)="buttonClick(menu.url)">Top 10 {{menu.menu_name}} Home Tutor</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-header menu-title">
+                            Find Home Tuitions For Your Locations:
+                        </div>
+                        <div class="card-body bg-transparent" routerLinkActive="active">
+                            <ul *ngFor="let menu of locationMenuList">
 
-                            <li class="menu-item" style="padding-left: 4px; text-align: justify!important;">
-                                <a role="button" (click)="buttonClick(menu.url)">To 10 Home Tutor Near {{menu.menu_name}}</a>
-                            </li>
-                        </ul>
+                                <li class="menu-item" style="padding-left: 4px; text-align: justify!important;">
+                                    <a role="button" (click)="buttonClick(menu.url)">To 10 Home Tutor Near {{menu.menu_name}}</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

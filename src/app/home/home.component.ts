@@ -39,6 +39,10 @@ export class HomeComponent implements OnInit {
     l: any = 1;
     private sub: Subscription;
 
+    readMore1: any = 'Show More...';
+    readMore2: any = 'Show More...';
+    readMore3: any = 'Show More...';
+
     constructor(private router: Router, config: NgbCarouselConfig,
         meta: Meta, title: Title) {
         config.interval = 10000;
@@ -220,6 +224,30 @@ export class HomeComponent implements OnInit {
             this.time4 = 30;
             this.detail4 = false;
             this.sub.unsubscribe();
+        }
+    }
+
+    changeButton1(){
+        if(this.readMore1 == 'Show More...'){
+            this.readMore1 = 'Show Less...';
+        } else {
+            this.readMore1 = 'Show More...';
+        }
+    }
+
+    changeButton2(){
+        if(this.readMore2 == 'Show More...'){
+            this.readMore2 = 'Show Less...';
+        } else {
+            this.readMore2 = 'Show More...';
+        }
+    }
+
+    changeButton3(){
+        if(this.readMore3 == 'Show More...'){
+            this.readMore3 = 'Show Less...';
+        } else {
+            this.readMore3 = 'Show More...';
         }
     }
 

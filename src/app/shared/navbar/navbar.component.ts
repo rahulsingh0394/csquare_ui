@@ -5,7 +5,8 @@ import { NgbPopoverConfig } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import {TweenMax} from "gsap";
-import { Ng2DeviceService } from 'ng2-device-detector';
+import { PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser} from '@angular/common';
 
 @Component({
     selector: 'app-navbar',
@@ -25,15 +26,15 @@ export class NavbarComponent implements OnInit {
     screenHeight: any;
     screenWidth: any;
     deviceInfo: any;
+    testBrowser: any;
 
     constructor(public location: Location,
         private element: ElementRef,
         config: NgbPopoverConfig,
         private router: Router,
-        private deviceService: Ng2DeviceService,
-        private renderer: Renderer2) {
+        private renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: string){
+        this.testBrowser = isPlatformBrowser(platformId);
         this.sidebarVisible = false;
-        this.deviceInfo = this.deviceService.getDeviceInfo();
     }
 
 
@@ -55,15 +56,17 @@ export class NavbarComponent implements OnInit {
     ngOnInit() {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
-        if(this.deviceInfo.device == 'iphone' || this.deviceInfo.device == 'android'){
+        if(this.testBrowser == true){
+            const width = window.screen.width;
+            const height = window.screen.height;
+            if(width <= 800 && height <= 800 ){
             
-        } else {
-            TweenMax.from(document.getElementById("nav"), 0.5, {opacity: 0, y: -50, delay: 1});
-            TweenMax.staggerFrom(document.getElementsByClassName("labelBtn"), 0.5, {opacity: 0, y: -50, delay: 1.5}, 0.2);
-            TweenMax.staggerFrom(document.getElementsByClassName("nav-item"), 0.5, {opacity: 0, y: -50, delay: 2}, 0.2);
+            } else {
+                TweenMax.from(document.getElementById("nav"), 0.5, {opacity: 0, y: -50, delay: 1});
+                TweenMax.staggerFrom(document.getElementsByClassName("labelBtn"), 0.5, {opacity: 0, y: -50, delay: 1.5}, 0.2);
+                TweenMax.staggerFrom(document.getElementsByClassName("nav-item"), 0.5, {opacity: 0, y: -50, delay: 2}, 0.2);
+            }
         }
-        
-
     }
     sidebarOpen() {
         const toggleButton = this.toggleButton;

@@ -13,6 +13,8 @@ export class AboutComponent implements OnInit {
         middle: false,
         right: false
     };
+    readMore: any = 'Show More...';
+    isCollapsedS1: any;
     constructor(
         meta: Meta, title: Title) {
 
@@ -30,6 +32,14 @@ export class AboutComponent implements OnInit {
         // carouselLoad will trigger this funnction when your load value reaches
         // it is helps to load the data by parts to increase the performance of the app
         // must use feature to all carousel
+    }
+
+    changeButton(){
+        if(this.readMore == 'Show More...'){
+            this.readMore = 'Show Less...';
+        } else {
+            this.readMore = 'Show More...';
+        }
     }
 
 }

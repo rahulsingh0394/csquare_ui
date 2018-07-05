@@ -4,8 +4,7 @@ import { BangaloreService } from './bangalore.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Meta, Title } from "@angular/platform-browser";
 import { PLATFORM_ID, Inject } from '@angular/core';
-import { isPlatformBrowser} from '@angular/common';
-import { Ng2DeviceService } from 'ng2-device-detector';
+import { isPlatformBrowser } from '@angular/common';
 
 
 @Component({
@@ -87,10 +86,12 @@ export class BangaloreComponent implements OnInit {
   syllabusMenuList: any[] = [];
   subjectMenuList: any[] = [];
   locationMenuList: any[] = [];
-  tutorDetails: any [] = [];
+  tutorDetails: any[] = [];
 
   testBrowser: any;
   deviceInfo = null;
+  show: boolean = false;
+  loading: any = true;
 
   constructor(
     private location: Location,
@@ -98,96 +99,88 @@ export class BangaloreComponent implements OnInit {
     private meta: Meta,
     private title: Title,
     private service: BangaloreService,
-    private deviceService: Ng2DeviceService,
     private route: ActivatedRoute,
-    @Inject(PLATFORM_ID) private platformId: string){
-      this.testBrowser = isPlatformBrowser(platformId);
-    this.page = this.location.path();
-    this.title.setTitle('Best Home/Private Tuition Tutor in bangalore for CBSE, ISCE & State Board');
-        this.meta.addTags([
-          { name: 'author', content: 'www.csquareeducation.com' },
-          { name: 'description', content: 'Best ✓Qualified ✓Experienced ✓certified ✓trusted private tutor at your home in bangalore. Services: personal tuition teacher, Online Classes for ICSE, CBSE, State, IGCSE board for Math, Science, English, Geometry, Social, Chemistry, Physic, Hindi.' }
-        ]);
-  }
-
-  ngOnInit() {
-
-    if(this.testBrowser == true){
-      this.deviceInfo = this.deviceService.getDeviceInfo();
-      if(this.deviceInfo.device == 'iphone' || this.deviceInfo.device == 'android'){
+    @Inject(PLATFORM_ID) private platformId: string) {
+    this.testBrowser = isPlatformBrowser(platformId);
+    this.page = location.path();
+    import('../json' + location.path() + '.json').then(module => {
+      let result = module;
+      title.setTitle(result['title']);
+      meta.addTags([
+        { name: 'author', content: 'www.csquareeducation.com' },
+        { name: 'description', content: result['description'] }
+      ]);
+    });
+    
+    if (this.testBrowser == true) {
+      const width = window.screen.width;
+      const height = window.screen.height;
+      if (width <= 800 && height <= 800) {
         const url = this.page;
         import('../json' + url + '.json').then(module => {
           let result = module;
-          this.title.setTitle(result['title']);
-          this.meta.addTags([
-            { name: 'author', content: 'www.csquareeducation.com' },
-            { name: 'description', content: result['description'] }
-          ]);
           this.h1Des = result['h1Des'];
           let i = 1;
-          for(i = 1; i <= 5; i++){
+          for (i = 1; i <= 5; i++) {
             let data = {};
-            data['name'] = result['t'+i];
-            data['exp'] = result['t'+i+'Exp'];
-            data['url'] = result['t'+i+'Url'];
-            data['desp'] = result['t'+i+'Desp'];
+            data['name'] = result['t' + i];
+            data['exp'] = result['t' + i + 'Exp'];
+            data['url'] = result['t' + i + 'Url'];
+            data['desp'] = result['t' + i + 'Desp'];
             this.tutorDetails.push(data);
           }
         });
+        this.show = true;
       } else {
-      const url = this.page;
-      import('../json' + url + '.json').then(module => {
-        let result = module;
-        this.title.setTitle(result['title']);
-        this.meta.addTags([
-          { name: 'author', content: 'www.csquareeducation.com' },
-          { name: 'description', content: result['description'] }
-        ]);
-        this.h1Des = result['h1Des'];
-        let i = 1;
-        for(i = 1; i <= 15; i++){
-          let data = {};
-          data['name'] = result['t'+i];
-          data['exp'] = result['t'+i+'Exp'];
-          data['url'] = result['t'+i+'Url'];
-          data['desp'] = result['t'+i+'Desp'];
-          this.tutorDetails.push(data);
-        }
-      });
-      import('../json/bangalore/menu_for_class.json').then(module => {
-        let menu = module;
-        for (let i = 0; i < menu['size']; i++) {
-          this.classMenuList[i] = menu[i + 1];
-        }
-      })
-      import('../json/bangalore/menu_for_syllabus.json').then(module => {
-        let menu = module;
-        for (let i = 0; i < menu['size']; i++) {
-          this.syllabusMenuList[i] = menu[i + 1];
-        }
-      })
-      import('../json/bangalore/menu_for_subjects.json').then(module => {
-        let menu = module;
-        for (let i = 0; i < menu['size']; i++) {
-          this.subjectMenuList[i] = menu[i + 1];
-        }
-      })
-      import('../json/bangalore/menu_for_location.json').then(module => {
-        let menu = module;
-        for (let j = 0; j < 90; j++) {
-          let i = Math.floor(Math.random() * (menu['size'] - 1 + 1)) + 1;
-          this.locationMenuList[j] = menu[i];
-        }
-      })
+        this.show = true;
+        const url = this.page;
+        import('../json' + url + '.json').then(module => {
+          let result = module;
+          this.h1Des = result['h1Des'];
+          let i = 1;
+          for (i = 1; i <= 15; i++) {
+            let data = {};
+            data['name'] = result['t' + i];
+            data['exp'] = result['t' + i + 'Exp'];
+            data['url'] = result['t' + i + 'Url'];
+            data['desp'] = result['t' + i + 'Desp'];
+            this.tutorDetails.push(data);
+          }
+        });
+        import('../json/bangalore/menu_for_class.json').then(module => {
+          let menu = module;
+          for (let i = 0; i < menu['size']; i++) {
+            this.classMenuList[i] = menu[i + 1];
+          }
+        })
+        import('../json/bangalore/menu_for_syllabus.json').then(module => {
+          let menu = module;
+          for (let i = 0; i < menu['size']; i++) {
+            this.syllabusMenuList[i] = menu[i + 1];
+          }
+        })
+        import('../json/bangalore/menu_for_subjects.json').then(module => {
+          let menu = module;
+          for (let i = 0; i < menu['size']; i++) {
+            this.subjectMenuList[i] = menu[i + 1];
+          }
+        })
+        import('../json/bangalore/menu_for_location.json').then(module => {
+          let menu = module;
+          for (let j = 0; j < 90; j++) {
+            let i = Math.floor(Math.random() * (menu['size'] - 1 + 1)) + 1;
+            this.locationMenuList[j] = menu[i];
+          }
+        })
+      }
     }
   }
-  }
+
+  ngOnInit() { }
 
   buttonClick(data: any) {
     this.router.navigateByUrl(data);
-    setTimeout(() => {
       window.location.reload();
-    }, 100);
   }
 
 }

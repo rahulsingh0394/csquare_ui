@@ -15,10 +15,6 @@ import { SharedModule } from '../shared/shared.module';
 import { routing } from './bangalore.routing';
 import { BangaloreComponent } from './bangalore.component';
 import { BangaloreService } from './bangalore.service';
-// import { PrivateTuitionInBangaloreComponent } from './private-tuition/private-tuition-in-bangalore/private-tuition-in-bangalore.component';
-// import { PrivateTuitionComponent } from './private-tuition/private-tuition.component';
-// import { PrivateTutorComponent } from './private-tutor/private-tutor.component';
-// import { PrivateTutorInBangaloreComponent } from './private-tutor/private-tutor-in-bangalore/private-tutor-in-bangalore.component';
 
 @NgModule({
   imports: [
