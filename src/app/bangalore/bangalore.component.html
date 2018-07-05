@@ -1,8 +1,8 @@
-<div *ngIf="show == false">
-    <div style="top: 35%; left: 35%;">
-        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '4px' }"></ngx-loading>
-        <h4 style="margin-top: 1em;">
-            Please Wait While Page Loads...</h4>
+<div class="temp" *ngIf="show == false">
+    <div>
+        <ngx-loading [show]="loading"></ngx-loading>
+        <h4 style="margin-top: 20%; margin-bottom: 20%!important; margin-left: 20%; z-index: 1000!important">
+            Please Wait While Page Loads.It's a webapp so it takes time for first time to load.</h4>
     </div>
 </div>
 <div *ngIf="show == true">
