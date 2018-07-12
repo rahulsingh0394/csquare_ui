@@ -5,6 +5,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Meta, Title } from "@angular/platform-browser";
 import { PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { Http } from '@angular/http';
 
 
 @Component({
@@ -100,6 +101,7 @@ export class BangaloreComponent implements OnInit {
     private title: Title,
     private service: BangaloreService,
     private route: ActivatedRoute,
+    private http: Http,
     @Inject(PLATFORM_ID) private platformId: string) {
     this.testBrowser = isPlatformBrowser(platformId);
     this.page = location.path();
@@ -111,14 +113,16 @@ export class BangaloreComponent implements OnInit {
         { name: 'description', content: result['description'] }
       ]);
     });
-    
+  }
+
+  ngOnInit() {
+    const url = this.page;
     if (this.testBrowser == true) {
       const width = window.screen.width;
       const height = window.screen.height;
       if (width <= 800 && height <= 800) {
-        const url = this.page;
-        import('assets/json' + url + '.json').then(module => {
-          let result = module;
+        this.http.get('assets/json' + url + '.json').subscribe(data => {
+          const result = data.json();
           this.h1Des = result['h1Des'];
           let i = 1;
           for (i = 1; i <= 5; i++) {
@@ -132,9 +136,8 @@ export class BangaloreComponent implements OnInit {
           }
         });
       } else {
-        const url = this.page;
-        import('assets/json' + url + '.json').then(module => {
-          let result = module;
+        this.http.get('assets/json' + url + '.json').subscribe(data => {
+          const result = data.json();
           this.h1Des = result['h1Des'];
           let i = 1;
           for (i = 1; i <= 15; i++) {
@@ -147,40 +150,42 @@ export class BangaloreComponent implements OnInit {
             this.show = true;
           }
         });
-        import('assets/json/bangalore/menu_for_class.json').then(module => {
-          let menu = module;
+        this.http.get('assets/json/bangalore/menu_for_class.json').subscribe(data => {
+          const menu = data.json();
           for (let i = 0; i < menu['size']; i++) {
             this.classMenuList[i] = menu[i + 1];
           }
-        })
-        import('assets/json/bangalore/menu_for_syllabus.json').then(module => {
-          let menu = module;
+        });
+
+        this.http.get('assets/json/bangalore/menu_for_syllabus.json').subscribe(data => {
+          const menu = data.json();
           for (let i = 0; i < menu['size']; i++) {
             this.syllabusMenuList[i] = menu[i + 1];
           }
-        })
-        import('assets/json/bangalore/menu_for_subjects.json').then(module => {
-          let menu = module;
+        });
+
+        this.http.get('assets/json/bangalore/menu_for_subjects.json').subscribe(data => {
+          const menu = data.json();
           for (let i = 0; i < menu['size']; i++) {
             this.subjectMenuList[i] = menu[i + 1];
           }
-        })
-        import('assets/json/bangalore/menu_for_location.json').then(module => {
-          let menu = module;
+        });
+
+        this.http.get('assets/json/bangalore/menu_for_location.json').subscribe(data => {
+          const menu = data.json();
           for (let j = 0; j < 90; j++) {
             let i = Math.floor(Math.random() * (menu['size'] - 1 + 1)) + 1;
             this.locationMenuList[j] = menu[i];
           }
-        })
+        });
+
       }
     }
   }
 
-  ngOnInit() { }
-
   buttonClick(data: any) {
     this.router.navigateByUrl(data);
-      window.location.reload();
+    window.location.reload();
   }
 
 }

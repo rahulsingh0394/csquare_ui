@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-tutors-review',
@@ -15,7 +16,7 @@ export class TutorsComponent implements OnInit {
   subjectMenuList: any[] = [];
   locationMenuList: any[] = [];
 
-  constructor(private router: Router, private meta: Meta, private title: Title) {
+  constructor(private router: Router, private meta: Meta, private title: Title, private http:Http) {
     title.setTitle('Tutors review on CsquareEducation');
 
     meta.addTags([
@@ -25,31 +26,34 @@ export class TutorsComponent implements OnInit {
    }
 
   ngOnInit() {
-    import('assets/json/bangalore/menu_for_class.json').then(module => {
-      let menu = module;
+    this.http.get('assets/json/bangalore/menu_for_class.json').subscribe(data => {
+      const menu = data.json();
       for (let i = 0; i < menu['size']; i++) {
         this.classMenuList[i] = menu[i + 1];
       }
-    })
-    import('assets/json/bangalore/menu_for_syllabus.json').then(module => {
-      let menu = module;
+    });
+
+    this.http.get('assets/json/bangalore/menu_for_syllabus.json').subscribe(data => {
+      const menu = data.json();
       for (let i = 0; i < menu['size']; i++) {
         this.syllabusMenuList[i] = menu[i + 1];
       }
-    })
-    import('assets/json/bangalore/menu_for_subjects.json').then(module => {
-      let menu = module;
+    });
+
+    this.http.get('assets/json/bangalore/menu_for_subjects.json').subscribe(data => {
+      const menu = data.json();
       for (let i = 0; i < menu['size']; i++) {
         this.subjectMenuList[i] = menu[i + 1];
       }
-    })
-    import('assets/json/bangalore/menu_for_location.json').then(module => {
-      let menu = module;
+    });
+
+    this.http.get('assets/json/bangalore/menu_for_location.json').subscribe(data => {
+      const menu = data.json();
       for (let j = 0; j < 90; j++) {
         let i = Math.floor(Math.random() * (menu['size'] - 1 + 1)) + 1;
         this.locationMenuList[j] = menu[i];
       }
-    })
+    });
   }
 
   buttonClick(data: any) {
