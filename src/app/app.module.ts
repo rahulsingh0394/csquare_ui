@@ -10,7 +10,6 @@ import { LoadingModule } from 'ngx-loading';
 import { HttpModule } from '@angular/http';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 import { NguCarouselModule } from '@ngu/carousel';
-import { Ng2DeviceDetectorModule } from 'ng2-device-detector';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
@@ -40,7 +39,6 @@ import { BangaloreComponent } from './bangalore/bangalore.component';
     BrowserModule.withServerTransition({ appId: 'my-app' }),
     NgbModule.forRoot(),
     ScrollToModule.forRoot(),
-    Ng2DeviceDetectorModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
@@ -69,7 +67,8 @@ import { BangaloreComponent } from './bangalore/bangalore.component';
       { path: 'tutors-review', loadChildren: './tutors/tutors.module#TutorsModule' },
       { path: 'admin-app',      loadChildren: './admin-app/admin-app.module#AdminAppModule' },
       { path: 'home-tutors-private-tutors', component: HomeTutorComponent },
-      { path: '', loadChildren: './Class-wise-best-private-home-tutor/Class-wise-best-private-home-tutor.module#ClassWiseModule' }
+      { path: '', loadChildren: './Class-wise-best-private-home-tutor/Class-wise-best-private-home-tutor.module#ClassWiseModule' },
+      { path: '', loadChildren: './Syllabus-wise-best-private-home-tutor/Syllabus-wise-best-private-home-tutor.module#SyllabusWiseModule' }    
     ]),
   ],
   providers: [StudentService, TutorService],

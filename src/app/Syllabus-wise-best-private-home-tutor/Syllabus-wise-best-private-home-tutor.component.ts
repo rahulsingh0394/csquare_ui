@@ -8,12 +8,12 @@ import { Http } from '@angular/http';
 
 
 @Component({
-  selector: 'app-Class-wise-best-private-home-tutor',
-  templateUrl: './Class-wise-best-private-home-tutor.html',
-  styleUrls: ['./Class-wise-best-private-home-tutor.scss'],
+  selector: 'app-Syllabus-wise-best-private-home-tutor',
+  templateUrl: './Syllabus-wise-best-private-home-tutor.html',
+  styleUrls: ['./Syllabus-wise-best-private-home-tutor.scss'],
   providers: [Location, { provide: LocationStrategy, useClass: PathLocationStrategy }],
 })
-export class ClassWiseComponent implements OnInit {
+export class SyllabusWiseComponent implements OnInit {
 
   paramId: any;
   
@@ -115,7 +115,7 @@ export class ClassWiseComponent implements OnInit {
   buttonClick(data: any) {
     this.router.navigateByUrl(data);
     setTimeout(() => {
-      window.location.reload;
+      window.location.reload();
     }, 100);
   }
 
