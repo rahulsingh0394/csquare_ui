@@ -22,6 +22,8 @@ import { StudentComponent } from './studentForm/student.component';
 import { StudentService } from './studentForm/student.service';
 import { TutorComponent } from './tutorForm/tutor.component';
 import { TutorService } from './tutorForm/tutor.service';
+import { HomeTutorComponent } from './home-tutors-private-tutors/home-tutors-private-tutors.component';
+import { BangaloreComponent } from './bangalore/bangalore.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { TutorService } from './tutorForm/tutor.service';
     FooterComponent,
     StudentComponent,
     TutorComponent,
+    HomeTutorComponent,
+    BangaloreComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-app' }),
@@ -51,7 +55,7 @@ import { TutorService } from './tutorForm/tutor.service';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'about', loadChildren: './about/about.module#AboutModule' },
-      { path: 'bangalore', loadChildren: './bangalore/bangalore.module#BangaloreModule' },
+      { path: 'bangalore', component: BangaloreComponent },
       { path: 'contact', loadChildren: './contact/contact.module#ContactModule' },
       { path: 'careers', loadChildren: './careers/careers.module#CareersModule' },
       { path: 'media', loadChildren: './media/media.module#MediaModule' },
@@ -64,6 +68,8 @@ import { TutorService } from './tutorForm/tutor.service';
       { path: 'terms', loadChildren: './terms/terms.module#TermsModule'},
       { path: 'tutors-review', loadChildren: './tutors/tutors.module#TutorsModule' },
       { path: 'admin-app',      loadChildren: './admin-app/admin-app.module#AdminAppModule' },
+      { path: 'home-tutors-private-tutors', component: HomeTutorComponent },
+      { path: '', loadChildren: './Class-wise-best-private-home-tutor/Class-wise-best-private-home-tutor.module#ClassWiseModule' }
     ]),
   ],
   providers: [StudentService, TutorService],

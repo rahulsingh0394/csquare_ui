@@ -8,12 +8,12 @@ import { Http } from '@angular/http';
 
 
 @Component({
-  selector: 'app-bangalore',
-  templateUrl: './bangalore.html',
-  styleUrls: ['./bangalore.scss'],
+  selector: 'app-home-tutors-private-tutors',
+  templateUrl: './home-tutors-private-tutors.html',
+  styleUrls: ['./home-tutors-private-tutors.scss'],
   providers: [Location, { provide: LocationStrategy, useClass: PathLocationStrategy }],
 })
-export class BangaloreComponent implements OnInit {
+export class HomeTutorComponent implements OnInit {
 
   paramId: any;
   

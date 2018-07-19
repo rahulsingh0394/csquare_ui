@@ -8,12 +8,12 @@ import { Http } from '@angular/http';
 
 
 @Component({
-  selector: 'app-bangalore',
-  templateUrl: './bangalore.html',
-  styleUrls: ['./bangalore.scss'],
+  selector: 'app-Class-wise-best-private-home-tutor',
+  templateUrl: './Class-wise-best-private-home-tutor.html',
+  styleUrls: ['./Class-wise-best-private-home-tutor.scss'],
   providers: [Location, { provide: LocationStrategy, useClass: PathLocationStrategy }],
 })
-export class BangaloreComponent implements OnInit {
+export class ClassWiseComponent implements OnInit {
 
   paramId: any;
   
@@ -114,6 +114,7 @@ export class BangaloreComponent implements OnInit {
 
   buttonClick(data: any) {
     this.router.navigateByUrl(data);
+    window.location.reload();
   }
 
 }
