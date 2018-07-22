@@ -1,5 +1,5 @@
 {
-    "size": "13",
+    "size": "20",
     "1": {
         "menu_name": "Accountancy",
         "img": "assets/img-menu/subject/account.jpg",
@@ -42,7 +42,7 @@
     },
     "9": {
         "menu_name": "Mathematics",
-        "img": "assets/img-menu/subject/maths.jpg",
+        "img": "assets/img-menu/subject/mathematics.jpg",
         "url": "/bangalore/home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Mathematics"
     },
     "10": {
@@ -64,5 +64,40 @@
         "menu_name": "Social Science",
         "img": "assets/img-menu/subject/social_science.jpg",
         "url": "/bangalore/home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Social_Science"
+    },
+    "14": {
+        "menu_name": "French",
+        "img": "assets/img-menu/subject/French.jpg",
+        "url": "/bangalore/home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/French"
+    },
+    "15": {
+        "menu_name": "German",
+        "img": "assets/img-menu/subject/german.jpg",
+        "url": "/bangalore/home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/German"
+    },
+    "16": {
+        "menu_name": "Kannada",
+        "img": "assets/img-menu/subject/Kannada.jpg",
+        "url": "/bangalore/home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Kannada"
+    },
+    "17": {
+        "menu_name": "Sanskrit",
+        "img": "assets/img-menu/subject/sanskrit.jpg",
+        "url": "/bangalore/home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Sanskrit"
+    },
+    "18": {
+        "menu_name": "Spoken-English",
+        "img": "assets/img-menu/subject/SpokenEnglish.jpg",
+        "url": "/bangalore/home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Spoken_English"
+    },
+    "19": {
+        "menu_name": "Spoken-Hindi",
+        "img": "assets/img-menu/subject/spokenhindi.jpg",
+        "url": "/bangalore/home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Spoken_Hindi"
+    },
+    "20": {
+        "menu_name": "Spoken-Kannada",
+        "img": "assets/img-menu/subject/spokenkannada.jpg",
+        "url": "/bangalore/home-tutors-private-tutors/Subjects-wise-best-private-home-tutor/Spoken_Kannada"
     }
 }

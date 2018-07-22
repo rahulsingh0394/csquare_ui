@@ -1,0 +1,262 @@
+.temp {
+    background-color: #fff!important;
+    z-index: 999!important;
+    color: #000!important;
+}
+
+.card-header {
+    border: 1px solid #ccc;
+    color: #fff !important;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 0px !important;
+    background-color: #5e50ad;
+}
+
+.card-body {
+    background-color: #fff !important;
+    border: 1px solid #ccc;
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+.menu-item {
+    font-size: 14px;
+}
+
+.menu-title {
+    color: #fff !important;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px!important;
+    font-weight: bold;
+}
+
+h1 {
+    color: #fff;
+    font-size: 1em;
+}
+
+@media(max-width: 600px) {
+    .menu-item {
+        font-size: 12px;
+    }
+    .desp {
+        font-size: 14px;
+    }
+    .img-circle {
+        margin-left: 15%;
+        margin-top: 0px;
+    }
+}
+
+.main {
+    margin-top: -6em;
+    background-color: #fff;
+}
+
+a {
+    color: #382f69 !important;
+}
+
+a:hover {
+    color: #00bcd4 !important;
+}
+
+.checked {
+    color: orange;
+}
+
+.star {
+    margin-left: 43%;
+}
+
+.fa {
+    font-size: 25px;
+}
+
+.awesome {
+    margin: 0 auto
+}
+
+.awesome {
+    width: 100%;
+    font-family: Amatic;
+    font-size: 2em;
+    text-align: center !important;
+    color: #000;
+    font-weight: 700;
+    position: absolute;
+    -webkit-animation: colorchange 20s infinite alternate
+}
+
+@-webkit-keyframes colorchange {
+    0%,
+    40%,
+    10% {
+        color: #f71e0f
+    }
+    20% {
+        color: #f84701
+    }
+    30% {
+        color: #9fa103
+    }
+    40% {
+        color: rgb(59, 168, 8)
+    }
+    50% {
+        color: #0c968a
+    }
+    60% {
+        color: rgb(0, 81, 255)
+    }
+    70% {
+        color: rgb(94, 9, 252)
+    }
+    90% {
+        color: #d400ff
+    }
+    80% {
+        color: #ff00d4
+    }
+    100% {
+        color: rgb(255, 8, 8)
+    }
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+    text-align: justify !important;
+}
+
+h4 {
+    margin-bottom: 1em !important;
+}
+
+.button {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.quoted1 .fa {
+    height: 50px!important;
+    width: 50px!important;
+    background: #00bcd4;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+.review-test1 {
+    background: #f6f6f6;
+    padding: 4.25rem 2.5rem;
+    border-radius: 10px;
+    border: 1px solid #f1f1f1;
+    text-align: justify;
+    position: relative;
+    transition: all .4s ease-in;
+    margin-top: -20px;
+}
+
+.review-test1:hover {
+    border: none;
+    color: #fff!important;
+    background: #00bcd4!important;
+    .tagline {
+        color: #fff;
+    }
+    .name {
+        color: #fff;
+    }
+}
+
+.quoted2 .fa {
+    height: 50px!important;
+    width: 50px!important;
+    background: #5e50ad;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+.review-test2 {
+    background: #f6f6f6;
+    padding: 4.25rem 2.5rem;
+    border-radius: 10px;
+    border: 1px solid #f1f1f1;
+    text-align: justify;
+    position: relative;
+    transition: all .4s ease-in;
+    margin-top: -20px;
+}
+
+.review-test2:hover {
+    border: none;
+    color: #fff!important;
+    background: #5e50ad!important;
+    .tagline {
+        color: #fff;
+    }
+    .name {
+        color: #fff;
+    }
+}
+
+.review-photo img {
+    height: 100px!important;
+    width: 100px!important;
+    margin-top: -50px!important;
+    border-radius: 50%!important;
+    display: inline-block!important;
+    position: relative!important;
+    z-index: 1;
+}
+
+.bottom40 {
+    margin-bottom: 40px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 1em;
+}
+
+.name {
+    text-align: center!important;
+    color: #212331;
+    font-size: 2em!important;
+    font-weight: 500!important;
+    line-height: 1.2!important;
+    font-family: 'Raleway', sans-serif;
+    margin-top: -40px;
+}
+
+.tagline {
+    color: #00bcd4;
+    font-size: 1em!important;
+    font-weight: 400!important;
+    margin-left: 45%;
+    margin-top: -20px;
+}
+
+@media(max-width: 600px) {
+    .tagline {
+        margin-left: 36%;
+    }
+    .star {
+        margin-left: 31%;
+    }
+    .mobile {
+        display: none;
+    }
+}

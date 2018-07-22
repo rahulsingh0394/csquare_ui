@@ -68,7 +68,8 @@ import { BangaloreComponent } from './bangalore/bangalore.component';
       { path: 'admin-app',      loadChildren: './admin-app/admin-app.module#AdminAppModule' },
       { path: 'home-tutors-private-tutors', component: HomeTutorComponent },
       { path: '', loadChildren: './Class-wise-best-private-home-tutor/Class-wise-best-private-home-tutor.module#ClassWiseModule' },
-      { path: '', loadChildren: './Syllabus-wise-best-private-home-tutor/Syllabus-wise-best-private-home-tutor.module#SyllabusWiseModule' }    
+      { path: '', loadChildren: './Syllabus-wise-best-private-home-tutor/Syllabus-wise-best-private-home-tutor.module#SyllabusWiseModule' } ,
+      { path: '', loadChildren: './Subjects-wise-best-private-home-tutor/Subjects-wise-best-private-home-tutor.module#SubjectsWiseModule' }    
     ]),
   ],
   providers: [StudentService, TutorService],
